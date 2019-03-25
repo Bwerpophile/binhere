@@ -5,12 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 puts "clean up DB"
 
 Bin.destroy_all
 User.destroy_all
 
 puts "Start database creation... "
+
 
 puts "Victorine creation..."
 
@@ -31,87 +33,107 @@ poubelle_papier1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin1.jpg')),
   kind: 'papier',
   name: 'mat',
-  longitude: 47.2185254,
-  latitude: -1.5671195
+  address: '14 Rue Beauregard, 44000 Nantes',
+  longitude: 47.2134354,
+  latitude: -1.5556044
 )
 
 poubelle_papier2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin2.jpg')),
   kind: 'papier',
   name: 'jor',
-  longitude: 47.2187063,
-  latitude: -1.5685133
+  address: '26 Rue Stanislas Baudry, 44400 Nantes',
+  longitude: 47.2181645,
+  latitude: -1.5430119
 )
 
 poubelle_papier3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin3.jpg')),
   kind: 'papier',
   name: 'sim',
-  longitude: 47.2186982,
-  latitude: -1.5689721
+  address: '7 Impasse Saint-Laurent, 44000 Nantes',
+  longitude: 47.2183730,
+  latitude: -1.5501451
 )
 
 poubelle_papier4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin4.jpg')),
   kind: 'papier',
   name: 'jim',
-  longitude: 47.218705,
-  latitude: -1.5690397
+  address: '6 Place Aristide Briand, 44003 Nantes',
+  longitude: 47.2177317,
+  latitude: -1.5633201
 )
 
 poubelle_papier5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin5.jpg')),
   kind: 'papier',
   name: 'jem',
-  longitude: 47.2183323,
-  latitude: -1.5620625
+  address: '13 Rue de la Juiverie, 44000 Nantes',
+  longitude: 47.2154289,
+  latitude: -1.5530633
 )
 
 poubelle_menagere1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin6.jpg')),
   kind: 'menager',
   name: 'john',
-  longitude: 47.2185081,
-  latitude: -1.5545757
+  address: 'Rue de Talensac, 44009 Nantes',
+  longitude: 47.2212440,
+  latitude: -1.5579771
 )
 
 poubelle_menagere2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin7.jpg')),
   kind: 'menager',
   name: 'jacques',
-  longitude: 47.2140721,
-  latitude: -1.5576681
+  address: '12 Rue Paul Bellamy, 44000 Nantes',
+  longitude: 47.2213460,
+  latitude: -1.5557241
 )
 
 poubelle_menagere3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin8.jpg')),
   kind: 'menager',
   name: 'josh',
-  longitude: 47.2124104,
-  latitude: -1.5556372
+  address: 'Rue Sully, 44000 Nantes',
+  longitude: 47.2206028,
+  latitude: -1.5507245
 )
 
 poubelle_menagere4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin9.jpg')),
   kind: 'menager',
   name: 'bruno',
-  longitude: 47.2124234,
-  latitude: -1.5556044
+  address: '31 Place Viarme, 44000 Nantes',
+  longitude: 47.2200198,
+  latitude: -1.5626764
 )
 
 poubelle_menagere5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin10.jpg')),
   kind: 'menager',
   name: 'marcel',
-  longitude: 47.2134354,
-  latitude: -1.5556044
+  address: '5 Place Maréchal Foch, 44000 Nantes',
+  longitude: 47.2191746,
+  latitude: -1.5503382
+)
+
+victorine = User.create!(
+  user_name: 'Victo',
+  first_name: 'Victorine',
+  last_name: 'Bramard',
+  address: '12 rue Emile Pehant, 44000 Nantes',
+  email: 'victo@gmail.com',
+  password: 'password',
+  photo: File.open(Rails.root.join('#'))
 )
 
 glassbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container2.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
-  address: 'Chaussée de la Madeleine, 44000 Nantes'
+  address: 'Chaussée de la Madeleine, 44000 Nantes',
   lattitude: 47.212563,
   longitude: -1.553234,
 )
@@ -120,7 +142,7 @@ glassbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container3.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
-  address: '10 Quai Turenne, 44000 Nantes'
+  address: '10 Quai Turenne, 44000 Nantes',
   lattitude: 47.212585,
   longitude: -1.555094,
 )
@@ -129,7 +151,7 @@ glassbin3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container4.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
-  address: '128 Allée Brancas, 44000 Nantes'
+  address: '128 Allée Brancas, 44000 Nantes',
   lattitude: 47.213811,
   longitude: -1.556244,
 )
@@ -138,7 +160,7 @@ glassbin4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
-  address: '6 Allée de la Maison Rouge, 44000 Nantes'
+  address: '6 Allée de la Maison Rouge, 44000 Nantes',
   lattitude: 47.212944,
   longitude: -1.550890,
 )
@@ -156,16 +178,16 @@ plasticbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique1.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
-  address: 'Allée Jean Bart, 44000 Nantes'
+  address: 'Allée Jean Bart, 44000 Nantes',
   lattitude: 47.214831,
-  longitude: -1.555654,
+  longitude: -1.555654
 )
 
 plasticbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique2.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
-  address: 'Place du Commerce, 44000 Nantes'
+  address: 'Place du Commerce, 44000 Nantes',
   lattitude: 47.213293,
   longitude: -1.558250,
 )
@@ -174,7 +196,7 @@ plasticbin3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique3.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
-  address: 'Bouffay, 44000 Nantes'
+  address: 'Bouffay, 44000 Nantes',
   lattitude: 47.214569,
   longitude: -1.553454,
 )
@@ -183,7 +205,7 @@ plasticbin4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique4.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
-  address: 'Rue Emile Pehant, 44000 Nantes'
+  address: 'Rue Emile Pehant, 44000 Nantes',
   lattitude: 47.212289,
   longitude: -1.548780,
 )
@@ -198,4 +220,5 @@ plasticbin5 = Bin.create!(
 )
 
 puts "Fake Database has been created and Victorine is still behind you..."
+
 
