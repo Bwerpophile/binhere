@@ -12,77 +12,7 @@ User.destroy_all
 
 puts "Start database creation... "
 
-  poubelle_papier1 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin1.jpg')),
-  kind: 'papier',
-  name: 'mat',
-  longitude: 47.2185254,
-  latitude: -1.5671195
-)
-
-  poubelle_papier2 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin2.jpg')),
-  kind: 'papier',
-  name: 'jor',
-  longitude: 47.2187063,
-  latitude: -1.5685133
-)
-  poubelle_papier3 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin3.jpg')),
-  kind: 'papier',
-  name: 'sim',
-  longitude: 47.2186982,
-  latitude: -1.5689721
-)
-  poubelle_papier4 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin4.jpg')),
-  kind: 'papier',
-  name: 'jim',
-  longitude: 47.218705,
-  latitude: -1.5690397
-)
-  poubelle_papier5 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin5.jpg')),
-  kind: 'papier',
-  name: 'jem',
-  longitude: 47.2183323,
-  latitude: -1.5620625
-)
-  poubelle_menagere1 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin6.jpg')),
-  kind: 'menager',
-  name: 'john',
-  longitude: 47.2185081,
-  latitude: -1.5545757
-)
-poubelle_menagere2 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin7.jpg')),
-  kind: 'menager',
-  name: 'jacques',
-  longitude: 47.2140721,
-  latitude: -1.5576681
-)
-poubelle_menagere3 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin8.jpg')),
-  kind: 'menager',
-  name: 'josh',
-  longitude: 47.2124104,
-  latitude: -1.5556372
-)
-poubelle_menagere4 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin9.jpg')),
-  kind: 'menager',
-  name: 'bruno',
-  longitude: 47.2124234,
-  latitude: -1.5556044
-)
-poubelle_menagere5 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/bin10.jpg')),
-  kind: 'menager',
-  name: 'marcel',
-  longitude: 47.2134354,
-  latitude: -1.5556044
-)
+puts "Victorine creation..."
 
 victorine = User.create!(
   user_name: 'Victo',
@@ -94,6 +24,89 @@ victorine = User.create!(
   photo: File.open(Rails.root.join('#'))
 )
 
+puts "Victorine is behind you ..."
+puts "Starting trashes creation ..."
+
+poubelle_papier1 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin1.jpg')),
+  kind: 'papier',
+  name: 'mat',
+  longitude: 47.2185254,
+  latitude: -1.5671195
+)
+
+poubelle_papier2 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin2.jpg')),
+  kind: 'papier',
+  name: 'jor',
+  longitude: 47.2187063,
+  latitude: -1.5685133
+)
+
+poubelle_papier3 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin3.jpg')),
+  kind: 'papier',
+  name: 'sim',
+  longitude: 47.2186982,
+  latitude: -1.5689721
+)
+
+poubelle_papier4 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin4.jpg')),
+  kind: 'papier',
+  name: 'jim',
+  longitude: 47.218705,
+  latitude: -1.5690397
+)
+
+poubelle_papier5 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin5.jpg')),
+  kind: 'papier',
+  name: 'jem',
+  longitude: 47.2183323,
+  latitude: -1.5620625
+)
+
+poubelle_menagere1 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin6.jpg')),
+  kind: 'menager',
+  name: 'john',
+  longitude: 47.2185081,
+  latitude: -1.5545757
+)
+
+poubelle_menagere2 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin7.jpg')),
+  kind: 'menager',
+  name: 'jacques',
+  longitude: 47.2140721,
+  latitude: -1.5576681
+)
+
+poubelle_menagere3 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin8.jpg')),
+  kind: 'menager',
+  name: 'josh',
+  longitude: 47.2124104,
+  latitude: -1.5556372
+)
+
+poubelle_menagere4 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin9.jpg')),
+  kind: 'menager',
+  name: 'bruno',
+  longitude: 47.2124234,
+  latitude: -1.5556044
+)
+
+poubelle_menagere5 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin10.jpg')),
+  kind: 'menager',
+  name: 'marcel',
+  longitude: 47.2134354,
+  latitude: -1.5556044
+)
+
 glassbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container2.jpg')),
   kind: 'Verre',
@@ -102,6 +115,7 @@ glassbin1 = Bin.create!(
   lattitude: 47.212563,
   longitude: -1.553234,
 )
+
 glassbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container3.jpg')),
   kind: 'Verre',
@@ -110,6 +124,7 @@ glassbin2 = Bin.create!(
   lattitude: 47.212585,
   longitude: -1.555094,
 )
+
 glassbin3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container4.jpg')),
   kind: 'Verre',
@@ -118,6 +133,7 @@ glassbin3 = Bin.create!(
   lattitude: 47.213811,
   longitude: -1.556244,
 )
+
 glassbin4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
   kind: 'Verre',
@@ -126,6 +142,7 @@ glassbin4 = Bin.create!(
   lattitude: 47.212944,
   longitude: -1.550890,
 )
+
 glassbin5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
   kind: 'Verre',
@@ -135,9 +152,6 @@ glassbin5 = Bin.create!(
   longitude: -1.556855,
 )
 
-# Poubelles de plastique
-puts 'WIP creation of plastic bins...'
-
 plasticbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique1.jpg')),
   kind: 'Plastique',
@@ -146,6 +160,7 @@ plasticbin1 = Bin.create!(
   lattitude: 47.214831,
   longitude: -1.555654,
 )
+
 plasticbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique2.jpg')),
   kind: 'Plastique',
@@ -154,6 +169,7 @@ plasticbin2 = Bin.create!(
   lattitude: 47.213293,
   longitude: -1.558250,
 )
+
 plasticbin3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique3.jpg')),
   kind: 'Plastique',
@@ -162,6 +178,7 @@ plasticbin3 = Bin.create!(
   lattitude: 47.214569,
   longitude: -1.553454,
 )
+
 plasticbin4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique4.jpg')),
   kind: 'Plastique',
@@ -170,6 +187,7 @@ plasticbin4 = Bin.create!(
   lattitude: 47.212289,
   longitude: -1.548780,
 )
+
 plasticbin5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique5.jpg')),
   kind: 'Plastique',
@@ -178,5 +196,6 @@ plasticbin5 = Bin.create!(
   lattitude: 47.211509,
   longitude: -1.550971,
 )
-puts 'Fake Database has been created !'
+
+puts "Fake Database has been created and Victorine is still behind you..."
 
