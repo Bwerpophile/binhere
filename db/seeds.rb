@@ -29,7 +29,7 @@ victorine = User.create!(
 puts 'WIP creation of glass bins...'
 
 glassbin1 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container2.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: 'Chaussée de la Madeleine, 44000 Nantes'
@@ -37,7 +37,7 @@ glassbin1 = Bin.create!(
   longitude: -1.553234,
 )
 glassbin2 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container3.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: '10 Quai Turenne, 44000 Nantes'
@@ -45,7 +45,7 @@ glassbin2 = Bin.create!(
   longitude: -1.555094,
 )
 glassbin3 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container4.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: '128 Allée Brancas, 44000 Nantes'
@@ -53,7 +53,7 @@ glassbin3 = Bin.create!(
   longitude: -1.556244,
 )
 glassbin4 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: '6 Allée de la Maison Rouge, 44000 Nantes'
@@ -61,7 +61,7 @@ glassbin4 = Bin.create!(
   longitude: -1.550890,
 )
 glassbin5 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: "1 Allée de l'île Gloriette, 44000 Nantes",
@@ -73,7 +73,7 @@ glassbin5 = Bin.create!(
 puts 'WIP creation of plastic bins...'
 
 plasticbin1 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique1.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Allée Jean Bart, 44000 Nantes'
@@ -81,7 +81,7 @@ plasticbin1 = Bin.create!(
   longitude: -1.555654,
 )
 plasticbin2 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique2.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Place du Commerce, 44000 Nantes'
@@ -89,7 +89,7 @@ plasticbin2 = Bin.create!(
   longitude: -1.558250,
 )
 plasticbin3 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique3.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Bouffay, 44000 Nantes'
@@ -97,7 +97,7 @@ plasticbin3 = Bin.create!(
   longitude: -1.553454,
 )
 plasticbin4 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique4.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Rue Emile Pehant, 44000 Nantes'
@@ -105,7 +105,7 @@ plasticbin4 = Bin.create!(
   longitude: -1.548780,
 )
 plasticbin5 = Bin.create!(
-  photo: File.open(Rails.root.join('#')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique5.jpg')),
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: "Avenue de l'Hôtel Dieu, 44000 Nantes",
