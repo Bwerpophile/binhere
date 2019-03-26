@@ -2,8 +2,11 @@ class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @bins = Bin.all
-
+    if params[:bin_type].present?
+      @bins = Bin.where(kind: params[:bin_type])
+    else
+      redirect_to root_path
+    end
   end
 
   def show
