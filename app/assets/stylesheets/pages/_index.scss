@@ -1,2 +1,19 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container {
+  display: flex;
+}
+
+.card-container {
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.card-clothest {
+
+}
+
+.placeholder {
+  padding: 32px;
+}

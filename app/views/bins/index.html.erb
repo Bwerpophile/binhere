@@ -1,3 +1,30 @@
-<h1>Bin#index</h1>
-<p>Find me in app/views/bin/index.html.erb</p>
+<div class="container">
+  <div class="card-container">
+    <input class="form-control" type="text" placeholder="Votre adresse...">
 
+    <h1>Poubelles proches de vous</h1>
+      <div class="row">
+
+      <!--   if adresse = true
+        card poubelle la plus proche -->
+      <% @bins.each do |bin| %>
+        <div class="col-12">
+          <div class="card-product">
+            <div class="card-product-infos">
+              <h2 id = "card-title"> <%= bin(params[:bin_type]).name %> </h2>
+              <p class="card-description"> 12 rue Emile Pehant, 44000 Nantes</p>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+      <!-- bin.each -->
+      <!-- end -->
+      </div>
+  </div>
+  <div>
+    <div class="placeholder">
+      <%= image_tag "mapgoogle.jpg" %>
+    </div>
+  </div>
+</div>
