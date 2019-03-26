@@ -2,8 +2,7 @@ class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @bins = Bin.all
-
+    @bins = Bin.where(kind: params[:bin_type])
   end
 
   def show
