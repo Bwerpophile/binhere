@@ -1,6 +1,7 @@
 class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+
   def index
     if params[:bin_type].present?
       @bins = Bin.where(kind: params[:bin_type])
@@ -15,7 +16,7 @@ class BinsController < ApplicationController
 
   private
   def bin_params
-    params.require(:bin).permit(:name, :id)
+    params.require(:bin).permit(:name, :id, :address, :photo)
   end
 end
 
