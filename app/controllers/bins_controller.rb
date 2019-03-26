@@ -1,14 +1,14 @@
 class BinsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :show
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @bins = bin.all
+    @bins = Bin.all
+
   end
 
   def show
     @bin = Bin.find(params[:id])
   end
-
 
   private
   def bin_params
