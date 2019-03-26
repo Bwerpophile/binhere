@@ -23,7 +23,7 @@ victorine = User.create!(
   address: '12 rue Emile Pehant',
   email: 'victo@gmail.com',
   password: 'password',
-  photo: File.open(Rails.root.join('#'))
+  avatar: File.open(Rails.root.join('db/fixtures/users/victorine.jpg'))
 )
 
 puts "Victorine is behind you ..."
@@ -119,22 +119,12 @@ poubelle_menagere5 = Bin.create!(
   latitude: -1.5503382
 )
 
-victorine = User.create!(
-  user_name: 'Victo',
-  first_name: 'Victorine',
-  last_name: 'Bramard',
-  address: '12 rue Emile Pehant, 44000 Nantes',
-  email: 'victo@gmail.com',
-  password: 'password',
-  photo: File.open(Rails.root.join('#'))
-)
-
 glassbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container2.jpg')),
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: 'Chaussée de la Madeleine, 44000 Nantes',
-  lattitude: 47.212563,
+  latitude: 47.212563,
   longitude: -1.553234,
 )
 
@@ -143,7 +133,7 @@ glassbin2 = Bin.create!(
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: '10 Quai Turenne, 44000 Nantes',
-  lattitude: 47.212585,
+  latitude: 47.212585,
   longitude: -1.555094,
 )
 
@@ -152,7 +142,7 @@ glassbin3 = Bin.create!(
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: '128 Allée Brancas, 44000 Nantes',
-  lattitude: 47.213811,
+  latitude: 47.213811,
   longitude: -1.556244,
 )
 
@@ -161,7 +151,7 @@ glassbin4 = Bin.create!(
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: '6 Allée de la Maison Rouge, 44000 Nantes',
-  lattitude: 47.212944,
+  latitude: 47.212944,
   longitude: -1.550890,
 )
 
@@ -170,7 +160,7 @@ glassbin5 = Bin.create!(
   kind: 'Verre',
   name: Faker::Games::Pokemon.name,
   address: "1 Allée de l'île Gloriette, 44000 Nantes",
-  lattitude: 47.211347,
+  latitude: 47.211347,
   longitude: -1.556855,
 )
 
@@ -179,7 +169,7 @@ plasticbin1 = Bin.create!(
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Allée Jean Bart, 44000 Nantes',
-  lattitude: 47.214831,
+  latitude: 47.214831,
   longitude: -1.555654
 )
 
@@ -188,7 +178,7 @@ plasticbin2 = Bin.create!(
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Place du Commerce, 44000 Nantes',
-  lattitude: 47.213293,
+  latitude: 47.213293,
   longitude: -1.558250,
 )
 
@@ -197,7 +187,7 @@ plasticbin3 = Bin.create!(
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Bouffay, 44000 Nantes',
-  lattitude: 47.214569,
+  latitude: 47.214569,
   longitude: -1.553454,
 )
 
@@ -206,7 +196,7 @@ plasticbin4 = Bin.create!(
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Rue Emile Pehant, 44000 Nantes',
-  lattitude: 47.212289,
+  latitude: 47.212289,
   longitude: -1.548780,
 )
 
@@ -215,7 +205,7 @@ plasticbin5 = Bin.create!(
   kind: 'Plastique',
   name: Faker::Games::Pokemon.name,
   address: "Avenue de l'Hôtel Dieu, 44000 Nantes",
-  lattitude: 47.211509,
+  latitude: 47.211509,
   longitude: -1.550971,
 )
 
