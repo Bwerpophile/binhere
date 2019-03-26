@@ -121,7 +121,7 @@ poubelle_menagere5 = Bin.create!(
 
 glassbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container2.jpg')),
-  kind: 'Verre',
+  kind: 'verre',
   name: Faker::Games::Pokemon.name,
   address: 'Chaussée de la Madeleine, 44000 Nantes',
   latitude: 47.212563,
@@ -130,7 +130,7 @@ glassbin1 = Bin.create!(
 
 glassbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container3.jpg')),
-  kind: 'Verre',
+  kind: 'verre',
   name: Faker::Games::Pokemon.name,
   address: '10 Quai Turenne, 44000 Nantes',
   latitude: 47.212585,
@@ -139,7 +139,7 @@ glassbin2 = Bin.create!(
 
 glassbin3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container4.jpg')),
-  kind: 'Verre',
+  kind: 'verre',
   name: Faker::Games::Pokemon.name,
   address: '128 Allée Brancas, 44000 Nantes',
   latitude: 47.213811,
@@ -148,7 +148,7 @@ glassbin3 = Bin.create!(
 
 glassbin4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
-  kind: 'Verre',
+  kind: 'verre',
   name: Faker::Games::Pokemon.name,
   address: '6 Allée de la Maison Rouge, 44000 Nantes',
   latitude: 47.212944,
@@ -157,7 +157,7 @@ glassbin4 = Bin.create!(
 
 glassbin5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
-  kind: 'Verre',
+  kind: 'verre',
   name: Faker::Games::Pokemon.name,
   address: "1 Allée de l'île Gloriette, 44000 Nantes",
   latitude: 47.211347,
@@ -166,7 +166,7 @@ glassbin5 = Bin.create!(
 
 plasticbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique1.jpg')),
-  kind: 'Plastique',
+  kind: 'plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Allée Jean Bart, 44000 Nantes',
   latitude: 47.214831,
@@ -175,7 +175,7 @@ plasticbin1 = Bin.create!(
 
 plasticbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique2.jpg')),
-  kind: 'Plastique',
+  kind: 'plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Place du Commerce, 44000 Nantes',
   latitude: 47.213293,
@@ -184,7 +184,7 @@ plasticbin2 = Bin.create!(
 
 plasticbin3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique3.jpg')),
-  kind: 'Plastique',
+  kind: 'plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Bouffay, 44000 Nantes',
   latitude: 47.214569,
@@ -193,7 +193,7 @@ plasticbin3 = Bin.create!(
 
 plasticbin4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique4.jpg')),
-  kind: 'Plastique',
+  kind: 'plastique',
   name: Faker::Games::Pokemon.name,
   address: 'Rue Emile Pehant, 44000 Nantes',
   latitude: 47.212289,
@@ -202,7 +202,7 @@ plasticbin4 = Bin.create!(
 
 plasticbin5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique5.jpg')),
-  kind: 'Plastique',
+  kind: 'plastique',
   name: Faker::Games::Pokemon.name,
   address: "Avenue de l'Hôtel Dieu, 44000 Nantes",
   latitude: 47.211509,
