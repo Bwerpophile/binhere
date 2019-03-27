@@ -1,5 +1,5 @@
 <div class="container">
- <div class="card-container">
+  <div class="card-container">
    <input class="form-control" type="text" placeholder="Votre adresse...">
 
    <h1>Poubelles proches de vous</h1>
@@ -16,13 +16,13 @@
          </div>
        <% end %>
      </div>
- </div>
- <div class="map-bin-container">
-   <div class="button-container">
+  </div>
+  <div class="map-bin-container">
+    <div class="button-container">
 
-       <div class="row">
+      <div class="row">
        <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+          <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
            </div>
          <% end %>
          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
