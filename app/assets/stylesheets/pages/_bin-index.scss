@@ -1,0 +1,123 @@
+.container-index {
+  display: flex;
+}
+
+.form-control {
+  margin-bottom: 24px;
+  flex: 0 0 40%;
+}
+
+.card-container {
+  justify-content: space-between;
+  padding: 32px;
+}
+
+#card-title-index {
+  align-self: flex-start;
+
+}
+.map-bin-container {
+  // background-color: red;
+  // display: sticky;
+  flex: 0 0 50%;
+  padding: 32px;
+  // position: sticky;
+  // top: 0;
+  position: relative;
+}
+
+.button-container {
+  flex: 0 0 50%;
+  padding: 0 32px;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#map {
+flex: 0 0 100%;
+height: 100vh;
+
+
+}
+.map-container {
+  flex: 0 0 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.fakemap {
+  // margin-top: 137px;
+  width: 800px;
+  height: auto;
+  // max-width: 100%;
+}
+
+.mapcards {
+  max-width: 100%;
+  max-height: 100%;
+  background-position: center;
+  background-size: cover;
+  height:150px;
+}
+
+.mapcards:hover {
+opacity: 1;
+}
+
+.card-product-index {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  // border-left:25px solid #E5B31F;
+  margin-top: 20px;
+}
+
+.card-product-index h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product-index p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-index .card-product-infos {
+  padding: 16px;
+  height: 100%;
+}
+
+.address {
+}
+
+body {
+  // background-image: url("fond-home.png");
+  // background-size: cover;
+}
+
+.container-adress-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-waste {
+  height: 100px;
+  width: 100px;
+  background-color: purple;
+}
+
+#card-description-index {
+  align-items: flex-start;
+  font-style: lato;
+}
