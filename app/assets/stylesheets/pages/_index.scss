@@ -31,8 +31,11 @@
 }
 
 .map-container {
-  // padding: 32px;
-  // width: 800px;
+}
+
+#map {
+   height: 100vh;
+  flex: 0 0 50%;
 }
 
 .fakemap {
