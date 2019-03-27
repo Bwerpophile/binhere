@@ -8,10 +8,31 @@ class BinsController < ApplicationController
     else
       redirect_to root_path
     end
+
+    @bins = Bin.all
+    @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
+      {
+        # lat: bin.latitude,
+        # lng: bin.longitude
+        lat: bin.latitude,
+        lng: bin.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def show
     @bin = Bin.find(params[:id])
+
+    @marker = {
+        # lat: bin.latitude,
+        # lng: bin.longitude
+      lat: @bin.latitude,
+      lng: @bin.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
   end
 
   def bin_kind
@@ -28,6 +49,7 @@ class BinsController < ApplicationController
   end
 
   private
+
   def bin_params
     params.require(:bin).permit(:name, :id, :address, :photo, :bin_type)
   end

@@ -1,0 +1,17 @@
+.map_and_details_show {
+  justify-content: center;
+  display: flex;
+}
+
+#map {
+  display: flex;
+  flex: 0 0 80%;
+}
+
+
+.details_show {
+  display: flex;
+  flex-direction: column;
+    border: 2px solid grey;
+    flex: 0 0 30%;
+}
