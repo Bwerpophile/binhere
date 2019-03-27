@@ -1,3 +1,41 @@
-<h1>Bin#show</h1>
-<p>Find me in app/views/bin/show.html.erb</p>
+<div class="container">
+  <div class="card-container">
 
+    <h1>Poubelle selectionnée</h1>
+      <div class="row">
+
+          <div class="col-12">
+            <div class="card-product">
+              <div class="card-product-infos">
+                <h2 id = "card-title"> <%= @bin.name %> </h2>
+                <p class="card-description"> <%= @bin.address %></p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+  </div>
+  <div class="map-bin-container">
+    <div class="button-container">
+
+        <div class="row">
+        <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+            </div>
+          <% end %>
+          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+            </div>
+          <% end %>
+          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+            </div>
+          <% end %>
+          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+            </div>
+          <% end %>
+       </div>
+
+  </div>
+</div>
