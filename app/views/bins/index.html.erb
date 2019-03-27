@@ -1,58 +1,47 @@
 <div class="container">
-  <div class="card-container">
-    <input class="form-control" type="text" placeholder="Votre adresse...">
+ <div class="card-container">
+   <input class="form-control" type="text" placeholder="Votre adresse...">
 
-    <h1>Poubelles proches de vous</h1>
-      <div class="row">
+   <h1>Poubelles proches de vous</h1>
+     <div class="row">
+       <% @bins.each do |bin| %>
+         <div class="col-12">
+           <div class="card-product">
+             <div class="card-product-infos">
+               <h2 id = "card-title"> <%= bin.name %> </h2>
+               <p class="card-description"> <%= bin.address %></p>
+             </div>
+           </div>
+         <%= cl_image_tag bin.photo, alt: "Photo costume", height: 100, crop: :fill, gravity: :north %>
+         </div>
+       <% end %>
+     </div>
+ </div>
+ <div class="map-bin-container">
+   <div class="button-container">
 
-      <!--   if adresse = true
-        card poubelle la plus proche -->
-      <% @bins.each do |bin| %>
-        <div class="col-12">
-          <div class="card-product">
-            <div class="card-product-infos">
-              <h2 id = "card-title"> <%= bin.name %> </h2>
-              <p class="card-description"> 12 rue Emile Pehant, 44000 Nantes</p>
-            </div>
-<<<<<<< HEAD
-                <%= cl_image_tag bin.photo, height: 200, width: 150, gravity: :north, crop: :fill %>
-          </div>
-        <% end %>
-=======
-          </div><%= cl_image_tag bin.photo, height: 300, width: 400, crop: :fill %>
-        </div>
-
-      <% end %>
-      <!-- bin.each -->
-      <!-- end -->
->>>>>>> 0f2f813f2d8db5ca3ab46feb0daf824dae18fa95
+       <div class="row">
+       <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
       </div>
-  </div>
-  <div class="map-bin-container">
-    <div class="button-container">
 
-        <div class="row">
-        <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
-            </div>
-          <% end %>
-          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
-            </div>
-          <% end %>
-          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
-            </div>
-          <% end %>
-          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-            <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
-            </div>
-          <% end %>
-       </div>
+   <div class="map-container">
+       <%= image_tag "mapgoogle.jpg", class: "fakemap" %>
+   </div>
 
-    <div class="map-container">
-        <%= image_tag "mapgoogle.jpg", class: "fakemap" %>
-    </div>
-
-  </div>
+ </div>
 </div>

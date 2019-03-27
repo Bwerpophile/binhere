@@ -2,11 +2,8 @@ source 'https://rubygems.org'
 ruby '2.5.3'
 
 gem 'bootsnap', require: false
-<<<<<<< HEAD
 gem 'cloudinary', '~> 1.9.1'
-=======
-gem 'cloudinary' , '~> 1.9.1'
->>>>>>> 0f2f813f2d8db5ca3ab46feb0daf824dae18fa95
+
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
