@@ -14,9 +14,22 @@ class BinsController < ApplicationController
     @bin = Bin.find(params[:id])
   end
 
+  def bin_kind
+    case bin_type
+      when bin.king == "verre"
+        "glass_color"
+      when bin_kind == "papier"
+        "paper_color"
+      when bin_kind == "plastique"
+        "plastique_color"
+      when bin_kind == "menager"
+        "menager_color"
+      end
+  end
+
   private
   def bin_params
-    params.require(:bin).permit(:name, :id, :address, :photo)
+    params.require(:bin).permit(:name, :id, :address, :photo, :bin_type)
   end
 end
 
