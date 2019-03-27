@@ -18,12 +18,19 @@
               <div class="card-background" id="verre" >
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');">
                 </div>
+                <div class="card-name">
+                  <h5 id="type"> Verre </h5>
+                </div>
               </div>
+
               <% end %>
 
               <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
               <div class="card-background" id="plastique" >
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');">
+                </div>
+                <div class="card-name">
+                  <h5 id="type"> Plastique </h5>
                 </div>
               </div>
               <% end %>
@@ -32,12 +39,38 @@
               <div class="card-background" id="carton" >
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');">
                 </div>
+                <div class="card-name">
+                  <h5 id="type"> Carton </h5>
+                </div>
               </div>
               <% end %>
 
               <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
               <div class="card-background" id="menagere" >
                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
+                </div>
+                <div class="card-name">
+                  <h5 id="type"> Poubelles ménagères </h5>
+                </div>
+              </div>
+              <% end %>
+
+              <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
+              <div class="card-background" id="plus" >
+                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
+                </div>
+                <div class="card-name">
+                  <h5 id="type"> Plus de déchets </h5>
+                </div>
+              </div>
+              <% end %>
+
+              <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
+              <div class="card-background" id="info" >
+                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_info.png") %>');">
+                </div>
+                <div class="card-name">
+                  <h5 id="type"> Informations </h5>
                 </div>
               </div>
               <% end %>
