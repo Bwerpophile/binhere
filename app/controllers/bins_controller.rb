@@ -1,21 +1,57 @@
 class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+
   def index
     if params[:bin_type].present?
       @bins = Bin.where(kind: params[:bin_type])
     else
       redirect_to root_path
     end
+
+    @bins = Bin.all
+    @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
+      {
+        # lat: bin.latitude,
+        # lng: bin.longitude
+        lat: bin.latitude,
+        lng: bin.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def show
     @bin = Bin.find(params[:id])
+
+    @marker = {
+        # lat: bin.latitude,
+        # lng: bin.longitude
+      lat: @bin.latitude,
+      lng: @bin.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+  end
+
+  def bin_kind
+    case bin_type
+      when bin.king == "verre"
+        "glass_color"
+      when bin_kind == "papier"
+        "paper_color"
+      when bin_kind == "plastique"
+        "plastique_color"
+      when bin_kind == "menager"
+        "menager_color"
+      end
   end
 
   private
+
   def bin_params
-    params.require(:bin).permit(:name, :id)
+    params.require(:bin).permit(:name, :id, :address, :photo, :bin_type)
   end
 end
 

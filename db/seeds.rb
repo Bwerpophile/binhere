@@ -34,8 +34,8 @@ poubelle_papier1 = Bin.create!(
   kind: 'papier',
   name: 'Mat',
   address: '14 Rue Beauregard, 44000 Nantes',
-  longitude: 47.2134354,
-  latitude: -1.5556044
+  latitude: 47.2134354,
+  longitude: -1.5556044
 )
 
 poubelle_papier2 = Bin.create!(
@@ -43,8 +43,8 @@ poubelle_papier2 = Bin.create!(
   kind: 'papier',
   name: 'Jor',
   address: '26 Rue Stanislas Baudry, 44400 Nantes',
-  longitude: 47.2181645,
-  latitude: -1.5430119
+  latitude: 47.2181645,
+  longitude: -1.5430119
 )
 
 poubelle_papier3 = Bin.create!(
@@ -52,8 +52,8 @@ poubelle_papier3 = Bin.create!(
   kind: 'papier',
   name: 'Sim',
   address: '7 Impasse Saint-Laurent, 44000 Nantes',
-  longitude: 47.2183730,
-  latitude: -1.5501451
+  latitude: 47.2183730,
+  longitude: -1.5501451
 )
 
 poubelle_papier4 = Bin.create!(
@@ -61,8 +61,8 @@ poubelle_papier4 = Bin.create!(
   kind: 'papier',
   name: 'Jim',
   address: '6 Place Aristide Briand, 44003 Nantes',
-  longitude: 47.2177317,
-  latitude: -1.5633201
+  latitude: 47.2177317,
+  longitude: -1.5633201
 )
 
 poubelle_papier5 = Bin.create!(
@@ -70,8 +70,8 @@ poubelle_papier5 = Bin.create!(
   kind: 'papier',
   name: 'Jem',
   address: '13 Rue de la Juiverie, 44000 Nantes',
-  longitude: 47.2154289,
-  latitude: -1.5530633
+  latitude: 47.2154289,
+  longitude: -1.5530633
 )
 
 poubelle_menagere1 = Bin.create!(
@@ -79,8 +79,8 @@ poubelle_menagere1 = Bin.create!(
   kind: 'menager',
   name: 'John',
   address: 'Rue de Talensac, 44009 Nantes',
-  longitude: 47.2212440,
-  latitude: -1.5579771
+  latitude: 47.2212440,
+  longitude: -1.5579771
 )
 
 poubelle_menagere2 = Bin.create!(
@@ -88,8 +88,8 @@ poubelle_menagere2 = Bin.create!(
   kind: 'menager',
   name: 'Jacques',
   address: '12 Rue Paul Bellamy, 44000 Nantes',
-  longitude: 47.2213460,
-  latitude: -1.5557241
+  latitude: 47.2213460,
+  longitude: -1.5557241
 )
 
 poubelle_menagere3 = Bin.create!(
@@ -97,8 +97,8 @@ poubelle_menagere3 = Bin.create!(
   kind: 'menager',
   name: 'Josh',
   address: 'Rue Sully, 44000 Nantes',
-  longitude: 47.2206028,
-  latitude: -1.5507245
+  latitude: 47.2206028,
+  longitude: -1.5507245
 )
 
 poubelle_menagere4 = Bin.create!(
@@ -106,8 +106,8 @@ poubelle_menagere4 = Bin.create!(
   kind: 'menager',
   name: 'Bruno',
   address: '31 Place Viarme, 44000 Nantes',
-  longitude: 47.2200198,
-  latitude: -1.5626764
+  latitude: 47.2200198,
+  longitude: -1.5626764
 )
 
 poubelle_menagere5 = Bin.create!(
@@ -115,8 +115,8 @@ poubelle_menagere5 = Bin.create!(
   kind: 'menager',
   name: 'Marcel',
   address: '5 Place Maréchal Foch, 44000 Nantes',
-  longitude: 47.2191746,
-  latitude: -1.5503382
+  latitude: 47.2191746,
+  longitude: -1.5503382
 )
 
 glassbin1 = Bin.create!(
@@ -147,7 +147,7 @@ glassbin3 = Bin.create!(
 )
 
 glassbin4 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container1.jpg')),
   kind: 'verre',
   name: 'Gwendolyn',
   address: '6 Allée de la Maison Rouge, 44000 Nantes',
