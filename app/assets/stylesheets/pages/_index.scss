@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
 
 .container {
   display: flex;
@@ -14,6 +15,10 @@
   padding: 32px;
 }
 
+#card-title {
+  align-self: flex-start;
+
+}
 .map-bin-container {
   // background-color: red;
   width: 3000px;
