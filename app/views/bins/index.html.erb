@@ -12,6 +12,7 @@
                 <p class="card-description"> <%= bin.address %></p>
               </div>
             </div>
+                <%= cl_image_tag bin.photo, height: 200, width: 150, gravity: :north, crop: :fill %>
           </div>
         <% end %>
       </div>
