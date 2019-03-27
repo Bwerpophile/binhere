@@ -1,28 +1,29 @@
 <div class="container">
   <div class="card-container">
-    <input class="form-control" type="text" placeholder="Votre adresse...">
-      <h1>Poubelles proches de vous</h1>
-        <div class="row">
-          <% @bins.each do |bin| %>
-            <div class="col-12">
-              <div class="card-product">
-                <div class="<%= bin.kind %>"></div>
-                  <div class="card-product-infos">
-                   <h2 id = "card-title"> <%= bin.name %> </h2>
-                   <p class="card-description"> <%= bin.address %></p>
-                  </div>
-              </div>
-            </div>
-         <% end %>
-       </div>
-   </div>
 
- <div class="map-bin-container">
-   <div class="button-container">
+   <input class="form-control" type="text" placeholder="Votre adresse...">
 
-       <div class="row">
+   <h1>Poubelles proches de vous</h1>
+     <div class="row">
+       <% @bins.each do |bin| %>
+         <div class="col-12">
+           <div class="card-product">
+             <div class="card-product-infos">
+               <h2 id = "card-title"> <%= bin.name %> </h2>
+               <p class="card-description"> <%= bin.address %></p>
+             </div>
+           </div>
+         <%= cl_image_tag bin.photo, alt: "Photo costume", height: 100, crop: :fill, gravity: :north %>
+         </div>
+       <% end %>
+     </div>
+  </div>
+  <div class="map-bin-container">
+    <div class="button-container">
+      
+      <div class="row">
        <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+          <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
            </div>
          <% end %>
          <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
