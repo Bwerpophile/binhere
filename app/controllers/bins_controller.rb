@@ -1,6 +1,7 @@
 class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+
   def index
     if params[:bin_type].present?
       @bins = Bin.where(kind: params[:bin_type])
@@ -34,10 +35,23 @@ class BinsController < ApplicationController
       }
   end
 
+  def bin_kind
+    case bin_type
+      when bin.king == "verre"
+        "glass_color"
+      when bin_kind == "papier"
+        "paper_color"
+      when bin_kind == "plastique"
+        "plastique_color"
+      when bin_kind == "menager"
+        "menager_color"
+      end
+  end
+
   private
 
   def bin_params
-    params.require(:bin).permit(:name, :id)
+    params.require(:bin).permit(:name, :id, :address, :photo, :bin_type)
   end
 end
 
