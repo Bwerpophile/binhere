@@ -147,7 +147,7 @@ glassbin3 = Bin.create!(
 )
 
 glassbin4 = Bin.create!(
-  photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
+  photo: File.open(Rails.root.join('db/fixtures/bins/container1.jpg')),
   kind: 'verre',
   name: 'Gwendolyn',
   address: '6 Allée de la Maison Rouge, 44000 Nantes',
