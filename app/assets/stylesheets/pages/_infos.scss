@@ -1,0 +1,19 @@
+.info-page {
+  display:flex;
+  flex-direction: row;
+
+}
+.image-info {
+  margin-right: 30px;
+  height : 500px;
+  justify-content: center;
+  align-item: center;
+  display: flex;
+  margin-bottom : 200px;
+}
+
+.image-info img {
+  height : 450px;
+  width: 550px;
+}
+
