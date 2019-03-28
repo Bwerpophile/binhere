@@ -12,13 +12,13 @@
           <br>
           <p> Choisissez votre déchet</p>
 
-          <div class="cards">
+          <div class="cards-homepage">
 
               <%= link_to bins_path(bin_type: "verre") do %>
-              <div class="card-background" id="verre" >
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');">
+              <div class="card-background-homepage" id="verre" >
+                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');">
                 </div>
-                <div class="card-name">
+                <div class="card-name-homepage">
                   <h5 id="type-verre"> Verre </h5>
                 </div>
               </div>
@@ -26,40 +26,40 @@
               <% end %>
 
               <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-              <div class="card-background" id="plastique" >
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');">
+              <div class="card-background-homepage" id="plastique" >
+                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');">
                 </div>
-                <div class="card-name">
+                <div class="card-name-homepage">
                   <h5 id="type-plastique"> Plastique </h5>
                 </div>
               </div>
               <% end %>
 
               <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-              <div class="card-background" id="carton" >
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');">
+              <div class="card-background-homepage" id="carton" >
+                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');">
                 </div>
-                <div class="card-name">
+                <div class="card-name-homepage">
                   <h5 id="type-carton"> Carton </h5>
                 </div>
               </div>
               <% end %>
 
               <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
-              <div class="card-background" id="menagere" >
-                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
+              <div class="card-background-homepage" id="menagere" >
+                 <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
                 </div>
-                <div class="card-name">
+                <div class="card-name-homepage">
                   <h5 id="type-menagere"> Poubelles ménagères </h5>
                 </div>
               </div>
               <% end %>
 
               <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
-              <div class="card-background" id="plus" >
-                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
+              <div class="card-background-homepage" id="plus" >
+                 <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
                 </div>
-                <div class="card-name">
+                <div class="card-name-homepage">
                   <h5 id="type-plus"> Plus de déchets </h5>
                 </div>
               </div>
