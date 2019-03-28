@@ -11,7 +11,7 @@ gem 'puma'
 gem 'rails', '5.2.2.1'
 gem 'redis'
 gem 'faker'
-
+gem 'geocoder'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
@@ -31,5 +31,4 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'carrierwave', '~> 1.2'
-
 end
