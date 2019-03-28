@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 50px 0;
   height: 850px;
   display: flex;
 }
@@ -28,5 +28,16 @@
 }
 
 #name2 {
+  font-size: 100px;
   font-family: 'lato', sans-serif;
+  color:white
+}
+
+.title {
+  display:flex;
+  align-item:left;
+}
+
+.slogan {
+  font-family: 'karla', sans-serif;
 }
