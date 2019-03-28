@@ -1,26 +1,66 @@
-<div class="container info-page">
-    <div class="info-titre">
-      <h1> <strong>Informations sur le tri à Nantes </strong> </h1>
+  <div class="container">
+    <div class="info-page">
+
+     <div class= "image-info"> <%= image_tag "image_de_nantes.jpg" %> </div>
+
+      <div class="info-text">
+        <h1> <strong>Informations sur le tri à Nantes </strong> </h1>
+
+        <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Poubelle bleue
+        </button>
+      </h5>
     </div>
-    <br>
-    <div class="info-content">
-      <h2>Les modes de collecte à Nantes et en métropole </h2>
-      <p> <h3>Les déchets recyclabes </h3>
-      Les déchets recyclabes sont à déposer dans les bacs et sacs jaunes.
 
-      papier/carton : briques vides, emballages en carton plat, cartonnettes, tous les papiers.
-      Veiller à ce que les contenants soient bien vidés, sans film plastique et les papiers non souillés.
-      plastiques : bouteilles et flacons en plastique avec les bouchons (bouteilles d'eau, de lait, de vinaigre, d'huile alimentaire, flacons de lessive, de produits d'entretien, de savon...)
-      métal : barquettes, canettes de soda, boîtes de conserve, bouteilles de sirop, aérosols...
-
-      <h3>Les déchets non recyclabes </h3>
-      <p>Les autres déchets dits ordures ménagères sont à déposer dans les bacs et sacs bleus car non recyclables.
-
-      sacs et pots en plastique (sacs de supermarché, pots de yaourts)
-      barquettes en plastique ou en polystyrène, couches culottes ou autres textiles sanitaires (coton, mouchoir, essuie-tout...) </p>
-
-
-      </p>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Il s’agit des déchets non dangereux et non recyclables qui rentrent facilement dans votre bac. Ils ne sont pas issus d’activités spécifiques (ex : un matériau ou un objet issus de la déconstruction, de la mécanique…).
+        Ces déchets sont collectées en porte à porte avec quelques exceptions telles que le quartier de Trentemoult où ont été implantées des colonnes enterrées. Les déchets ménagers sont collectés en bacs pour des raisons d’hygiène et de sécurité des agents de collecte. La collecte s’effectue 1 à 2 fois selon les communes ou quartiers de Nantes Métropole.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Poubelle verte
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Bouteilles
+        <br>
+        Bocaux
+        <br>
+        Cristal
+        <br>
+        Flacons
+        <br>
+        Gobelets
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Poubelle jaune
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+       Il s’agit des bouteilles et flacons en plastique, des papiers, des cartons et briques alimentaires, des emballages métalliques : annuaire, baril de lessive, barquette aluminium, boîte de conserve, boîte à oeufs en carton, bombe aérosol, bombe mousse à raser, bouteille d'huile plastique, bouteille en plastique, bouteille produit ménager vide, brique alimentaire, cahier, canette, carton, enveloppe, flacon produit ménager vide, flacon en plastique, journaux, livre, magazine, revue, papier, sac en papier...
+      </div>
     </div>
   </div>
 </div>
+
+      </div>
+    </div>
+  </div>
+
