@@ -1,10 +1,13 @@
-
-<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
-<div class="form-container">
+<div class="form-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/grass.jpg);">
   <div class="formulaire">
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <h2>Log in</h2>
+    <div class="signuplogo">
+      <%= image_tag "binhere_logo_blue.png", class:"logotop" %>
+      <h2>Se connecter</h2>
+    </div>
+
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
       <div class="form-inputs">
         <%= f.input :email,
                     required: false,
@@ -16,19 +19,10 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-
-      <div class="container-login100-form-btn">
-        <div class="wrap-login100-form-btn">
-          <div class="login100-form-bgbtn"></div>
-          <button class="login100-form-btn">
-            <div class="form-actions">
-              <%= f.button :submit, "Log in" %>
-            </div>
-          </button>
+          <div class="form-actions">
+            <%= f.button :submit, "Log in" %>
+          </div>
         </div>
-      </div>
-    <!-- <%= render "devise/shared/links" %> -->
-    <% end %>
-
   </div>
+    <% end %>
 </div>
