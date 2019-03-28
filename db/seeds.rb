@@ -29,45 +29,45 @@ victorine = User.create!(
 puts "Victorine is behind you ..."
 puts "Starting trashes creation ..."
 
-poubelle_papier1 = Bin.create!(
+poubelle_carton1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin1.jpg')),
-  kind: 'papier',
+  kind: 'carton',
   name: 'Mat',
   address: '14 Rue Beauregard, 44000 Nantes',
   latitude: 47.2134354,
   longitude: -1.5556044
 )
 
-poubelle_papier2 = Bin.create!(
+poubelle_carton2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin2.jpg')),
-  kind: 'papier',
+  kind: 'carton',
   name: 'Jor',
   address: '26 Rue Stanislas Baudry, 44400 Nantes',
   latitude: 47.2181645,
   longitude: -1.5430119
 )
 
-poubelle_papier3 = Bin.create!(
+poubelle_carton3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin3.jpg')),
-  kind: 'papier',
+  kind: 'carton',
   name: 'Sim',
   address: '7 Impasse Saint-Laurent, 44000 Nantes',
   latitude: 47.2183730,
   longitude: -1.5501451
 )
 
-poubelle_papier4 = Bin.create!(
+poubelle_carton4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin4.jpg')),
-  kind: 'papier',
+  kind: 'carton',
   name: 'Jim',
   address: '6 Place Aristide Briand, 44003 Nantes',
   latitude: 47.2177317,
   longitude: -1.5633201
 )
 
-poubelle_papier5 = Bin.create!(
+poubelle_carton5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin5.jpg')),
-  kind: 'papier',
+  kind: 'carton',
   name: 'Jem',
   address: '13 Rue de la Juiverie, 44000 Nantes',
   latitude: 47.2154289,
