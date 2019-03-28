@@ -3,23 +3,19 @@ class BinsController < ApplicationController
 
 
   def index
-    if params[:bin_type].present?
-      @bins = Bin.where(kind: params[:bin_type])
-    else
-      redirect_to root_path
-    end
+    redirect_to root_path unless params[:bin_type].present?
 
-    @bins = Bin.all
+    @bins = Bin.where(kind: params[:bin_type])
+
+    @bins = @bins.near(params[:address], 0.6).limit(3) if params[:address].present?
+
     @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
       {
-        # lat: bin.latitude,
-        # lng: bin.longitude
         lat: bin.latitude,
         lng: bin.longitude
-        # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
-        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
+    # @locations = Bin.near([@bins.latitude, @bins.longitude], 5, :order => :distance)
   end
 
   def show
