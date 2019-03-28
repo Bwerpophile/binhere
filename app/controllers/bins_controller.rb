@@ -1,7 +1,6 @@
 class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   def index
     if params[:bin_type].present?
       @bins = Bin.where(kind: params[:bin_type])
@@ -9,7 +8,7 @@ class BinsController < ApplicationController
       redirect_to root_path
     end
 
-    @bins = Bin.all
+    @bins = Bin.where(kind: params[:bin_type])
     @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
       {
         # lat: bin.latitude,
@@ -37,14 +36,14 @@ class BinsController < ApplicationController
 
   def bin_kind
     case bin_type
-      when bin.king == "verre"
-        "glass_color"
+      when bin.kind == "verre"
+        "verre"
       when bin_kind == "papier"
-        "paper_color"
+        "papier"
       when bin_kind == "plastique"
-        "plastique_color"
+        "plastique"
       when bin_kind == "menager"
-        "menager_color"
+        "menager"
       end
   end
 
