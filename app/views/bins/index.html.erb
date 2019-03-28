@@ -1,50 +1,71 @@
-<!-- <div class="container-adress-button"> -->
-    <!-- <div class="address">
-      <input class="form-control" type="text" placeholder="Votre adresse...">
-    </div> -->
-    <!-- <div class="button-container">
-      <%#= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%#= image_url("glasspicto.png") %>');"></div>
-      <%# end %>
-      <%#= link_to bins_path(bin_type: "papier"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%#= image_url("glasspicto.png") %>');"></div>
-      <%# end %>
-      <%#= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%#= image_url("glasspicto.png") %>');"></div>
-      <%# end %>
-      <%#= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%#= image_url("glasspicto.png") %>');"></div>
-      <%# end %>
-    </div> -->
-<!-- </div> -->
 <div class="container-index">
   <div class="card-container">
-    <div class="address">
-      <input class="form-control" type="text" placeholder="Votre adresse...">
-    </div>
-    <h1>Poubelles proches de vous</h1>
-    <div class="row">
-      <% @bins.each do |bin| %>
-        <div class="col-12">
-          <div class="card-product-index">
-            <div class="<%= bin.kind %>"></div>
-              <div class="card-product-infos">
-               <h2 id = "card-title-index"> poubelle <%= bin.name %> </h2>
-               <p class="card-description-index"> <%= bin.address %></p>
-              </div>
-          </div>
+
+<%= form_tag bins_path, method: :get do %>
+  <div>
+    <%= text_field_tag :address,
+      params[:address],
+      placeholder: "Entrez votre adresse"
+    %>
+  </div>
+  <%=  hidden_field_tag :bin_type, params[:bin_type] %>
+<% end %>
+
+  <% if @bins.present?%>
+   <h1>Poubelles proches de vous</h1>
+     <div class="row">
+       <% @bins.each do |bin| %>
+       <%= link_to bin_path(bin.id) do %>
+         <div class="col-12">
+           <div class="card-product">
+             <div class="card-product-infos">
+               <h2 id = "card-title"> <%= bin.name %> </h2>
+               <p class="card-description"> <%= bin.address %></p>
+             </div>
+           </div>
+         <%= cl_image_tag bin.photo, alt: "Photo poubelle", height: 100, crop: :fill, gravity: :north %>
+         </div>
+       <% end %>
+      <% end %>
+     </div>
+  </div>
+  <div class="map-bin-container">
+    <div class="button-container">
+
+      <div class="row">
+       <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+          <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
         </div>
-     <% end %>
-   </div>
-   </div>
-   <div class="map-bin-container">
+      
       <div class="map-container">
-        <div id="map"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+   </div>
+    <% else %>
+      <h1>Pas de poubelle dans un rayon de 600metre autour de votre position</h1>
+      <div class="button_show">
+      <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
+        <div class="btn btn-primary" style="height: 55px; width: 130px;" href="#" role="button">retour recherche
         </div>
+        <% end %>
+    <% end %>  
       </div>
 </div>
-
-
- </div>
