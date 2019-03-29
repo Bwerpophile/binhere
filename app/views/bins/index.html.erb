@@ -1,4 +1,4 @@
-<div class="container-index">
+ <div class="container-index">
   <div class="container-adress-button">
     <div class="address">
       <h1>Poubelles proches de vous</h1>
@@ -10,45 +10,59 @@
         <%=  hidden_field_tag :bin_type, params[:bin_type] %>
      <% end %>
     </div>
-    
+
     <div class="button-container">
 
-      <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');"></div>
-      <% end %>
-       <%= link_to bins_path(bin_type: "papier"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');"></div>
-      <% end %>
-      <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');"></div>
-      <% end %>
-      <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-        <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');"></div>
-      <% end %>
+        <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+        <div class="unique-button-waste-container" id="verre">
+          <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');"></div>
+          <div class="card-name-homepage">
+          <h5 id="type-verre"> Verre </h5>
+          </div>
+        <% end %>
+        </div>
+
+        <div class="unique-button-waste-container" id="plastique">
+          <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
+          <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');"></div>
+          <% end %>
+        </div>
+        <div class="unique-button-waste-container" id="carton">
+          <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
+          <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');"></div>
+        <% end %>
+        </div>
+        <div class="unique-button-waste-container" id="menagere">
+        <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
+          <div class="button-waste" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');"></div>
+        <% end %>
+      </div>
     </div>
   </div>
-  
+
 <% if @bins.present?%>
   <div class="card-maps-container">
-    <div class="card-container">
+    <div class="card-container-index">
       <div class="row">
         <% @bins.each do |bin| %>
           <div class="col-12">
-            <div class="card-product-index">
-              <div class="<%= bin.kind %>"></div>
-                <div class="card-product-infos">
-                  <div class="poubelle-name-stars">
-                     <h2 id = "card-title-index"> Poubelle <%= bin.name %>  <i class="far fa-star fa-xs"></i></h2>
-                     <p class="bin-distance">250m</p>
+            <%= link_to bin_path(bin) do %>
+              <div class="card-product-index">
+                <div class="<%= bin.kind %>"></div>
+                  <div class="card-product-infos">
+                    <div class="poubelle-name-stars">
+                       <h2 id = "card-title-index"> Poubelle <%= bin.name %>  <i class="far fa-star"></i></h2>
+                       <p class="bin-distance">250m</p>
+                    </div>
+                    <div class="address-card">
+                       <p class="card-description-index"><%= (bin.address.split(','))[0] %>,</p>
+                       <p class="card-description-index"><%= (bin.address.split(','))[1] %></p>
+                    </div>
                   </div>
-                  <div class="address-card">
-                     <p class="card-description-index"><%= (bin.address.split(','))[0] %>,</p>
-                     <p class="card-description-index"><%= (bin.address.split(','))[1] %></p>
-                  </div>
-                </div>
-            </div>
+              </div>
           </div>
-        <% end %>
+            <% end %>
+        <%end%>
       </div>
     </div>
     <div class="map-bin-container-index">
@@ -58,16 +72,16 @@
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
-    </div>
+
 
     <% else %>
       <h1>Pas de poubelle dans un rayon de 600metre autour de votre position</h1>
       <div class="button_show">
       <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
         <div class="btn btn-primary" style="height: 55px; width: 130px;" href="#" role="button">retour recherche
-
         </div>
-        <% end %>
-    <% end %>  
-     </div>
-
+      <% end %>
+  <% end %>
+  </div>
+</div>
+</div>
