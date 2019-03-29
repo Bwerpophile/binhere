@@ -28,6 +28,7 @@ class BinsController < ApplicationController
         # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
         # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
+      console
   end
 
   def bin_kind
