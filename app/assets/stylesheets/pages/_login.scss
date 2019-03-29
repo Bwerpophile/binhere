@@ -1,3 +1,56 @@
-.container {
-  background-color: red;
+.form-container {
+  display: flex;
+}
+
+.imgbackground {
+  background-image: cover;
+}
+
+.signuplogo {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-form {
+}
+
+.logotop {
+  width: 160px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  // margin-right: 40px;
+  // margin-top: -50px;
+}
+
+.formulaire  {
+  opacity: 0.8;
+  margin: 100px 0 100px 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 50px;
+  background-color: #FFFFFF;
+  display: flex;
+  border-radius: 10px;
+}
+
+.form {
+ background-color:#FAFAFA;
+ padding:30px;
+ width:280px;
+}
+
+.form-inputs {
+  border: none;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.formfields {
+  justify-content: space-around;
+}
+
+.form-actions {
+  text-align: center;
 }

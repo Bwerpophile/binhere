@@ -1,35 +1,30 @@
-.verre{
-  color: green;
-  width: 20pxpx;
+.verre {
+  width: 20px;
   height: 100vh;
   background-color: green;
   background-size: cover;
-  flex: 0 0 5%;
+  flex: 0 0 1%;
 }
 
-.papier{
-  color: purple;
-  width: 20pxpx;
+.papier {
   height: 100vh;
-  background-color: green;
+  background-color: purple;
   background-size: cover;
-  flex: 0 0 5%;
+  flex: 0 0 1%;
 }
 
 .menager {
-  color: bleu;
-  width: 20pxpx;
+  width: 20px;
   height: 100vh;
-  background-color: green;
+  background-color: blue;
   background-size: cover;
-  flex: 0 0 5%;
+  flex: 0 0 1%;
 }
 
 .plastique {
-  color: jaune;
-  width: 20pxpx;
+  width: 20px;
   height: 100vh;
-  background-color: green;
+  background-color: #f8c420;
   background-size: cover;
-  flex: 0 0 5%;
+  flex: 0 0 1%;
 }
