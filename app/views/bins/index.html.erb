@@ -32,6 +32,26 @@
   <div class="card-maps-container">
     <div class="card-container">
       <div class="row">
+<<<<<<< HEAD
+       <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+          <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+         <%= link_to bins_path(bin_type: "verre"), class: 'card_link' do %>
+           <div class="col-sm-3 mapcards" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("glasspicto.png") %>');">
+           </div>
+         <% end %>
+        </div>
+
+=======
         <% @bins.each do |bin| %>
           <div class="col-12">
             <div class="card-product-index">
@@ -52,6 +72,7 @@
       </div>
     </div>
     <div class="map-bin-container-index">
+>>>>>>> cd1fce8b368a3ac50fce11e86f29064921431a8a
       <div class="map-container">
         <div id="map"
             data-markers="<%= @markers.to_json %>"
@@ -68,6 +89,13 @@
 
         </div>
         <% end %>
+<<<<<<< HEAD
+    <% end %>
+      </div>
+    </div>
+</div>
+=======
     <% end %>  
      </div>
 
+>>>>>>> cd1fce8b368a3ac50fce11e86f29064921431a8a
