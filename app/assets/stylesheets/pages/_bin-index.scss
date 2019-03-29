@@ -1,7 +1,15 @@
+body {
+  background-color: white;
+}
+
+
 .container-index {
   // display: flex;
 }
 
+.search-bar {
+  padding-top: 10px;
+}
 .container-adress-button {
   display: flex;
   flex: 0 0 100%;
@@ -17,6 +25,7 @@
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 15px;
+  justify-content: space-between;
 }
 
 .form-control {
@@ -33,6 +42,7 @@
   top: 0;
   position: relative;
   padding-top: 55px;
+  height: 750px;
 
 }
 
@@ -68,6 +78,7 @@ opacity: 1;
   display: flex;
   overflow: hidden;
   background-size: cover;
+  padding: 5px;
 }
 
 .button-waste img {
@@ -76,14 +87,6 @@ opacity: 1;
    min-height: 100%;
 }
 
-.unique-button-waste-container:hover {
-  opacity: 1;
-  background-color: rgba(193, 193, 193, 0.2);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  transition: 0.2s;
-  transform: scale(1.2);
-}
 
 .button-container {
   display: flex;
@@ -93,11 +96,27 @@ opacity: 1;
 }
 
 .unique-button-waste-container {
+  position: relative;
   justify-content: center;
   background-color: white;
   align-items: center;
   display: flex;
-  width: 13%;
+  box-shadow: 10px 10px 9px -9px rgba(0,0,0,0.75);
+}
+.unique-button-waste-container:hover {
+  opacity: 1;
+  background-color: rgba(193, 193, 193, 0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: 0.2s;
+  transform: scale(1.2);
+  & .card-name-homepage {
+    opacity: 1;
+    background-color: rgba(193, 193, 193, 0.8);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+  }
 }
 
 .bin-distance {
