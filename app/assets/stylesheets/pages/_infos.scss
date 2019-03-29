@@ -1,19 +1,81 @@
 .info-page {
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
 
 }
 .image-info {
   margin-right: 30px;
-  height : 500px;
+  margin-bottom : 40px;
+  margin-top: 30px;
   justify-content: center;
   align-item: center;
   display: flex;
-  margin-bottom : 200px;
 }
 
 .image-info img {
-  height : 450px;
-  width: 550px;
+  height : 400px;
+  width: 1000px;
 }
+
+.collapse-information {
+  margin-bottom: 400px;
+}
+
+.info-text {
+  display:flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#info-title {
+  display:flex;
+  align-item: center;
+  text-align: center;
+  justify-content:center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.card-info-header {
+
+}
+
+.card-info-title {
+  text-decoration: none;
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.card-info-button {
+  width: 10000px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  color:black;
+  text-decoration:none;
+}
+
+.card-info-button:hover {
+  text-decoration:none;
+}
+
+.dropdown img {
+  height: 30px;
+  width: 30px;
+}
+
+.imagebackground-info {
+  background-repeat: no-repeat;
+  background-position:100% 0%;
+}
+
+
+
 
