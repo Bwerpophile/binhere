@@ -18,6 +18,11 @@ body {
 
 .card-maps-container{
   display: flex;
+  flex: 0 0 100%
+}
+
+.card-container-index {
+  flex: 0 0 50%
 }
 
 .address {
@@ -133,7 +138,10 @@ opacity: 1;
   display: flex;
 }
 
-// BIN NOT FOUND
+
+.card-product-index {
+  flex: 0 0 50%;
+
 .notfoundcontainer {
   display: flex;
 }
