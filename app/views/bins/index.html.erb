@@ -90,7 +90,12 @@
 
 
     <% else %>
-      <h1>Pas de poubelle dans un rayon de 600metre autour de votre position</h1>
+    <div class="notfoundcontainer">
+      <div class="notfound">
+        <h3>Désolé, nous n'avons rien trouvé</h3>
+      </div>
+    </div>
+
       <div class="button_show">
       <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
         <div class="btn btn-primary" style="height: 55px; width: 130px;" href="#" role="button">retour recherche

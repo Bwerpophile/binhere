@@ -133,3 +133,23 @@ opacity: 1;
   display: flex;
 }
 
+// BIN NOT FOUND
+.notfoundcontainer {
+  display: flex;
+}
+
+.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 300px;
+  margin-top: 64px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  // padding: 30px;
+  color: white;
+  background-image: url(desert.jpg);
+  background-size: cover;
+
+}
