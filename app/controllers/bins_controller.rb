@@ -8,8 +8,6 @@ class BinsController < ApplicationController
 
     @bins = @bins.near(params[:address], 0.6).limit(3) if params[:address].present?
 
-    @bins = Bin.where(kind: params[:bin_type])
-
     @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
       {
         lat: bin.latitude,
