@@ -1,33 +1,40 @@
-  <div class="container">
-    <div class="info-page">
 
-     <div class= "image-info"> <%= image_tag "image_de_nantes.jpg" %> </div>
+<div class="imagebackground-info" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= image_url("nantes-lg.jpg") %>');">
+
+
+    <div class="info-page" >
 
       <div class="info-text">
-        <h1> <strong>Informations sur le tri à Nantes </strong> </h1>
+        <h1 id="info-title"> <strong> Informations sur le tri à Nantes </strong> </h1>
 
-        <div class="accordion" id="accordionExample">
+
+
+        <div class="accordion collapse-information" id="accordionExample">
   <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <div class="card-header card-info-header" id="headingOne">
+      <h5 class="mb-0 card-info-title">
+        <button class="btn btn-link card-info-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Poubelle bleue
+          <div class="dropdown"> <%= image_tag "dropdown.png" %> </div>
         </button>
+
       </h5>
+
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseOne" class="collapse show card-body-info-background" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body card-body-info">
         Il s’agit des déchets non dangereux et non recyclables qui rentrent facilement dans votre bac. Ils ne sont pas issus d’activités spécifiques (ex : un matériau ou un objet issus de la déconstruction, de la mécanique…).
         Ces déchets sont collectées en porte à porte avec quelques exceptions telles que le quartier de Trentemoult où ont été implantées des colonnes enterrées. Les déchets ménagers sont collectés en bacs pour des raisons d’hygiène et de sécurité des agents de collecte. La collecte s’effectue 1 à 2 fois selon les communes ou quartiers de Nantes Métropole.
       </div>
     </div>
   </div>
   <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+    <div class="card-header card-info-header" id="headingTwo">
+      <h5 class="mb-0 card-info-title">
+        <button class="btn btn-link collapsed card-info-button" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Poubelle verte
+          <div class="dropdown"> <%= image_tag "dropdown.png" %> </div>
         </button>
       </h5>
     </div>
@@ -45,10 +52,11 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+    <div class="card-header card-info-header" id="headingThree">
+      <h5 class="mb-0 card-info-title">
+        <button class="btn btn-link collapsed card-info-button" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Poubelle jaune
+          <div class="dropdown"> <%= image_tag "dropdown.png" %> </div>
         </button>
       </h5>
     </div>
@@ -56,11 +64,12 @@
       <div class="card-body">
        Il s’agit des bouteilles et flacons en plastique, des papiers, des cartons et briques alimentaires, des emballages métalliques : annuaire, baril de lessive, barquette aluminium, boîte de conserve, boîte à oeufs en carton, bombe aérosol, bombe mousse à raser, bouteille d'huile plastique, bouteille en plastique, bouteille produit ménager vide, brique alimentaire, cahier, canette, carton, enveloppe, flacon produit ménager vide, flacon en plastique, journaux, livre, magazine, revue, papier, sac en papier...
       </div>
+      </div>
     </div>
   </div>
 </div>
 
       </div>
     </div>
-  </div>
+</div>
 

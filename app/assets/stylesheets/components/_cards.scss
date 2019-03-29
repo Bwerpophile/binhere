@@ -59,7 +59,62 @@
   transition: .2s;
 }
 
+.card-product-infos {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-top: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    opacity:1;
+    background-color: #7CACDC;
+    border-radius-top-right: 5px;
+    border-radius-bottom-right: 5px;
+    color:white;
+    & .card-description-index, & .bin-distance {
+      color: white;
+    }
+  }
+}
+
+.card-container-index {
+  justify-content: space-between;
+  padding: 32px;
+}
+.card-product-index {
+  overflow: hidden;
+  height: 120px;
+  background: rgba(211, 232, 243, 0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  // border-left:25px solid #E5B31F;
+  margin-top: 20px;
+  // border: 1px black solid;
+  border-radius: 5px;
+
+}
+.card-product-index h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+#card-title-index {
+  align-self: flex-start;
+  font-family: lato;
+  font-size: 25px;
+}
+.card-description-index {
+  font-family: merryweather;
+  font-size: 20px;
+  color: #888888;
+  line-height: 0.5;
+  transition: .2s;
+}
+
 #card-description-index {
   align-items: flex-start;
   font-style: lato;
 }
+
