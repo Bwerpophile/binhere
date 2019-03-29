@@ -2,6 +2,15 @@
  display: flex;
 }
 
+.button_show img {
+  height: 40px;
+  width: 40px;
+  &:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  }
+}
+
 .card-container {
  justify-content: space-between;
  padding: 32px;
@@ -12,10 +21,19 @@
 
 }
 
+.card-container-show {
+  justify-content: space-between;
+  padding: 32px;
+  flex: 1 0 50%;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
 .button_show {
 
   display: flex;
-  margin-bottom: 75px;
   justify-content: space-between;
 }
 
