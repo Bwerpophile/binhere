@@ -131,7 +131,7 @@ glassbin1 = Bin.create!(
   address: 'Chaussée de la Madeleine, 44000 Nantes',
   latitude: 47.212563,
   longitude: -1.553234,
-  reviews: "",
+  reviews: "Aucun problème, poubelle propre !",
 )
 
 glassbin2 = Bin.create!(
