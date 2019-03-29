@@ -89,13 +89,22 @@
       </div>
 
 
+
     <% else %>
-      <h1>Pas de poubelle dans un rayon de 600metre autour de votre position</h1>
-      <div class="button_show">
-      <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
-        <div class="btn btn-primary" style="height: 55px; width: 130px;" href="#" role="button">retour recherche
+
+    <div class="button_notfound">
+    <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
+        <div class="back-button"> <%= image_tag "retour-arrière.png" %>
         </div>
-      <% end %>
+    </div>
+    <% end  %>
+    <div class="notfoundcontainer">
+      <div class="notfound">
+        <h3><strong>Désolé, nous n'avons rien trouvé dans les environs !</strong></h3>
+      </div>
+    </div>
+
+
   <% end %>
   </div>
 </div>

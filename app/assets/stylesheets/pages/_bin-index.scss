@@ -138,6 +138,36 @@ opacity: 1;
   display: flex;
 }
 
+
 .card-product-index {
   flex: 0 0 50%;
+
+.notfoundcontainer {
+  display: flex;
+}
+
+.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 300px;
+  margin-top: 64px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  // padding: 30px;
+  color: white;
+  background-image: url(desert.jpg);
+  background-size: cover;
+
+}
+
+.button_notfound img {
+  height: 40px;
+  width: 40px;
+  margin: 24px 0 -64px 32px;
+  &:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  }
 }
