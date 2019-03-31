@@ -1,17 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_url("binhere_banner_fleche_vide.png") %>');">
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0)), url('<%= image_url("garbage") %>');">
 
 
   <div class="container">
     <div class="banner-box">
-          <div class= "title">
-          <h1 id="name"> <strong> BIN </strong> </h1>
-          <h1 id="name2" > <strong>here? </strong> </h1>
+      <div class="title-container">
+        <div class= "title">
+          <h1 id="name"> <strong> </strong> </h1>
+          <h1 id="name2" > <strong></strong> </h1>
           </div>
-          <p id="slogan"> <i> Triez où vous vivez, quand vous voulez, sans vous tromper. </i> </p>
-          <br>
-          <br>
-          <p> Choisissez un déchet : </p>
+          <div>
+           <p id="call-to-action"> Trouvez où jeter <br></p><p id="vos-dechets"> vos déchets !</p>
+            <p id="slogan">
+              Bin here est une application de géolocalisation des poubelles, choisissez votre déchet et nous vous trouvons les poubelles appropriées autour de vous.
+             <!--  Triez où vous vivez,<br>
+             quand vous voulez,<br>
+             sans vous tromper. --></p>
+          </div>
+        </div>
 
+          <!-- <p> Choisissez un déchet : </p> -->
           <div class="cards-homepage">
 
               <%= link_to bins_path(bin_type: "verre") do %>

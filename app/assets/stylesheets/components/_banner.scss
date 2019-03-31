@@ -2,8 +2,9 @@
   background-size: cover;
   background-position: center;
   padding: 50px 0;
-  height: 850px;
+  height: 800px;
   display: flex;
+  background-color: #7CACDC;
 }
 
 .banner h1 {
@@ -17,7 +18,7 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -38,6 +39,29 @@
   align-item:left;
 }
 
-.slogan {
-  font-family: 'karla', sans-serif;
+#slogan {
+  font-family: poppins;
+  // font-size: 2em;
+  color: white;
+  // line-height: 70px;
+  padding-top: 0px;
+  width: 620px;
+}
+
+#call-to-action {
+   font-family: poppins;
+  font-size: 4em;
+  color: white;
+  font-weight: bolder;
+  line-height: 70px;
+}
+
+#vos-dechets {
+    font-family: poppins;
+  font-size: 4em;
+  color: white;
+  font-weight: bolder;
+  line-height: 70px;
+  color: #eeb111;
+
 }
