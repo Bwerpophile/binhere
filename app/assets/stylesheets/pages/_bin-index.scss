@@ -4,34 +4,28 @@ body {
 
 
 .container-index {
-  // display: flex;
+  display: flex;
 }
 
-.search-bar {
-  padding-top: 10px;
-}
-.container-adress-button {
-  //display: flex;
+.container-address-button {
+  display: flex;
   flex: 0 0 100%;
   justify-content: space-between;
+  margin-top: 32px;
 }
 
 .card-maps-container{
   display: flex;
-  flex: 0 0 100%
-}
-
-.card-container-index {
-  flex: 0 0 50%
+  flex: 0 0 100%;
+  margin-left: 24px;
 }
 
 .address {
-  flex : 0 0 50%;
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 15px;
   justify-content: space-between;
-  width: 50%;
+  width: 80%;
 }
 
 .form-control {
@@ -42,12 +36,10 @@ body {
 .map-bin-container-index {
   // background-color: red;
   // display: sticky;
-  flex: 0 0 50%;
-  padding: 32px;
+  padding: 0 32px;
   position: sticky;
   top: 0;
   position: relative;
-  padding-top: 55px;
   height: 750px;
 
 }
@@ -66,6 +58,7 @@ height: 100%;
   left: 0;
 }
 
+
 .mapcards {
   max-width: 100%;
   max-height: 100%;
@@ -78,28 +71,13 @@ height: 100%;
 opacity: 1;
 }
 
-.button-waste {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  overflow: hidden;
-  background-size: cover;
-  padding: 5px;
-}
 
-.button-waste img {
-   object-fit: cover;
-   min-width: 100%;
-   min-height: 100%;
-}
-
-
-.button-container {
+.button-container-index {
   display: flex;
   flex: 0 0 50%;
-  padding: 0 32px;
-  padding-top: 32px;
-  width: 50%
+  padding: 22px 18px;
+  justify-content: flex-end;
+
 }
 
 .unique-button-waste-container {
@@ -173,4 +151,34 @@ opacity: 1;
   transition: 0.4s;
   transform: scale(1.2);
   }
+}
+
+.poubelle-image {
+  flex: 0 0 100%;
+  background-image: cover;
+}
+
+.poubelle-image-cl {
+  width: 100%;
+  height: 11.5em;
+}
+
+.around-bin-text {
+  font-family: poppins;
+  font-size: 35px;
+  padding-top: 4px;
+  padding-left: 12px;
+  margin-top: 30px;
+  margin-left: 32px;
+  justify-content: center;
+  background-color: #eeb111;
+  width: 40%;
+  height: 5%;
+  padding-bottom: 29px;
+
+}
+
+.map-boutons {
+  flex: 0 0 36%;
+  padding-top:  108px;
 }

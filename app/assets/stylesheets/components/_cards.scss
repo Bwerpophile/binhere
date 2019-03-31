@@ -23,7 +23,7 @@
 
 .card-container-index {
   justify-content: space-between;
-  padding: 32px;
+  padding-left: 32px;
   a:hover {
     text-decoration: none;
   }
@@ -78,10 +78,6 @@
   }
 }
 
-.card-container-index {
-  justify-content: space-between;
-  padding: 32px;
-}
 .card-product-index {
   overflow: hidden;
   height: 120px;
@@ -121,7 +117,7 @@
 .address h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    font-family: lato;
+    font-family: poppins;
     font-weight: 500;
     line-height: 1.2;
 }
