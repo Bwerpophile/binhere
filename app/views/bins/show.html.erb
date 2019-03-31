@@ -1,51 +1,89 @@
-<div class="container-index">
+<div class="container-show">
+  <!-- button_show -->
+  <div class="poubelle-infos">
+    <div class="bin_name">
+      <h1>Poubelle <%= @bin.name %></h1>
+    </div>
+    <div  class="bin_address">
+      <p> <%= @bin.address %></p>
+    </div>
+   <!-- Inserer une info -->
+  </div>
 
+  <div class="reviewsmap">
+    <!-- ------------------ -->
 
-  <div class="card-maps-container">
-    <div class="card-container-show">
-      <div class="button_show">
-        <%=  link_to bins_path(bin_type: @bin.kind) do %>
-          <div class="back-button"> <%= image_tag "retour-arrière.png" %>
+    <div class="container">
+      <div class="row customer-reviews">
+         <div class="col-md-6 column">
+          <div class="inner-box">
+            <h3> User_name </h3>
+            <p class="date">14 June</p>
+            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
+          </p>
           </div>
-        <% end  %>
+        </div>
+        <div class="col-md-6 column">
+          <div class="inner-box">
+            <h3> User_name </h3>
+            <p class="date">26 April</p>
+            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
+          </p>
+          </div>
+        </div>
+         <div class="col-md-6 column">
+          <div class="inner-box">
+            <h3> User_name </h3>
+            <p class="date">18 March</p>
+            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
+          </p>
+          </div>
+        </div>
+    <div class="col-md-6 column">
+          <div class="inner-box">
+            <h3> User_name </h3>
+            <p class="date">31 March</p>
+            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
+          </p>
+          </div>
+        </div>
+    <div class="col-md-6 column">
+          <div class="inner-box">
+            <h3> User_name </h3>
+            <p class="date">18 October</p>
+            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
+          </div>
+        </div>
+
+     </div>
+    </div>
+    <!-- <div class="reviews">
+      <h1>Avis</h1>
+      <div class="reviewtest">
+        ----------
+        <h3>Bernard</h3>
+        <p>Poubelle méga sale, j'ai gerbé trois fois, merci BinHere ! </p>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="card-product-index">
-            <div class="<%= @bin.kind %>"></div>
-              <div class="card-product-infos">
-                <div class="poubelle-name-stars">
-                  <h2 id = "card-title-index" class="mb-3"> Poubelle <%= @bin.name %>
-                </div>
-                <div class="address-card">
-                  <p class="card-description-index"><%= (@bin.address.split(','))[0] %>,</p>
-                  <p class="card-description-index"><%= (@bin.address.split(','))[1] %></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="card-product-index">
-                <div class="card-product-infos">
-                  <div class="address-card">
-                    <p class="card-description-index"><%= @bin.reviews %></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="map-bin-container-index">
-          <div class="map-container">
-            <div id="map"
-            data-markers="[<%= @marker.to_json %>]"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
-          </div>
-        </div>
+      <div class="reviewtest">
+        ----------
+        <h3>Bernard</h3>
+        <p>Poubelle méga sale, j'ai gerbé trois fois, merci BinHere ! </p>
       </div>
+      <div class="reviewtest">
+        ----------
+        <h3>Bernard</h3>
+        <p>Poubelle méga sale, j'ai gerbé trois fois, merci BinHere ! </p>
+      </div>
+    </div> -->
+    <div class="map-bin-container-index">
+      <div class="map-container">
+        <div id="map"
+        data-markers="[<%= @marker.to_json %>]"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
 
