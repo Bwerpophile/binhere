@@ -1,7 +1,7 @@
  <div class="container-index">
   <div class="container-adress-button">
     <div class="address">
-      <h1>Poubelles proches de vous</h1>
+      <h1>Il</h1>
       <div class="search-bar">
         <%= form_tag bins_path, method: :get do %>
           <div><%= text_field_tag :address,
@@ -12,6 +12,8 @@
        <% end %>
       </div>
     </div>
+
+    <%= @bins.length %>
 
     <div class="button-container">
 

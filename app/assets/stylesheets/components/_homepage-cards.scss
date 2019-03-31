@@ -1,17 +1,20 @@
-.banner {
-  background-color: #7CACDC;
+.banner-box {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 100px;
 }
+
 .cards-homepage {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
-  height: 300px;
+  height: 500px;
   width: 300px;
   margin-top: 10px;
   font-color: white;
   border-radius: 5px;
+  flex: 0 0 30%;
 }
-
 
 .card-category-homepage {
   max-width: 100%;
@@ -31,14 +34,18 @@
   position: relative;
 }
 
-
 .card-background-homepage:hover {
   transform: scale(1.2);
   transition: 0.4s;
 }
 
-
-
+//  body {
+//   background:url('garbage.jpg') no-repeat center center;
+//   background-size:cover;
+//   /* Workaround for some mobile browsers */
+//   min-height:100%;
+//   background-attachment: fixed;
+// }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
