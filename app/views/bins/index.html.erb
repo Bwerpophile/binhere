@@ -2,7 +2,7 @@
   <div class="container-adress-cards">
      <div class="map-boutons">
         <div class="title-bin-index">
-        <h1 class="around-bin-text">Poubelles autour de vous</h1>
+        <h1 class="around-bin-text">POUBELLES AUTOUR DE VOUS</h1>
         </div>
           <div class="button-container-index">
 
@@ -72,6 +72,23 @@
           </div>
         </div>
       </div>
+    <% else %>
+    <div>
+      <div class="button_notfound">
+        <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
+          <%= image_tag "retour-arrière.png" %>
+          <% end  %>
+      </div>
+
+
+      <div class="notfoundcontainer">
+        <div class="notfound">
+          <h3><strong>Désolé, nous n'avons rien trouvé dans les environs !</strong></h3>
+        </div>
+      </div>
+    </div>
+
+    <% end %>
   </div>
 
     <div class="map-bin-container-index">
@@ -82,22 +99,7 @@
         </div>
       </div>
     </div>
-
-    <% else %>
-
-    <div class="button_notfound">
-    <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
-        <div class="back-button"> <%= image_tag "retour-arrière.png" %>
-        </div>
-    </div>
-    <% end  %>
-    <div class="notfoundcontainer">
-      <div class="notfound">
-        <h3><strong>Désolé, nous n'avons rien trouvé dans les environs !</strong></h3>
-      </div>
-    </div>
-
-
-  <% end %>
 </div>
+
+
 

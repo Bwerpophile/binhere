@@ -16,11 +16,12 @@ body {
 .card-maps-container{
   display: flex;
   margin-left: 24px;
+  min-height: calc(100vh - 164px);
 }
 
-.container-address-cards {
+.container-adress-cards {
   flex: 0 0 63%;
-
+  min-height: calc(100vh - 164px);
 }
 
 .title-bin-index {
