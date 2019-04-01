@@ -36,7 +36,8 @@ poubelle_carton1 = Bin.create!(
   address: '14 Rue Beauregard, 44000 Nantes',
   latitude: 47.2134354,
   longitude: -1.5556044,
-  reviews: "Poubelle propre, vidée souvent."
+  reviews: ["Poubelle propre, vidée souvent.",
+            "D'habitude je me rend toujours à la poubelle plus au nord mais grâce a binhere j'ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci Bin here !!"],
 )
 
 poubelle_carton2 = Bin.create!(
@@ -46,7 +47,8 @@ poubelle_carton2 = Bin.create!(
   address: '26 Rue Stanislas Baudry, 44400 Nantes',
   latitude: 47.2181645,
   longitude: -1.5430119,
-  reviews: "Toujours blindée, un effort doit être fait, j'espère que BinHere peut faire bouger les choses !",
+  reviews: ["Toujours blindée, un effort doit être fait, j'espère que BinHere peut faire bouger les choses !",
+            "Beaucoup trop de gens utilise cette poubelle ! C'est parfois à croire que les éboueurs ne passe plus !"],
 )
 
 poubelle_carton3 = Bin.create!(
@@ -56,7 +58,8 @@ poubelle_carton3 = Bin.create!(
   address: '7 Impasse Saint-Laurent, 44000 Nantes',
   latitude: 47.2183730,
   longitude: -1.5501451,
-  reviews: "Poubelle pleine et non entretenue.",
+  reviews: ["Poubelle pleine et non entretenue.",
+            "Bon on m'a demandé de donner une review sur une poubelle, j'aime bien le concept, poubelle clean, lieu clean."],
 )
 
 poubelle_carton4 = Bin.create!(
@@ -66,7 +69,8 @@ poubelle_carton4 = Bin.create!(
   address: '6 Place Aristide Briand, 44003 Nantes',
   latitude: 47.2177317,
   longitude: -1.5633201,
-  reviews: "Poubelle bien entretenue, merci.",
+  reviews: ["Poubelle bien entretenue, merci.",
+            "Poubelle pleine et non entretenue."],
 )
 
 poubelle_carton5 = Bin.create!(
@@ -76,7 +80,8 @@ poubelle_carton5 = Bin.create!(
   address: '13 Rue de la Juiverie, 44000 Nantes',
   latitude: 47.2154289,
   longitude: -1.5530633,
-  reviews: "Rien à dire, poubelle propre et à proximité de chez moi :-)",
+  reviews: ["Rien à dire, poubelle propre et à proximité de chez moi :-)",
+            "D'habitude je me rend toujours à la poubelle plus au nord mais grâce a binhere j'ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci Bin here !!"],
 )
 
 poubelle_menagere1 = Bin.create!(
@@ -131,7 +136,8 @@ glassbin1 = Bin.create!(
   address: 'Chaussée de la Madeleine, 44000 Nantes',
   latitude: 47.212563,
   longitude: -1.553234,
-  reviews: "Aucun problème, poubelle propre !",
+  reviews: ["Poubelle bien entretenue, merci.",
+            "Poubelle pleine et non entretenue."],
 )
 
 glassbin2 = Bin.create!(
@@ -141,7 +147,8 @@ glassbin2 = Bin.create!(
   address: '10 Quai Turenne, 44000 Nantes',
   latitude: 47.212585,
   longitude: -1.555094,
-  reviews: "La poubelle déborde !",
+  reviews: ["Poubelle pleine et non entretenue.",
+            "Bon on m'a demandé de donner une review sur une poubelle, j'aime bien le concept, poubelle clean, lieu clean."],
 )
 
 glassbin3 = Bin.create!(
@@ -151,7 +158,8 @@ glassbin3 = Bin.create!(
   address: '128 Allée Brancas, 44000 Nantes',
   latitude: 47.213811,
   longitude: -1.556244,
-  reviews: "Poubelle bien desservie, mais dommage que le vide soit fait à 3h du matin..",
+  reviews: ["Poubelle bien desservie, mais dommage que le vide soit fait à 3h du matin..",
+            "Cette poubelle est nauséabonde, je ne recommande pas"],
 )
 
 glassbin4 = Bin.create!(
@@ -161,7 +169,8 @@ glassbin4 = Bin.create!(
   address: '6 Allée de la Maison Rouge, 44000 Nantes',
   latitude: 47.212944,
   longitude: -1.550890,
-  reviews: "Rien à dire, ce container n'est jamais plein à craquer.",
+  reviews: ["Rien à dire, poubelle propre et à proximité de chez moi :-)",
+            "D'habitude je me rend toujours à la poubelle plus au nord mais grâce a binhere j'ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci Bin here !!"],
 )
 
 glassbin5 = Bin.create!(
@@ -171,7 +180,8 @@ glassbin5 = Bin.create!(
   address: "1 Allée de l'île Gloriette, 44000 Nantes",
   latitude: 47.211347,
   longitude: -1.556855,
-  reviews: "Poubelle bien entretenue, le vide n'est pas fait durant la nuit, c'est un plus !",
+  reviews: ["Poubelle bien entretenue, le vide n'est pas fait durant la nuit, c'est un plus !",
+            "Et bien c'est une poubelle tout ce qu'il y a de plus basique, cependant des jeunes laisses leur bouteilles de verre au pied du container parfois"],
 )
 
 plasticbin1 = Bin.create!(
