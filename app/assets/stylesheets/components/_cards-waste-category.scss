@@ -8,7 +8,7 @@
 }
 
 #carton {
-  border-bottom:10px solid #f8c420;
+  border-bottom:10px solid #9a5a16 ;
 }
 
 #menagere {
@@ -34,7 +34,7 @@ border-bottom:10px solid black;
 }
 
 #type-carton {
-  color: #f8c420;
+  color: #9a5a16 ;
 }
 
 #type-menagere {
@@ -49,8 +49,11 @@ border-bottom:10px solid black;
   color: black;
 }
 
-// text-inside-card
+.card-background-homepage:hover {
+  background-color: white;
 
+}
+// text-inside-card
 .card-name-homepage {
   opacity: 0;
   position: absolute;
@@ -66,8 +69,9 @@ border-bottom:10px solid black;
 
 .card-background-homepage:hover .card-name-homepage{
   opacity: 1;
-  background-color: rgba(193, 193, 193, 0.4);
+  background-color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  transition: 0.4s;
+  transition: 0.2s;
+
 }

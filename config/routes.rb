@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+
   devise_for :users
   root to: 'pages#home'
 
+
+  resource :profile, only: [:show]
   resources :bins, only: [:index, :show] do
     resources :reviews, only: [:new, :create]
   end

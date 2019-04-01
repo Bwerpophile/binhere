@@ -1,0 +1,61 @@
+/* On mouse-over, add a deeper shadow */
+.card-profile:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.profile-reviews:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.profile-bins:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+
+.card-profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width:400px;
+  margin: auto;
+  text-align: center;
+  margin-left: 170px;
+  min-height: 500px;
+}
+.profile-reviews {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  min-height: 500px;
+}
+
+.profile-bins {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  margin-right: 170px;
+  min-height: 500px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.profile-infos {
+
+}
+.userinformation {
+  margin-top: 50px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.userinformation h1 {
+  color: #EEB111
+}
+.userinformation h2 {
+  color: #EEB111
+}
