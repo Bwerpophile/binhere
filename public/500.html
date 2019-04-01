@@ -5,14 +5,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    background-color: #C4C4C4;
+    color: #FFFFFF;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
   }
 
-  .rails-default-error-page div.dialog {
+  .btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #EEB111;
+  transition: background 0.3s ease;
+  }
+
+   .btn-flat:hover {
+    background: #f39331;
+    color: white;
+  }
+
+  a {
+    text-decoration:none;
+    color:white;
+  }
+
+/*  .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
     margin: 4em auto 0;
@@ -30,14 +48,14 @@
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
-
-  .rails-default-error-page h1 {
+*/
+  /*.rails-default-error-page h1 {
     font-size: 100%;
     color: #730E15;
     line-height: 1.5em;
-  }
+  }*/
 
-  .rails-default-error-page div.dialog > p {
+  /*.rails-default-error-page div.dialog > p {
     margin: 0 0 1em;
     padding: 1em;
     background-color: #F7F7F7;
@@ -50,17 +68,19 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  }*/
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="rails-default-error-page" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('binherehomeflechegrande.png');">
   <!-- This file lives in public/500.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1> ERREUR 500 </h1>
+      <p> Cette erreur vient de chez nous, nous faisons notre possible pour regler ce probleme. Veuillez nous excuser pour la gene occasionnée. </p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+     <button name="Retour a la page d'accueil" type="submit" class="btn btn-flat">
+      <p>  <a href="binhere.fr"> Retour a la page d'accueil </a> </p>
   </div>
 </body>
 </html>
