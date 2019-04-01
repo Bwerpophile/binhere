@@ -1,82 +1,33 @@
 <div class="container-show">
   <!-- button_show -->
-  <div class="poubelle-infos">
-    <div class="bin_name">
-      <h1>Poubelle <%= @bin.name %></h1>
-    </div>
-    <div  class="bin_address">
-      <p> <%= @bin.address %></p>
-    </div>
-   <!-- Inserer une info -->
+
+    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">Poubelle <%= @bin.name %></span></h1>
   </div>
 
-  <div class="reviewsmap">
-    <!-- ------------------ -->
 
-    <div class="container">
-      <div class="row customer-reviews">
-         <div class="col-md-6 column">
-          <div class="inner-box">
-            <h3> User_name </h3>
-            <p class="date">14 June</p>
-            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
-          </p>
-          </div>
-        </div>
-        <div class="col-md-6 column">
-          <div class="inner-box">
-            <h3> User_name </h3>
-            <p class="date">26 April</p>
-            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
-          </p>
-          </div>
-        </div>
-         <div class="col-md-6 column">
-          <div class="inner-box">
-            <h3> User_name </h3>
-            <p class="date">18 March</p>
-            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
-          </p>
-          </div>
-        </div>
-    <div class="col-md-6 column">
-          <div class="inner-box">
-            <h3> User_name </h3>
-            <p class="date">31 March</p>
-            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
-          </p>
-          </div>
-        </div>
-    <div class="col-md-6 column">
-          <div class="inner-box">
-            <h3> User_name </h3>
-            <p class="date">18 October</p>
-            <p class="text-justify">Poubelle méga sale, j'ai gerbé trois fois, merci BinHere !
-          </div>
-        </div>
+  <div class="profilreviewsmap">
+    <div class="profilreview">
 
-     </div>
+      <div class="profil">
+        <div class=" binphoto">
+          <%= cl_image_tag @bin.photo %>
+        </div>
+        <div class="binprofilinfos">
+          <h2><%= @bin.name %></h2>
+          <p><%= @bin.address %></p>
+          <p> Déchets : <%= @bin.kind %></p>
+        </div>
+      </div>
+
+      <div class="reviews">
+         <h1 id="avis">Avis</h1>
+
+      </div>
     </div>
-    <!-- <div class="reviews">
-      <h1>Avis</h1>
-      <div class="reviewtest">
-        ----------
-        <h3>Bernard</h3>
-        <p>Poubelle méga sale, j'ai gerbé trois fois, merci BinHere ! </p>
-      </div>
-      <div class="reviewtest">
-        ----------
-        <h3>Bernard</h3>
-        <p>Poubelle méga sale, j'ai gerbé trois fois, merci BinHere ! </p>
-      </div>
-      <div class="reviewtest">
-        ----------
-        <h3>Bernard</h3>
-        <p>Poubelle méga sale, j'ai gerbé trois fois, merci BinHere ! </p>
-      </div>
-    </div> -->
-    <div class="map-bin-container-index">
-      <div class="map-container">
+
+
+    <div class="map-show-container">
+      <div class="map-container-show">
         <div id="map"
         data-markers="[<%= @marker.to_json %>]"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -85,5 +36,4 @@
     </div>
   </div>
 </div>
-
 
