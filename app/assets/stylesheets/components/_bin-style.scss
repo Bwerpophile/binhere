@@ -1,45 +1,95 @@
+.non-active {
+  width: 120px;
+  height: 42px;
+  border: 3px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  text-align: center;
+  margin-right: 15px;
+  font-family: poppins;
+}
+
+.filter {
+  border: 3px solid;
+  text-align: center;
+  width: 120px;
+  height: 42px;
+  background-size: cover;
+  margin-right: 15px;
+  font-family: poppins;
+  color: white;
+}
+
+// Verre //
+
 .verre {
-  width: 120px;
-  height: 42px;
+  border-color: #46a84d;
+  color: #46a84d
+}
+
+.active.verre {
+  color: white;
   background-color: #46a84d;
-  background-size: cover;
-  margin-right: 15px;
-  font-family: poppins;
-  color: white;
 }
 
-
-.verre:active {
-    background-color: white;
-    color: black;
-  }
-
-.carton {
-  width: 120px;
-  height: 42px;
-  background-color: #f8c420;
-  background-size: cover;
-  margin-right: 15px;
-  font-family: poppins;
+.verre:hover {
   color: white;
+  background-color: #46a84d;
+  transform: scale(1.05);
 }
 
-.menager {
-  width: 120px;
-  height: 42px;
-  background-color: #002a6f;
-  background-size: cover;
-  margin-right: 15px;
-  font-family: poppins;
-  color: white;
-}
+// Plastique //
 
 .plastique {
-  width: 120px;
-  height: 42px;
-  background-color: #51C2D2;
-  background-size: cover;
-  margin-right: 15px;
-  font-family: poppins;
-  color: white;
+  color: #51C2D2;
+  border-color: #51C2D2;
 }
+
+.active.plastique {
+  color: white;
+  background-color: #51C2D2;
+}
+
+.plastique:hover {
+  color: white;
+  background-color: #51C2D2;
+  transform: scale(1.05);
+}
+
+// Carton //
+
+.carton {
+  color: #9a5a16;
+  border-color: #9a5a16;
+}
+
+.active.carton {
+  color: white;
+  background-color: #9a5a16;
+}
+
+.carton:hover {
+  color: white;
+  background-color: #9a5a16;
+  transform: scale(1.05);
+}
+
+// Menager //
+
+.menager {
+  color: #002a6f;
+  border-color: #002a6f;
+}
+
+.active.menager {
+  color: white;
+  background-color:#002a6f;
+}
+
+.menager:hover {
+  color: white;
+  background-color:#002a6f;
+  transform: scale(1.05);
+}
+

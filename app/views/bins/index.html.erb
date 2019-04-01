@@ -6,20 +6,25 @@
         </div>
           <div class="button-container-index">
 
+
+
+
+
+
             <%= link_to bins_path(bin_type: "verre") do %>
-              <div class="btn verre">Verre</div>
+              <div class="btn verre non-active <%= params[:bin_type] == "verre" ? "active filter" : nil%>">Verre</div>
             <% end %>
 
             <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-              <div class="btn plastique">Plastique</div>
+              <div class="btn plastique non-active <%= params[:bin_type] == "plastique" ? "active filter" : nil%>">Plastique</div>
             <% end %>
 
             <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-              <div class="btn carton">Carton</div>
+              <div class="btn carton non-active <%= params[:bin_type] == "carton" ? "active filter" : nil%>">Carton</div>
             <% end %>
 
             <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
-              <div class="btn menager">Ménager</div>
+              <div class="btn menager non-active <%= params[:bin_type] == "menager" ? "active filter" : nil%>">Ménager</div>
             <% end %>
           </div>
         </div>
