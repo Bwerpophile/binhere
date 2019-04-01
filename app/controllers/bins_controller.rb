@@ -32,19 +32,6 @@ class BinsController < ApplicationController
       }
   end
 
-  # def bin_kind
-  #   case bin_type
-  #   when bin.kind == "verre"
-  #     "verre"
-  #   when bin.kind == "papier"
-  #     "papier"
-  #   when bin.kind == "plastique"
-  #     "plastique"
-  #   when bin.kind == "menager"
-  #     "menager"
-  #   end
-  # end
-
   private
 
   def bin_params
