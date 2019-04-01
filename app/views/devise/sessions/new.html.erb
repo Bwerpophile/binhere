@@ -1,10 +1,9 @@
-<div class="form-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/grass.jpg);">
+<div class="form-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/garbage.jpg); background-size: cover;">
   <div class="formulaire">
 
-    <div class="signuplogo">
-      <%= image_tag "binhere_logo_blue.png", class:"logotop" %>
-      <h2>Se connecter</h2>
-    </div>
+
+      <h1 class="connexion"> <span class="highlighted highlighted-yellow">Se connecter</span></h1>
+
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
