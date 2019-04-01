@@ -20,17 +20,52 @@
     </div>
 
     <div class="reviews">
-      <h1 id="avis">Avis</h1>
+      <div class="container">
+        <div class="row customer-reviews">
+          <div class="col-md-6 column">
+            <div class="inner-box">
+            <%= simple_form_for [@bin, @review] do |f| %>
+            <%= f.input :name, label: 'Votre nom' %>
+            <%= f.input :description, label: 'Votre commentaire' %>
+            <div class="submit_button">
+              <%= f.submit value="salut" %><div class="add_review" > <%= image_tag "pen.png" %>
+                </div>
+            </div>
+              <% end %>
+            <div class="name_and_add">
+              <% if user_signed_in? %>
+                <div> <h3><%= 'Les avis' %> </h3> </div>
+              <% end %>
 
+            </div>
+                <div class="avis_show">
+                  <% if @bin.reviews.any? %>
+                    <% @reviews.each do |review|  %>
+                    <div class="hover_review">
+                      <div class="avis_name">
+                        <div> <strong><%= review.name %></strong></div>
+                      </div>
+                      <div class="descriptif_avis">
+                        <div><%= review.description  %></div>
+                        <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
+                      </div>
+                    </div>
+                    <% end  %>
+                  <% end  %>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
 
-  <div class="map-show-container">
-    <div class="map-container-show">
-      <div id="map"
-      data-markers="[<%= @marker.to_json %>]"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="map-show-container">
+      <div class="map-container-show">
+        <div id="map"
+        data-markers="[<%= @marker.to_json %>]"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
       </div>
     </div>
   </div>

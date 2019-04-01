@@ -157,3 +157,72 @@
   left: 0;
   width: 100%;
 }
+
+
+
+// IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+
+
+.customer-reviews {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .customer-reviews .column {
+    margin-bottom: 30px;
+  }
+  .customer-reviews .column .inner-box h3 .verified{
+    color: green;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 10px;
+  }
+  .customer-reviews .column .inner-box .date {
+    font-size: 18px;
+   font-weight: bold;
+  }
+  .customer-reviews .column .inner-box {
+    background-color: #f5f5f5;
+    padding: 15px;
+    min-height: 250px;
+  }
+  .customer-reviews .column h3 {
+    padding-bottom: 5px;
+  }
+  .name_and_add {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+  }
+  .descriptif_avis {
+    display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+  }
+  .add_review img {
+  height: 20px;
+  width: 20px;
+  &:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  }
+}
+ .add_review {
+  margin-left: 10px;
+ }
+.submit_button {
+  display: flex;
+}
+.hover_review {
+   &:hover {
+  background-color: white;
+  }
+}
+.card_review {
+  max-height: 20px;
+}
+.avis_show {
+  height: 150px;
+  overflow-y: scroll;
+}
