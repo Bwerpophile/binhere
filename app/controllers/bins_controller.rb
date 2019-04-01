@@ -19,6 +19,8 @@ class BinsController < ApplicationController
 
   def show
     @bin = Bin.find(params[:id])
+    @reviews = @bin.reviews
+    @review = Review.new
 
     @marker = {
         # lat: bin.latitude,
