@@ -5,6 +5,24 @@
   height: 21em;
   width: 15em;
   margin: 20px;
+    &:hover {
+      opacity:1;
+      background-color: #eeb111;
+      border-radius-top-right: 5px;
+      border-radius-bottom-right: 5px;
+      color: white;
+      transform: scale(1.1);
+      transition: 0.4s;
+    }
+    &:hover h2 {
+      color: white;
+    }
+    &:hover .card-trip-pricing {
+      color: white;
+    }
+    & .card-description-index, & .bin-distance {
+      color: white;
+    }
 }
 
 .card-trip > img {

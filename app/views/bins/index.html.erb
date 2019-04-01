@@ -1,20 +1,41 @@
  <div class="container-index">
   <div class="container-adress-cards">
-    <div class="title-bin-index">
-    <h1 class="around-bin-text">Poubelles autour de vous</h1>
-    </div>
-    <div class="container-address-button">
-      <div class="address">
-        <div class="search-bar">
-          <%= form_tag bins_path, method: :get do %>
-            <%= text_field_tag :address,
-                params[:address],
-                placeholder: "Saisissez votre adresse"%>
-            <%=  hidden_field_tag :bin_type, params[:bin_type] %>
-         <% end %>
+     <div class="map-boutons">
+        <div class="title-bin-index">
+        <h1 class="around-bin-text">Poubelles autour de vous</h1>
         </div>
-      </div>
-    </div>
+          <div class="button-container-index">
+
+            <%= link_to bins_path(bin_type: "verre") do %>
+              <div class="btn verre">Verre</div>
+            <% end %>
+
+            <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
+              <div class="btn plastique">Plastique</div>
+            <% end %>
+
+            <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
+              <div class="btn carton">Carton</div>
+            <% end %>
+
+            <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
+              <div class="btn menager">Ménager</div>
+            <% end %>
+          </div>
+        </div>
+
+          <div class="container-address-button">
+            <div class="address">
+              <div class="search-bar">
+                <%= form_tag bins_path, method: :get do %>
+                  <%= text_field_tag :address,
+                      params[:address],
+                      placeholder: "Saisissez votre adresse"%>
+                  <%=  hidden_field_tag :bin_type, params[:bin_type] %>
+               <% end %>
+              </div>
+            </div>
+          </div>
 
 
 
@@ -48,38 +69,14 @@
       </div>
   </div>
 
-    <div class="map-boutons">
-      <div class="button-container-index">
-        <%= link_to bins_path(bin_type: "verre") do %>
-          <div class="btn btn-primary verre">Verre</div>
-        <% end %>
-
-        <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-          <div class="btn btn-primary plastique">Plastique</div>
-        <% end %>
-
-        <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-          <div class="btn btn-primary carton">Carton</div>
-        <% end %>
-
-        <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
-          <div class="btn btn-primary menager">Ménager</div>
-        <% end %>
-      </div>
-      <div class="map-bin-container-index">
-        <div class="map-container">
-          <div id="map"
-              data-markers="<%= @markers.to_json %>"
-              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
+    <div class="map-bin-container-index">
+      <div class="map-container">
+        <div id="map"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
     </div>
-
-
-
-
-
 
     <% else %>
 
@@ -97,6 +94,5 @@
 
 
   <% end %>
-  </div>
 </div>
-</div>
+
