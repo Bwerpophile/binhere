@@ -1,58 +1,58 @@
  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0)), url('<%= image_url("garbage") %>');">
 
 
-  <div class="container">
-    <div class="banner-box">
-      <div class="title-container">
-        <div class= "title">
-          <h1 id="name"> <strong> </strong> </h1>
-          <h1 id="name2" > <strong></strong> </h1>
-          </div>
-          <div>
-           <p id="call-to-action"> Trouvez où jeter <br></p><p id="vos-dechets"> vos déchets !</p>
-            <p id="slogan">
-              Bin here est une application de géolocalisation des poubelles, choisissez votre déchet et nous vous trouvons les poubelles appropriées autour de vous.
-             <!--  Triez où vous vivez,<br>
-             quand vous voulez,<br>
-             sans vous tromper. --></p>
-          </div>
-        </div>
+ <div class="container">
+   <div class="banner-box">
+     <div class="title-container">
+       <div class= "title">
+         <h1 id="name"> <strong> </strong> </h1>
+         <h1 id="name2" > <strong></strong> </h1>
+         </div>
+         <div>
+          <p id="call-to-action"> Trouvez où jeter <br></p><p id="vos-dechets"> vos déchets !</p>
+           <p id="slogan">
+             Bin here est une application de géolocalisation des poubelles, choisissez votre déchet et nous vous trouvons les poubelles appropriées autour de vous.
+            <!--  Triez où vous vivez,<br>
+            quand vous voulez,<br>
+            sans vous tromper. --></p>
+         </div>
+       </div>
 
-          <!-- <p> Choisissez un déchet : </p> -->
-          <div class="cards-homepage">
+         <!-- <p> Choisissez un déchet : </p> -->
+         <div class="cards-homepage">
 
-              <%= link_to bins_path(bin_type: "verre") do %>
-              <div class="card-background-homepage" id="verre" >
-                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');">
-                </div>
-                  <div class="card-name-homepage">
-                    <h5 id="type-verre"> Verre </h5>
-                  </div>
-              </div>
+             <%= link_to bins_path(bin_type: "verre") do %>
+             <div class="card-background-homepage" id="verre" >
+               <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille_glass.png") %>');">
+               </div>
+                 <div class="card-name-homepage">
+                   <h5 id="type-verre"> Verre </h5>
+                 </div>
+             </div>
 
-              <% end %>
+             <% end %>
 
-              <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-              <div class="card-background-homepage" id="plastique" >
-                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');">
-                </div>
-                <div class="card-name-homepage">
-                  <h5 id="type-plastique"> Plastique </h5>
-                </div>
-              </div>
-              <% end %>
+             <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
+             <div class="card-background-homepage" id="plastique" >
+               <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_teille.png") %>');">
+               </div>
+               <div class="card-name-homepage">
+                 <h5 id="type-plastique"> Plastique </h5>
+               </div>
+             </div>
+             <% end %>
 
-              <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-              <div class="card-background-homepage" id="carton" >
-                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');">
-                </div>
-                <div class="card-name-homepage">
-                  <h5 id="type-carton"> Carton </h5>
-                </div>
-              </div>
-              <% end %>
+             <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
+             <div class="card-background-homepage" id="carton" >
+               <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_boite.png") %>');">
+               </div>
+               <div class="card-name-homepage">
+                 <h5 id="type-carton"> Carton </h5>
+               </div>
+             </div>
+             <% end %>
 
-              <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
+              <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
               <div class="card-background-homepage" id="menagere" >
                  <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_poubelle.png") %>');">
                 </div>
@@ -62,18 +62,16 @@
               </div>
               <% end %>
 
-              <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
-              <div class="card-background-homepage" id="plus" >
-                 <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_plusbordeau.png") %>');">
-                </div>
+             <%= link_to bins_path(bin_type: "menagere"), class: 'card_link' do %>
+             <div class="card-background-homepage" id="plus" >
+                <div class="card-category-homepage" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_url("picto_plusbordeau.png") %>');">
+
+                  </div>
                 <div class="card-name-homepage">
                   <h5 id="type-plus"> Plus de déchets </h5>
                 </div>
               </div>
               <% end %>
-
-
-
             </div>
         </div>
     </div>
