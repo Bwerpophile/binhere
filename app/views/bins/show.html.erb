@@ -2,38 +2,38 @@
   <!-- button_show -->
 
     <h1 class="bin_name"> <span class="highlighted highlighted-yellow">Poubelle <%= @bin.name %></span></h1>
-  </div>
+</div>
 
 
-  <div class="profilreviewsmap">
-    <div class="profilreview">
+<div class="profilreviewsmap">
+  <div class="profilreview">
 
-      <div class="profil">
-        <div class=" binphoto">
-          <%= cl_image_tag @bin.photo %>
-        </div>
-        <div class="binprofilinfos">
-          <h2><%= @bin.name %></h2>
-          <p><%= @bin.address %></p>
-          <p> Déchets : <%= @bin.kind %></p>
-        </div>
-      </div>
-
-      <div class="reviews">
-        <h1 id="avis">Avis</h1>
-
+    <div class="profil">
+      <div class=" binphoto">
+        <%= cl_image_tag @bin.photo %>
+      </div>s
+      <div class="binprofilinfos">
+        <h2><%= @bin.name %></h2>
+        <p><%= @bin.address %></p>
+        <p> Déchets : <%= @bin.kind %></p>
       </div>
     </div>
 
+    <div class="reviews">
+      <h1 id="avis">Avis</h1>
 
-    <div class="map-show-container">
-      <div class="map-container-show">
-        <div id="map"
-        data-markers="[<%= @marker.to_json %>]"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
+    </div>
+  </div>
+
+
+  <div class="map-show-container">
+    <div class="map-container-show">
+      <div id="map"
+      data-markers="[<%= @marker.to_json %>]"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
   </div>
 </div>
+
 
