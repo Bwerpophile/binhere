@@ -15,6 +15,7 @@
 .image-info img {
   height : 400px;
   width: 1000px;
+  font-family: popins;
 }
 
 .collapse-information {
@@ -40,6 +41,7 @@
   border-radius: 5px;
   margin-left: 100px;
   margin-right: 100px;
+  color: white;
 }
 
 .card-info-header {
@@ -64,16 +66,18 @@
 
 .card-info-button:hover {
   text-decoration:none;
+  color: #EEB111;
 }
 
 .dropdown img {
   height: 30px;
   width: 30px;
+
 }
 
 .imagebackground-info {
   background-repeat: no-repeat;
-  background-position:100% 0%;
+  background-position:100%;
 }
 
 
