@@ -45,7 +45,7 @@
   flex: 0 0 30%;
   background-color: white;
   margin: 0 8px 0 32px;
-  height: 600px;
+  max-height: 600px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -109,8 +109,16 @@
 }
 //////////
 // ---BUTTON---
-.button_title {
 
+.button_retour img {
+  background-image: #EEB111;
+  height: 40px;
+  width: 40px;
+  margin: 16px 0px -16px 64px;
+  &:hover {
+    transition: 0.4s;
+    transform: scale(1.2);
+  }
 }
 
 .button_show img {
