@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :bins
+  has_many :reviews, dependent: :destroy
   mount_uploader :avatar, PhotoUploader
 
   def full_name

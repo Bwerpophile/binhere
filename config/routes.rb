@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resource :profile, only: [:show]
   resources :bins, only: [:index, :show] do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :destroy]
   end
 
   get '/infos', to: 'pages#infos'

@@ -2,7 +2,7 @@
 <div class="container-show">
   <!-- button_show -->
   <div>
-    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE <%= @bin.name.upcase %></span></h1>
+    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name.upcase %></span></h1>
     <div class="button_retour">
       <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
       <%= image_tag "retour-arrière.png" %>
@@ -32,7 +32,7 @@
           <div class="inner-box">
             <h2 style="color: #EEB111;"><strong>Partagez votre avis</strong></h2>
             <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
-            <%= f.input :name, label: 'Votre nom' %>
+            <%= f.input :name, label: 'Objet' %>
             <%= f.input :description, label: 'Votre commentaire' %>
               <div class="submit_button">
                 <%= f.submit "Ajouter" %>
@@ -43,16 +43,24 @@
             <% if @bin.reviews.any? %>
             <% @reviews.each do |review|  %>
               <div class="hover_review">
+
                 <div class="avis_name">
-                  <p><strong><%= review.name %></strong><p>
+                  <div class="avis_name_delete">
+                    <p><strong><%= review.name %></strong><p>
+                    <%= link_to bin_review_path(@bin, review), method: :delete do %>
+                    <%= image_tag "delete.png", width: 20, height: 20 %>
+                    <% end  %>
+                  </div>
                 </div>
+
+                <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
                 <div class="descriptif_avis">
                   <div><%= review.description  %></div>
-                  <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
                 </div>
+
               </div>
-            <% end  %>
-            <% end  %>
+            <% end %>
+            <% end %>
           </div>
           </div>
         </div>
@@ -76,3 +84,4 @@
 
 
 
+<!-- Delete by Thomas Meerseman from the Noun Project -->
