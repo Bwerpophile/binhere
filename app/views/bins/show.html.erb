@@ -36,7 +36,7 @@
             <%= f.input :description, label: 'Votre commentaire' %>
               <div class="submit_button">
                 <%= f.submit "Ajouter" %>
-              <div class="add_review"><%= image_tag "pen.png" %></div>
+              <div class="add_review"></div>
               </div>
             <% end %>
           <div class="avis_show">
@@ -47,9 +47,6 @@
                 <div class="avis_name">
                   <div class="avis_name_delete">
                     <p><strong><%= review.name %></strong><p>
-                    <%= link_to bin_review_path(@bin, review), method: :delete do %>
-                    <%= image_tag "delete.png", width: 20, height: 20 %>
-                    <% end  %>
                   </div>
                 </div>
 
