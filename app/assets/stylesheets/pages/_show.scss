@@ -30,7 +30,6 @@
   font-family: poppins;
 }
 
-
 .profilreviewsmap {
   display: flex;
   padding: 32px;
@@ -39,13 +38,14 @@
 .profilreview {
   display: flex;
   flex: 0 0 50%;
+  height: 100%;
 }
 
 .profil {
   flex: 0 0 30%;
   background-color: white;
   margin: 0 8px 0 32px;
-  max-height: 600px;
+  // max-height: 400px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -75,8 +75,8 @@
 }
 
 .reviews {
-  padding: 0 16px;
-  flex: 0 0 50%;
+  padding: 0 32px;
+  flex: 0 0 60%;
   background-color: white;
   margin: 0 32px 0 8px;
 }
@@ -147,7 +147,8 @@
 
 .mapcards {
   max-width: 100%;
-  max-height: 100%;
+  // max-height: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
   height:150px;
@@ -249,8 +250,8 @@ opacity: 1;
 
 .reviews_show {
   margin-top: 30px;
-   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-   height: 150px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 150px;
 }
 
 .card-product-show {
@@ -270,70 +271,55 @@ opacity: 1;
  margin: 0;
 }
 
+/// REVIEWS ///
+.reviews {
+  height: 100%;
+}
+
 .customer-reviews {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .customer-reviews .column {
-    margin-bottom: 30px;
-  }
-  .customer-reviews .column .inner-box h3 .verified{
-    color: green;
-    font-size: 14px;
-    font-weight: normal;
-    padding-left: 10px;
-  }
+  margin-top: 0px;
+  margin-bottom: 50px;
+  margin-left: -20px;
+  // height: 380px;
+}
+// .customer-reviews .column {
+//   margin-bottom: 30px;
+// }
 
-  .customer-reviews .column .inner-box .date {
-    font-size: 18px;
-   font-weight: bold;
-  }
-
-  .customer-reviews .column .inner-box {
-    background-color: #f5f5f5;
-    padding: 15px;
-    min-height: 250px;
-  }
-  .customer-reviews .column h3 {
-
-    padding-bottom: 5px;
-  }
-
-  .name_and_add {
-    margin-top: 20px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid;
-    display: flex;
-    justify-content: space-between;
-  }
-
-
-  .descriptif_avis {
-    display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-  }
-
-  .add_review img {
+.add_review {
+  margin: 8px;
+}
+.add_review img {
   height: 20px;
   width: 20px;
+}
+
+.customer-reviews .column .inner-box {
+  background-color: white;
+  padding: 15px;
+  min-height: 250px;
   &:hover {
-  transition: 0.4s;
-  transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    // border-top: solid 1px #EEB111;
+    // border-left: solid 1px #EEB111;
   }
 }
 
- .add_review {
-  margin-left: 10px;
- }
+.descriptif_avis {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
 .submit_button {
   display: flex;
 }
 
 .hover_review {
-   &:hover {
-  background-color: white;
+  padding: 8px 16px;
+  &:hover {
+    background-color: #e5e5e5;
+    padding: 8px 16px;
   }
 }
 
@@ -341,7 +327,11 @@ opacity: 1;
   max-height: 20px;
 }
 .avis_show {
-  height: 150px;
+  height: 200px;
   overflow-y: scroll;
 }
 
+.avis_name p {
+  color: #EEB111;
+  margin-bottom: -4px
+}
