@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_29_103232) do
+ActiveRecord::Schema.define(version: 2019_04_02_073826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(version: 2019_03_29_103232) do
     t.datetime "updated_at", null: false
     t.text "reviews"
     t.index ["user_id"], name: "index_bins_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.bigint "user_id"
+    t.bigint "bin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bin_id"], name: "index_reviews_on_bin_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +58,6 @@ ActiveRecord::Schema.define(version: 2019_03_29_103232) do
   end
 
   add_foreign_key "bins", "users"
+  add_foreign_key "reviews", "bins"
+  add_foreign_key "reviews", "users"
 end
