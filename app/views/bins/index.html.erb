@@ -63,7 +63,9 @@
                       </div>
 
                       <h3 class="card-trip-pricing">+ d'infos</h3>
-                       <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+                      <% if bin.user %>
+                        <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+                      <% end %>
                     </div>
                   </div>
                <% end %>
