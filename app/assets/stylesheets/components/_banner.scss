@@ -56,11 +56,22 @@
 }
 
 #vos-dechets {
-    font-family: poppins;
+  font-family: poppins;
   font-size: 4em;
   color: white;
   font-weight: bolder;
   line-height: 70px;
   color: #eeb111;
 
+}
+.lighted-yellow {
+  color: black;
+  background: #EEB111;
+}
+.lighted {
+  padding: 0 15px 3px;
+  font-size: 4em;
+  font-weight: bolder;
+  // line-height: 80px;
+  font-family: poppins;
 }
