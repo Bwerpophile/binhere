@@ -165,3 +165,183 @@
   left: 0;
   width: 100%;
 }
+
+.container-show {
+ display: flex;
+}
+
+.button_show img {
+  height: 40px;
+  width: 40px;
+  &:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  }
+}
+
+.card-container {
+ justify-content: space-between;
+ padding: 32px;
+}
+
+#card-bin-title {
+ align-self: flex-start;
+
+}
+
+.card-container-show {
+  justify-content: space-between;
+  padding: 32px;
+  flex: 1 0 50%;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
+.button_show {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.map-bin-container {
+ // background-color: red;
+ // display: sticky;
+ display: flex;
+ flex-direction: column;
+ flex: 0 0 50%;
+ padding: 32px;
+ // position: sticky;
+ // top: 0;
+ position: relative;
+}
+
+.button-container {
+ justify-content: space-around;
+}
+
+
+.mapcards {
+ max-width: 100%;
+ max-height: 100%;
+ background-position: center;
+ background-size: cover;
+ height:150px;
+}
+
+.mapcards:hover {
+opacity: 1;
+}
+
+.reviews_show h2{
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+
+.reviews_show {
+  margin-top: 30px;
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   height: 150px;
+}
+
+.card-product-show {
+ overflow: hidden;
+ height: 120px;
+ background: #7cacdc;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ display: flex;
+ align-items: center;
+ // border-left:25px solid #E5B31F;
+ margin-top: 20px;
+}
+
+.card-product-show h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+
+.customer-reviews {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .customer-reviews .column {
+    margin-bottom: 30px;
+  }
+  .customer-reviews .column .inner-box h3 .verified{
+    color: green;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 10px;
+  }
+
+  .customer-reviews .column .inner-box .date {
+    font-size: 18px;
+   font-weight: bold;
+  }
+
+  .customer-reviews .column .inner-box {
+    background-color: #f5f5f5;
+    padding: 15px;
+    min-height: 250px;
+  }
+  .customer-reviews .column h3 {
+
+    padding-bottom: 5px;
+  }
+
+  .name_and_add {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .descriptif_avis {
+    display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+  }
+
+  .add_review img {
+  height: 20px;
+  width: 20px;
+  &:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  }
+}
+
+ .add_review {
+  margin-left: 10px;
+ }
+
+.submit_button {
+  display: flex;
+}
+
+.hover_review {
+   &:hover {
+  background-color: white;
+  }
+}
+
+.card_review {
+  max-height: 20px;
+}
+.avis_show {
+  height: 150px;
+  overflow-y: scroll;
+}
+

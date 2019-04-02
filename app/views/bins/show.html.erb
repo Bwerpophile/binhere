@@ -1,3 +1,4 @@
+
 <div class="container-show">
   <!-- button_show -->
   <div>
@@ -27,7 +28,34 @@
 
     <div class="reviews">
 
+         <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
+               <%= f.input :name, label: 'Votre nom' %>
+                <%= f.input :description, label: 'Votre commentaire' %>
+              <div class="submit_button">
+                <%= f.submit "Envoyer" %>
+                <div class="add_review" >
+                  </div>
+              </div>
+          <% end %>
     </div>
+
+     <div class="avis_show">
+                  <% if @bin.reviews.any? %>
+                    <% @reviews.each do |review|  %>
+                    <div class="hover_review">
+                      <div class="avis_name">
+                        <div> <strong><%= review.name %></strong></div>
+                      </div>
+                      <div class="descriptif_avis">
+                        <div><%= review.description  %></div>
+                        <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
+                      </div>
+                    </div>
+                    <% end  %>
+                  <% end  %>
+                </div>
+  </div>
+
 
 
   <div class="map-show-container">
@@ -39,5 +67,6 @@
     </div>
   </div>
 </div>
+
 
 
