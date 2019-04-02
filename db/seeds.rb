@@ -23,6 +23,7 @@ victorine = User.create!(
   address: '12 rue Emile Pehant',
   email: 'victo@gmail.com',
   password: 'password',
+  city: 'Bordeaux',
   avatar: File.open(Rails.root.join('db/fixtures/users/victorine.jpg')),
 )
 
@@ -33,6 +34,7 @@ joris = User.create!(
   address: '2 rue haute casserie',
   email: 'jojo@gmail.com',
   password: 'password',
+  city: 'Nantes',
   avatar: File.open(Rails.root.join('db/fixtures/users/joris.jpg')),
 )
 
@@ -43,6 +45,7 @@ boby = User.create!(
   address: '23 rue des saisies',
   email: 'bobo29@hotmail.fr',
   password: 'password',
+  city: 'Bordeaux',
   avatar: File.open(Rails.root.join('db/fixtures/users/boby.jpg')),
 )
 
@@ -53,6 +56,7 @@ jimmy = User.create!(
   address: '32 rue deshoulieres',
   email: 'jimmy@gmail.com',
   password: 'password',
+  city: 'Nantes',
   avatar: File.open(Rails.root.join('db/fixtures/users/jimmy.jpg')),
 )
 
@@ -63,6 +67,7 @@ matthieu = User.create!(
   address: '10 rue emile Pehant',
   email: 'mat@gmail.com',
   password: 'password',
+  city: 'Nantes',
   avatar: File.open(Rails.root.join('db/fixtures/users/matthieu.jpg')),
 )
 
@@ -73,6 +78,7 @@ simon = User.create!(
   address: '123 rue Jean baptiste vigier',
   email: 'keryhuel.simon@gmail.com',
   password: 'password',
+  city: 'Nantes',
   avatar: File.open(Rails.root.join('db/fixtures/users/simon.jpg')),
 )
 
