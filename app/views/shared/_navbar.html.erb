@@ -15,15 +15,18 @@
           <%= link_to "Infos tri", infos_path, class: "nav-link" %>
         </li>
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to "Home", "#", class: "nav-link" %>
         </li>
+        <li class="nav-item">
+        <%= link_to "Mon profile", profile_path , class: "nav-link" %>
+        </li>
 
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <li class="nav-item dropdownnavbar">
+          <%= cl_image_tag current_user.avatar, gravity: :north, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Profile", profile_path , class: "dropdown-item" %>
+
             <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
