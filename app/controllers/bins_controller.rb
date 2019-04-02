@@ -1,12 +1,17 @@
+
+
 class BinsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    redirect_to root_path unless params[:bin_type].present?
 
     @bins = Bin.where(kind: params[:bin_type])
-
-    @bins = @bins.near(params[:address], 0.6).limit(3) if params[:address].present?
+    redirect_to root_path unless params[:bin_type].present?
+    # @bins.each do |bin|
+    #   @bin.where[kind: params[:bin_type]
+    #   end
+    #   raise
+    @bins_api = @bins_api.near(params[:address], 0.6).limit(3) if params[:address].present?
 
     @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
       {
@@ -14,7 +19,6 @@ class BinsController < ApplicationController
         lng: bin.longitude
       }
     end
-    # @locations = Bin.near([@bins.latitude, @bins.longitude], 5, :order => :distance)
   end
 
   def show
@@ -31,6 +35,7 @@ class BinsController < ApplicationController
         # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
   end
+
 
   private
 

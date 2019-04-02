@@ -8,6 +8,7 @@
 
 puts "clean up DB"
 
+Review.destroy_all
 Bin.destroy_all
 User.destroy_all
 
@@ -31,7 +32,7 @@ puts "Starting trashes creation ..."
 
 poubelle_carton1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin1.jpg')),
-  kind: 'carton',
+  kind: 'papiercarton',
   name: 'Mat',
   address: '14 Rue Beauregard, 44000 Nantes',
   latitude: 47.2134354,
@@ -40,7 +41,7 @@ poubelle_carton1 = Bin.create!(
 
 poubelle_carton2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin2.jpg')),
-  kind: 'carton',
+  kind: 'papiercarton',
   name: 'Jor',
   address: '26 Rue Stanislas Baudry, 44400 Nantes',
   latitude: 47.2181645,
@@ -49,7 +50,7 @@ poubelle_carton2 = Bin.create!(
 
 poubelle_carton3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin3.jpg')),
-  kind: 'carton',
+  kind: 'papiercarton',
   name: 'Sim',
   address: '7 Impasse Saint-Laurent, 44000 Nantes',
   latitude: 47.2183730,
@@ -58,7 +59,7 @@ poubelle_carton3 = Bin.create!(
 
 poubelle_carton4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin4.jpg')),
-  kind: 'carton',
+  kind: 'papiercarton',
   name: 'Jim',
   address: '6 Place Aristide Briand, 44003 Nantes',
   latitude: 47.2177317,
@@ -67,7 +68,7 @@ poubelle_carton4 = Bin.create!(
 
 poubelle_carton5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin5.jpg')),
-  kind: 'carton',
+  kind: 'papiercarton',
   name: 'Jem',
   address: '13 Rue de la Juiverie, 44000 Nantes',
   latitude: 47.2154289,
@@ -76,7 +77,7 @@ poubelle_carton5 = Bin.create!(
 
 poubelle_menagere1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin6.jpg')),
-  kind: 'menager',
+  kind: "Emb. ménager",
   name: 'John',
   address: 'Rue de Talensac, 44009 Nantes',
   latitude: 47.2212440,
@@ -85,7 +86,7 @@ poubelle_menagere1 = Bin.create!(
 
 poubelle_menagere2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin7.jpg')),
-  kind: 'menager',
+  kind: "Emb. ménager",
   name: 'Jacques',
   address: '12 Rue Paul Bellamy, 44000 Nantes',
   latitude: 47.2213460,
@@ -94,7 +95,7 @@ poubelle_menagere2 = Bin.create!(
 
 poubelle_menagere3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin8.jpg')),
-  kind: 'menager',
+  kind: "Emb. ménager",
   name: 'Josh',
   address: 'Rue Sully, 44000 Nantes',
   latitude: 47.2206028,
@@ -103,7 +104,7 @@ poubelle_menagere3 = Bin.create!(
 
 poubelle_menagere4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin9.jpg')),
-  kind: 'menager',
+  kind: "Emb. ménager",
   name: 'Bruno',
   address: '31 Place Viarme, 44000 Nantes',
   latitude: 47.2200198,
@@ -112,7 +113,7 @@ poubelle_menagere4 = Bin.create!(
 
 poubelle_menagere5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin10.jpg')),
-  kind: 'menager',
+  kind: "Emb. ménager",
   name: 'Marcel',
   address: '5 Place Maréchal Foch, 44000 Nantes',
   latitude: 47.2191746,
@@ -208,6 +209,8 @@ plasticbin5 = Bin.create!(
   latitude: 47.211509,
   longitude: -1.550971,
 )
+
+GetBinsFromNantesAPIService.new.call
 
 puts "Fake Database has been created and Victorine is still behind you..."
 
