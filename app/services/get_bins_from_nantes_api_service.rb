@@ -10,7 +10,7 @@ class GetBinsFromNantesAPIService
       unless Bin.find_by(id_colonne: bin["fields"]["id_colonne"])
         bin = Bin.new(
           id_colonne: bin["fields"]["id_colonne"],
-          kind: bin["fields"]["type_dechets"],
+          kind: formatted_kind(bin["fields"]["type_dechets"]),
           latitude: bin["fields"]["location"].first,
           longitude: bin["fields"]["location"].last,
           address: formatted_address(bin["fields"]["voie"], bin["fields"]["code_postal"], bin["fields"]["commune"])
@@ -24,5 +24,15 @@ class GetBinsFromNantesAPIService
 
   def formatted_address(street, zipcode, city)
     "#{street}, #{zipcode} #{city.capitalize}"
+  end
+
+  def formatted_kind(kind)
+    if kind == "papiercarton"
+      kind = "carton"
+    elsif kind == "Emb. ménager"
+      kind == "menagere"
+
+    end
+    return kind
   end
 end
