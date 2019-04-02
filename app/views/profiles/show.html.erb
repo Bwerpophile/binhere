@@ -1,28 +1,34 @@
-<div class="profile-page" >
-  <div class="userinformation">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-show">
+  <!-- button_show -->
 
-      <div class="card-profile profile-infos">
-        <p> <%= current_user.avatar %></p>
-        <h1> <%= current_user.full_name %> </h1>
-        <p> <%= current_user.address %> </p>
-        <p> <%= current_user.email %></p>
-        <p> Nombre de recherches effectuées </p>
-        <p> Membre depuis 2019. </p>
-      </div>
-
-
-      <div class="profile-reviews profile-infos">
-        <h2> Vos derniers commentaires : </h2>
-        <p> Victo.reviews </p>
-      </div>
-
-      <div class="profile-bins profile-infos">
-        <h2> Vos dernières visites </h2>
-        <p> user.bins t'entend</p>
-      </div>
-
-  </div>
+    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">PROFIL</span></h1>
 </div>
 
+
+<div class="profilreviewsmap">
+  <div class="profilreview">
+
+    <div class="profil">
+      <div class=" binphoto">
+        <%= cl_image_tag current_user.avatar, gravity: :north, crop: :fill%>
+      </div>
+      <div class="binprofilinfos">
+        <h2> <strong><%= current_user.full_name %> </strong> </h2>
+        <p>Nantes</p>
+        <p>><%= current_user.email %></p>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <h1 id="avis">Avis</h1>
+
+    </div>
+  </div>
+
+
+  <div class="claimed-bin-container">
+    <div class="claimed-bin">
+    </div>
+  </div>
+</div>
 
