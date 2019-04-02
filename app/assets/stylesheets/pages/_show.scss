@@ -34,6 +34,7 @@
 .profilreviewsmap {
   display: flex;
   padding: 32px;
+  min-height: 800px;
 }
 
 .profilreview {
@@ -47,7 +48,6 @@
   background-color: white;
   margin: 0 8px 0 32px;
   // max-height: 400px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .binphoto {
@@ -56,14 +56,16 @@
 
 .binphoto > img {
   width: 100%;
+  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
 }
 
 .binprofilinfos {
   padding: 16px;
+  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
 }
 
 .binprofilinfos h2 {
-  color: #EEB111;
+  color: black;
 }
 
 .binprofilinfos p {
