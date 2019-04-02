@@ -11,7 +11,9 @@ class BinsController < ApplicationController
     @markers = @bins.where.not(latitude: nil, longitude: nil).map do |bin|
       {
         lat: bin.latitude,
-        lng: bin.longitude
+        lng: bin.longitude,
+        # infoWindow: render_to_string(partial: "infowindow", locals: {bin:bin}),
+      image_url: helpers.asset_url("pictogr_#{params[:bin_type]}.png")
       }
     end
     # @locations = Bin.near([@bins.latitude, @bins.longitude], 5, :order => :distance)
