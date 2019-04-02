@@ -35,7 +35,7 @@ class BinsController < ApplicationController
   private
 
   def bin_params
-    params.require(:bin).permit(:name, :id, :address, :photo, :bin_type)
+    params.require(:bin).permit(:name, :id, :address, :photo, :bin_type, :user_id)
   end
 end
 
