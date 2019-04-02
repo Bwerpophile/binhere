@@ -10,6 +10,7 @@
   justify-content: center;
   align-item: center;
   display: flex;
+  font-family: popins;
 }
 
 .image-info img {
@@ -64,6 +65,7 @@
 
 .card-info-button:hover {
   text-decoration:none;
+  color: #EEB111;
 }
 
 .dropdown img {
@@ -73,7 +75,7 @@
 
 .imagebackground-info {
   background-repeat: no-repeat;
-  background-position:100% 0%;
+  background-position:100%;
 }
 
 

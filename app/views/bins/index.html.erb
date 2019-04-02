@@ -63,10 +63,9 @@
                       </div>
 
                       <h3 class="card-trip-pricing">+ d'infos</h3>
-                      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+                       <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
                     </div>
                   </div>
-
                <% end %>
             <%end%>
           </div>

@@ -1,54 +1,77 @@
 
 <div class="container-show">
   <!-- button_show -->
+  <div>
+    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name.upcase %></span></h1>
+    <div class="button_retour">
+      <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
+      <%= image_tag "retour-arrière.png" %>
+      <% end  %>
+    </div>
+  </div>
 
-    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">Poubelle <%= @bin.name %></span></h1>
 </div>
 
 
 <div class="profilreviewsmap">
   <div class="profilreview">
-
     <div class="profil">
       <div class=" binphoto">
         <%= cl_image_tag @bin.photo %>
       </div>
       <div class="binprofilinfos">
-        <h2><%= @bin.name %></h2>
+        <h2><strong> <%= @bin.name %> </strong></h2>
         <p><%= @bin.address %></p>
         <p> Déchets : <%= @bin.kind %></p>
       </div>
     </div>
 
     <div class="reviews">
-      <h1 id="avis">Avis</h1>
-
-         <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
-               <%= f.input :name, label: 'Votre nom' %>
-                <%= f.input :description, label: 'Votre commentaire' %>
+      <div class="row customer-reviews">
+        <div class="col-md-12 column">
+          <div class="inner-box">
+            <h2 style="color: #EEB111;"><strong>Partagez votre avis</strong></h2>
+            <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
+            <%= f.input :name, label: 'Objet' %>
+            <%= f.input :description, label: 'Votre commentaire' %>
               <div class="submit_button">
-                <%= f.submit "Envoyer" %>
-                <div class="add_review" ><%= image_tag "pen.png" %>
-                  </div>
+                
+                <%= f.submit "Ajouter" %>
+              <div class="add_review"><%= image_tag "pen.png" %></div>
+
               </div>
-          <% end %>
-    </div>
-     <div class="avis_show">
-                  <% if @bin.reviews.any? %>
-                    <% @reviews.each do |review|  %>
-                    <div class="hover_review">
-                      <div class="avis_name">
-                        <div> <strong><%= review.name %></strong></div>
-                      </div>
-                      <div class="descriptif_avis">
-                        <div><%= review.description  %></div>
-                        <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
-                      </div>
-                    </div>
+            <% end %>
+          <div class="avis_show">
+            <% if @bin.reviews.any? %>
+            <% @reviews.each do |review|  %>
+              <div class="hover_review">
+
+                <div class="avis_name">
+                  <div class="avis_name_delete">
+                    <p><strong><%= review.name %></strong><p>
+                    <%= link_to bin_review_path(@bin, review), method: :delete do %>
+                    <%= image_tag "delete.png", width: 20, height: 20 %>
                     <% end  %>
-                  <% end  %>
+                  </div>
                 </div>
+
+                <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
+                <div class="descriptif_avis">
+                  <div><%= review.description  %></div>
+                </div>
+
+              </div>
+            <% end %>
+            <% end %>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
+
 
 
   <div class="map-show-container">
@@ -63,3 +86,4 @@
 
 
 
+<!-- Delete by Thomas Meerseman from the Noun Project -->
