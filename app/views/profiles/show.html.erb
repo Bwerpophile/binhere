@@ -9,25 +9,66 @@
   <div class="profilreview">
 
     <div class="profil">
+      <div>
+      <h1 id="avis">Mes infos</h1>
+    </div>
       <div class=" binphoto">
         <%= cl_image_tag current_user.avatar, gravity: :north, crop: :fill%>
       </div>
       <div class="binprofilinfos">
-        <h2> <strong><%= current_user.full_name %> </strong> </h2>
-        <p>Nantes</p>
-        <p>><%= current_user.email %></p>
+        <h2 #id="profil-name"> <strong><%= current_user.full_name %> </strong> </h2>
+        <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span>
+        <p id="city"><%= current_user.city %></p>
+        <p class="menu-profil"><span class="highlighted highlighted-yellow">PSEUDO</span>
+        <p id="city"><%= current_user.user_name %></p>
+         <p class="menu-profil"><span class="highlighted highlighted-yellow">EMAIL</span>
+        <p id="city"><%= current_user.email %></p>
+        <p class="city-profil"><span class="highlighted highlighted-yellow">CRÉÉ</span></p>
+        <p id="created"><%= (current_user.created_at.to_s.split)[0] %></p>
+
       </div>
     </div>
 
     <div class="reviews">
-      <h1 id="avis">Avis</h1>
+      <h1 id="avis">Mes avis</h1>
+        <% current_user.reviews.each do |review| %>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= review.description %></li>
 
+        </ul>
+      <% end %>
     </div>
   </div>
 
 
   <div class="claimed-bin-container">
+    <h1 id="avis">Mes poubelles</h1>
     <div class="claimed-bin">
+      <div class="card-maps-container">
+        <div class="card-container-index">
+          <div class="row">
+            <% current_user.bins.each do |bin| %>
+             <!--  <div class="col-12"> -->
+                <%= link_to bin_path(bin) do %>
+                 <div class="card-trip">
+                    <div class="poubelle-image"><%= cl_image_tag(bin.photo, gravity: :north, crop: :fill, class: "poubelle-image-cl") %></div>
+                    <div class="card-trip-infos">
+                      <div>
+                        <h2> Poubelle <%= bin.name %></h2>
+                        <p><%= (bin.address.split(','))[0] %>,</p>
+                        <p><%= (bin.address.split(','))[1] %>,</p>
+                      </div>
+
+
+                      <h3 class="card-trip-pricing">+ d'infos</h3>
+                       <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+                    </div>
+                  </div>
+               <% end %>
+            <%end%>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
