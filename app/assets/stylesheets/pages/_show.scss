@@ -172,6 +172,17 @@
  display: flex;
 }
 
+.button_show {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 .button_show img {
   height: 40px;
   width: 40px;
@@ -201,18 +212,6 @@
 }
 
 
-.button_show {
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
 
 .map-bin-container {
  // background-color: red;
@@ -299,11 +298,6 @@ opacity: 1;
   background-color: white;
   padding: 15px;
   min-height: 250px;
-  &:hover {
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    // border-top: solid 1px #EEB111;
-    // border-left: solid 1px #EEB111;
-  }
 }
 
 .descriptif_avis {
@@ -318,10 +312,21 @@ opacity: 1;
 
 .hover_review {
   padding: 8px 16px;
+  margin-right: 4px;
   &:hover {
     background-color: #e5e5e5;
     padding: 8px 16px;
   }
+}
+
+.avis_name p {
+  color: #EEB111;
+  margin-bottom: -4px;
+}
+
+.avis_name_delete {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card_review {
@@ -332,7 +337,9 @@ opacity: 1;
   overflow-y: scroll;
 }
 
-.avis_name p {
-  color: #EEB111;
-  margin-bottom: -4px
+
+.button_delete img{
+  width: 20px;
+  height: auto;
+
 }
