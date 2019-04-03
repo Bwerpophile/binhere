@@ -47,12 +47,14 @@
 .binphoto > img {
   width: 100%;
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  max-height: 260px;
+  max-width: 260px;
 }
 
 .binprofilinfos {
   padding: 16px;
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  height: 463px
+  height: 530px
 }
 
 .binprofilinfos h2 {
