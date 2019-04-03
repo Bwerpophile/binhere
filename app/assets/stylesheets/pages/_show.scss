@@ -49,6 +49,8 @@
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   max-height: 260px;
   max-width: 260px;
+  min-height: 260px;
+  min-width: 260px;
 }
 
 .binprofilinfos {
@@ -431,6 +433,18 @@ opacity: 1;
   margin: 16px 0px -16px 64px;
 }
 
+
+#bin-profil {
+  position: absolute;
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  top: 434px;
+  left: 259px;
+}
+
+
 .btn.btn-primary {
   background-color: #EEB111;
   border: #EEB111;
@@ -444,3 +458,4 @@ opacity: 1;
   }
 
 }
+
