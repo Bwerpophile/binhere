@@ -15,6 +15,7 @@ class GetBinsFromNantesAPIService
           longitude: bin["fields"]["location"].last,
           address: formatted_address(bin["fields"]["voie"], bin["fields"]["code_postal"], bin["fields"]["commune"])
         )
+        bin.remote_photo_url = "app/assets/images/default_placeholder.jpg"
         bin.save
       end
     end
