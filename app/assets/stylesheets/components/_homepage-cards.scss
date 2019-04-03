@@ -1,12 +1,12 @@
 .banner-box {
   display:flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding-top: 125px;
 }
 
 .cards-homepage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
   height: 500px;
   width: 300px;
@@ -30,8 +30,10 @@
   background: white;
   height: 150px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
+
   position: relative;
+  width: 130px;
+  margin-top: 40px;
 }
 
 .card-background-homepage:hover {
