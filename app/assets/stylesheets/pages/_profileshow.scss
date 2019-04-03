@@ -59,3 +59,37 @@
 .userinformation h2 {
   color: #EEB111
 }
+
+.elderscroll {
+  overflow-y: scroll;
+  max-height: 770px;
+}
+
+
+.map-bin-container-show {
+  // background-color: red;
+  // display: sticky;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  position: relative;
+  height: 750px;
+  flex: 0 0 37%
+}
+
+.card-maps-container-show{
+  display: flex;
+  margin-left: 0px;
+  min-height: calc(100vh - 164px);
+}
+
+.card-container-show {
+  justify-content: space-between;
+  padding-left: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 770px;
+    a:hover {
+    text-decoration: none;
+  }
+}

@@ -1,13 +1,3 @@
-.container-show {
- display: flex;
- flex-direction: column;
- width: 100%;
- // background-color: #EDF4F5;
- // background-image: asset-url("metro.png");
- // background-repeat:no-repeat;
- // background-size: cover;
-}
-
 // DIV infos poubelle
 
 .bin_name {
@@ -62,6 +52,7 @@
 .binprofilinfos {
   padding: 16px;
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  height: 463px
 }
 
 .binprofilinfos h2 {
@@ -75,13 +66,6 @@
 ///////////
 #avis {
   color: #EEB111;
-}
-
-.reviews {
-  padding: 0 32px;
-  flex: 0 0 60%;
-  background-color: white;
-  margin: 0 32px 0 8px;
 }
 
 .customer-reviews {
@@ -171,7 +155,9 @@
 }
 
 .container-show {
- display: flex;
+ flex-direction: column;
+ width: 100%;
+ max-height: 950px;
 }
 
 .button_show {
@@ -276,6 +262,10 @@ opacity: 1;
 /// REVIEWS ///
 .reviews {
   height: 100%;
+  padding: 0 32px;
+  flex: 0 0 60%;
+  background-color: white;
+  margin: 0 32px 0 8px;
 }
 
 .customer-reviews {
