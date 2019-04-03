@@ -1,11 +1,6 @@
 
 <div class="container-show">
   <!-- button_show -->
-    <div class="hey">
-      <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name %></span></h1>
-      <div class="badge<%= @bin.kind %>"> <%= @bin.kind %> </div>
-    </div>
-
 
     <div class="button-retour">
       <%=  link_to bins_path(bin_type: @bin.kind) do %>
@@ -18,7 +13,7 @@
 <div class="profilreviewsmap">
   <div class="profilreview">
     <div class="profil">
-      <div class=" binphoto">
+      <div class="binphoto">
         <%= cl_image_tag @bin.photo, id: 'pic_bin_show'%>
         <% @bin.user %>
         <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
@@ -62,11 +57,11 @@
             <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
             <%= f.input :name, label: 'Objet' %>
             <%= f.input :description, label: 'Votre commentaire' %>
-            <%= f.submit "Ajouter", class: "btn btn-primary"%>
+            <%= f.submit "Ajouter", class: "btn btn-add-review"%>
 
 
             <% end %>
-          <div class="avis_show">
+          <div class="avis-show">
             <% if @bin.reviews.any? %>
             <% @reviews.each do |review|  %>
               <div class="hover_review">

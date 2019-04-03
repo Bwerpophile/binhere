@@ -1,0 +1,10 @@
+Searching 182 files for "search-bar"
+
+/home/quetin/code/binhere/app/views/bins/index.html.erb:
+   28            <div class="container-address-button">
+   29              <div class="address">
+   30:               <div class="search-bar">
+   31                  <%= form_tag bins_path, method: :get do %>
+   32                    <%= text_field_tag :address,
+
+1 match in 1 file
