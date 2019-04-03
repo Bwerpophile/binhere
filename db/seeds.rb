@@ -373,3 +373,4 @@ reviews10 = Review.create!(
   bin: poubelle_carton3,
 )
 
+GetBinsFromNantesAPIService.new.call
