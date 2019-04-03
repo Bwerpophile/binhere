@@ -2,7 +2,7 @@
 <div class="container-show">
   <!-- button_show -->
     <div class="hey">
-      <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name.upcase %></span></h1>
+      <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name %></span></h1>
       <div class="badge<%= @bin.kind %>"> <%= @bin.kind %> </div>
     </div>
 
@@ -43,29 +43,33 @@
             <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
             <%= f.input :name, label: 'Objet' %>
             <%= f.input :description, label: 'Votre commentaire' %>
-              <div class="submit_button">
+            <%= f.submit "Ajouter", class: "btn btn-primary"%>
 
-                <%= f.submit "Ajouter" %>
-              <div class="add_review"></div>
 
-              </div>
             <% end %>
           <div class="avis_show">
             <% if @bin.reviews.any? %>
             <% @reviews.each do |review|  %>
               <div class="hover_review">
-
-                <div class="avis_name">
-                  <div class="avis_name_date">
-                    <p><strong><%= review.name %></strong></p>
-                    <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
+                <div class="user-infos">
+                  <div class="user-avatar">
+                    <%= cl_image_tag review.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+                  </div>
+                  <div class="avis_name-user">
+                    <div class="avis-user-name">
+                      <p><strong><%= review.user.user_name.capitalize %></strong></p>
+                    </div>
+                    <div class=" avis-review-name">
+                      <p><%= review.name %></p>
+                    </div>
+                  </div>
+                  <div class="avis_date">
+                    <div><p><%= review.created_at.strftime('%d/%m/%Y') %></p></div>
                   </div>
                 </div>
-
                 <div class="descriptif_avis">
-                  <div><%= review.description  %></div>
+                  <div><%= review.description %></div>
                 </div>
-
               </div>
             <% end %>
             <% end %>

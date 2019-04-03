@@ -290,85 +290,85 @@ plasticbin5 = Bin.create!(
 
 reviews1 = Review.create!(
   name: 'Peut mieux faire' ,
-  description:'Et bien c est une poubelle tout ce qu il y a de plus basique, cependant des jeunes laisses leur bouteilles de verre au pied du container parfois',
+  description:"Et bien c'est une poubelle tout ce qu il y'a de plus basique, cependant, des jeunes laissent parfois leur bouteilles de verre au pied du container.",
   user: matthieu,
   bin: glassbin1,
 )
 
 reviews2 = Review.create!(
   name: 'Super' ,
-  description:'D habitude je me rend toujours à la poubelle plus au nord mais grace a binhere j ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci Bin here !!',
+  description:"D'habitude je me rend toujours à la poubelle plus au nord mais grâce à BinHere, j'ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci BinHere !!",
   user: joris,
   bin: glassbin2,
 )
 
 reviews3 = Review.create!(
-  name: 'nul' ,
-  description:'Beaucoup trop de gens utilise cette poubelle ! C est parfois à croire que les éboueurs ne passe plus !',
+  name: 'Nul' ,
+  description:"Beaucoup trop de gens utilise cette poubelle ! C'est parfois à croire que les éboueurs ne passe plus !",
   user: matthieu,
   bin: glassbin3,
 )
 
 reviews4 = Review.create!(
-  name: 'une poubelle' ,
-  description:'Bon on m a demandé de donner une review sur une poubelle, j aime bien le concept, poubelle clean, lieu clean.',
+  name: 'Une poubelle' ,
+  description:"Bon on m'a demandé de donner une review sur une poubelle, j'aime bien le concept, poubelle clean, lieu clean.",
   user: jimmy,
   bin: glassbin4,
 )
 reviews5 = Review.create!(
-  name: 'sale' ,
-  description:'Cette poubelle est nauséabonde, je ne recommande pas',
+  name: 'Sale' ,
+  description:"Cette poubelle est nauséabonde, je ne la recommande pas",
   user: simon,
   bin: plasticbin1,
 )
 reviews6 = Review.create!(
   name: 'une belle poubelle' ,
-  description:'Cette poubelle est vraiment pratique, je suis content de l avoir découverte',
+  description:"Cette poubelle est vraiment pratique, je suis content de l'avoir découverte",
   user: matthieu,
   bin: plasticbin2,
 )
 reviews7 = Review.create!(
   name: 'Merci' ,
-  description:'Moi qui adore le tri je suis ravi d avoir apris l existence de cette poubelle plastique dans mon quartier, un grand merci a binhere pour leur travail !',
+  description:"Moi qui adore le tri je suis ravi d'avoir apris l'existence de cette poubelle plastique dans mon quartier, un grand merci a Binhere pour leur travail !",
   user: simon,
   bin: plasticbin3,
 )
 reviews8 = Review.create!(
   name: 'Bon' ,
-  description:'Laisser un commentaire sur une poubelle, pourquoi pas? Et bien cette poubelle est propre est bien désservie par les eboueurs',
+  description:"Laisser un commentaire sur une poubelle, pourquoi pas? Et bien cette poubelle est propre est bien désservie par les éboueurs",
   user: victorine,
   bin: poubelle_menagere1,
 )
 review9 = Review.create!(
   name: 'pas mal' ,
-  description:'Cette poubelle est pas mal mais je préfère cette a Rue de sully',
+  description:"Cette poubelle est pas mal mais je préfère cette à Rue de sully",
   user: jimmy,
   bin: poubelle_menagere2,
 )
 reviews10 = Review.create!(
   name: 'oui' ,
-  description:'Je dit OUI, cette poubelle est tout le temps parfaitement propre et l odeur très agréable, cela fait plaisirs de voir que des gens prennent encore soin des lieux publics',
+  description:"Je dit OUI, cette poubelle est tout le temps parfaitement propre et l'odeur très agréable, celà fait plaisirs de voir que des gens prennent encore soin des lieux publics",
   user: joris,
   bin: poubelle_menagere3,
 )
 
 reviews10 = Review.create!(
   name: 'Best' ,
-  description:'La meilleure poubelle carton du quartier, rien a dire, toujours de la place et très accessible',
+  description:"La meilleure poubelle carton du quartier, rien à dire, toujours de la place et très accessible",
   user: victorine,
   bin: poubelle_carton1,
 )
 
 reviews10 = Review.create!(
   name: 'marre' ,
-  description:'cest vraiment nimporte quoi, même pour jeter du carton les gens arrivent a etre sale, marre !',
+  description:"C'est vraiment n'importe quoi, même pour jeter du carton les gens arrivent à etre sale, marre !",
   user: matthieu,
   bin: poubelle_carton2,
 )
 
 reviews10 = Review.create!(
   name: 'yes' ,
-  description:'I was visiting Nantes and thanks god ive heard ot binhere? before, this bin is very usefull, thanks !',
+  description:"I was visiting Nantes and thanks god i've heard ot binhere? before, this bin is very usefull, thanks !",
   user: simon,
   bin: poubelle_carton3,
 )
