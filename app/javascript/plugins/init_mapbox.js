@@ -1,5 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 
 
 const initMapbox = () => {
@@ -19,6 +20,20 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/streets-v10',
 
     });
+
+    let directions = new MapboxDirections({
+      accessToken: mapElement.dataset.mapboxApiKey,
+      unit: 'metric',
+      profile: 'mapbox/cycling'
+    });
+
+    // map.addControl(directions, 'top-left');
+    directions.setOrigin(`${mapElement.dataset.departure-address}`);
+    directions.setDestination(`${mapElement.dataset.data-end-coordinates}`);
+
+    // const valenter = () => {
+    //                   const input_address = document.getElementById("address_user").value;
+    //                 }
 
     const markers = JSON.parse(mapElement.dataset.markers);
 

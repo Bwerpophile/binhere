@@ -34,7 +34,7 @@
               <div class="search-bar">
                 <%= form_tag bins_path, method: :get do %>
                   <%= text_field_tag :address,
-                      params[:address],
+                      params[:address], id: 'address_user',
                       placeholder: "Saisissez votre adresse"%>
                   <%=  hidden_field_tag :bin_type, params[:bin_type] %>
                <% end %>
@@ -52,7 +52,7 @@
           <div class="row">
             <% @bins.each do |bin| %>
              <!--  <div class="col-12"> -->
-                <%= link_to bin_path(bin) do %>
+                <%= link_to bin_path(bin, address: params[:address]) do %>
                  <div class="card-trip">
                     <div class="poubelle-image"><%= cl_image_tag(bin.photo, gravity: :north, crop: :fill, class: "poubelle-image-cl") %></div>
                     <div class="card-trip-infos">
