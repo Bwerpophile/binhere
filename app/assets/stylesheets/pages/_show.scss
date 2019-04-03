@@ -29,12 +29,14 @@
 
 .profilreview {
   display: flex;
-  flex: 0 0 50%;
+  justify-content: space-between;
+  flex: 1 0 60%;
   height: 100%;
+
 }
 
 .profil {
-  flex: 0 0 30%;
+  flex: 0 0 45%;
   background-color: white;
   margin: 0 8px 0 32px;
   // max-height: 400px;
@@ -44,20 +46,19 @@
   width: 100%;
 }
 
+
 .binphoto > img {
   width: 100%;
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  max-height: 260px;
-  max-width: 260px;
   min-height: 260px;
   min-width: 260px;
 }
 
 .binprofilinfos {
+  display: flex;
   padding: 16px;
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  height: 530px;
-  min-width: 260px;
+  align-items: center;
 }
 
 .binprofilinfos h2 {

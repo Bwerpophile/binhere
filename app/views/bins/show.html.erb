@@ -19,11 +19,12 @@
   <div class="profilreview">
     <div class="profil">
       <div class=" binphoto">
-        <%= cl_image_tag @bin.photo %>
+        <%= cl_image_tag @bin.photo, id: 'pic_bin_show'%>
         <% @bin.user %>
         <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
       </div>
       <div class="binprofilinfos">
+        <div class="name_and_own">
           <h2 #id="profil-name"> <strong><%= @bin.name %> </strong> </h2>
           <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
           <p id="city"><%= @bin.address %></p>
@@ -33,17 +34,30 @@
           <% else %>
           <p id="city">Cette poubelle n'a pas de propriétaire</p>
           <% end %>
+        </div>
+        <div class="creat_and_update">
           <p class="city-profil"><span class="highlighted highlighted-yellow">CRÉÉ LE</span></p>
           <p id="created"><%= @bin.created_at.strftime('%d-%m-%Y')%></p>
           <p class="city-profil"><span class="highlighted highlighted-yellow">MISE A JOUR</span></p>
           <p id="created"><%= @bin.updated_at.strftime('%d-%m-%Y')%></p>
         </div>
+      </div>
     </div>
+      <div class="map-show-container">
+        <div class="map-container-show">
+          <div id="map"
+            data-markers="[<%= @marker.to_json %>]"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="reviews">
-      <div class="row customer-reviews">
-        <div class="col-md-12 column">
-          <div class="inner-box">
+  <div class="reviews">
+    <div class="row customer-reviews">
+      <div class="col-md-12 column">
+        <div class="inner-box">
             <h2 style="color: #EEB111;"><strong>Partagez votre avis</strong></h2>
             <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
             <%= f.input :name, label: 'Objet' %>
@@ -82,19 +96,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-
-  <div class="map-show-container">
-    <div class="map-container-show">
-      <div id="map"
-      data-markers="[<%= @marker.to_json %>]"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-    </div>
-  </div>
 </div>
 
 
