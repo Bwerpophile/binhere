@@ -25,7 +25,8 @@
 
 .verre {
   border-color: #46a84d;
-  color: #46a84d
+  color: #46a84d;
+  border-radius: 0px;
 }
 
 .active.verre {
@@ -44,6 +45,7 @@
 .plastique {
   color: #51C2D2;
   border-color: #51C2D2;
+  border-radius: 0px;
 }
 
 .active.plastique {
@@ -62,6 +64,7 @@
 .carton {
   color: #9a5a16;
   border-color: #9a5a16;
+  border-radius: 0px;
 }
 
 .active.carton {
@@ -80,6 +83,7 @@
 .menager {
   color: #002a6f;
   border-color: #002a6f;
+  border-radius: 0px;
 }
 
 .active.menager {

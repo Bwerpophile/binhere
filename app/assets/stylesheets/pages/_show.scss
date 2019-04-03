@@ -1,3 +1,15 @@
+// Scrollbar //
+.avis-show::-webkit-scrollbar{
+    background-color:#fff;
+    width:16px;
+}
+
+.avis-show::-webkit-scrollbar-thumb {
+    background-color:#babac0;
+    border-radius:16px;
+    border:4px solid #fff;
+}
+
 // DIV infos poubelle
 
 .bin_name {
@@ -15,6 +27,7 @@
   color: black;
   background: #EEB111;
 }
+
 .highlighted {
   padding: 0 15px 3px;
   font-style: normal;
@@ -42,6 +55,7 @@
 
 .binphoto {
   width: 100%;
+  min-width: 260px;
 }
 
 .binphoto > img {
@@ -62,9 +76,6 @@
 
 .binprofilinfos h2 {
   color: black;
-}
-
-.binprofilinfos p {
 }
 
 
@@ -125,13 +136,12 @@
     transform: scale(1.2);
   }
 }
+
 .button_show {
   display: flex;
   justify-content: space-between;
 }
-.show-back-button {
 
-}
 // DIV map
 
 .map-show-container {
@@ -139,6 +149,7 @@
   flex-direction: column;
   flex: 0 0 50%;
   position: relative;
+  max-height: 800px;
 }
 
 .mapcards {
@@ -178,8 +189,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
+
 .button_show img {
   height: 40px;
   width: 40px;
@@ -249,6 +260,7 @@ opacity: 1;
   margin-top: 30px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 150px;
+  min-height: 800px;
 }
 
 .card-product-show {
@@ -270,7 +282,7 @@ opacity: 1;
 
 /// REVIEWS ///
 .reviews {
-  height: 100%;
+  height: 800px;
   padding: 0 32px;
   flex: 0 0 60%;
   background-color: white;
@@ -290,6 +302,7 @@ opacity: 1;
 .add_review {
   margin: 8px;
 }
+
 .add_review img {
   height: 20px;
   width: 20px;
@@ -339,7 +352,7 @@ opacity: 1;
 }
 
 .avis_name-user {
-  flex: 0 0 65%
+  flex: 0 0 65%;
 }
 
 .avis_name p {
@@ -356,11 +369,13 @@ opacity: 1;
 .card_review {
   max-height: 20px;
 }
-.avis_show {
-  height: 200px;
+
+.avis-show {
+  height: 500px;
+  min-height: 100%;
+  padding-top: 10px;
   overflow-y: scroll;
 }
-
 
 .button_delete img{
   width: 20px;
@@ -439,6 +454,20 @@ opacity: 1;
   min-width: 50px;
   min-height: 50px;
   left: 259px;
-  top: 440px;
+
+}
+
+
+.btn.btn-primary {
+  background-color: #EEB111;
+  border: #EEB111;
+  width: 120px;
+  height: 42px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  font-family: poppins;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
