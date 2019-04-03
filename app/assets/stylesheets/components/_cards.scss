@@ -24,6 +24,8 @@
 .card-container-index {
   justify-content: space-between;
   padding-left: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
     a:hover {
     text-decoration: none;
   }
