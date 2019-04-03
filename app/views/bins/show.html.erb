@@ -47,12 +47,12 @@
               <div class="hover_review">
 
                 <div class="avis_name">
-                  <div class="avis_name_delete">
+                  <div class="avis_name_date">
                     <p><strong><%= review.name %></strong></p>
+                    <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
                   </div>
                 </div>
 
-                <div><%= review.created_at.strftime('%d-%m-%Y') %></div>
                 <div class="descriptif_avis">
                   <div><%= review.description  %></div>
                 </div>
