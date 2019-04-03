@@ -97,8 +97,12 @@
 //////////
 // ---BUTTON---
 
-.button_retour img {
-  background-image: #EEB111;
+.hey {
+  display: flex;
+  align-items: center;
+}
+
+.button-retour img {
   height: 40px;
   width: 40px;
   margin: 16px 0px -16px 64px;
@@ -335,4 +339,69 @@ opacity: 1;
 .button_delete img{
   width: 20px;
   height: auto;
+}
+
+
+// BADGE
+
+.badgeverre {
+  margin-left: 9px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-top: 15px;
+  color: white;
+  background-color: #46a84d;
+  width: 120px;
+  height: 55px;
+  text-align: center;
+  margin-right: 15px;
+  font-family: poppins;
+}
+
+.badgeplastique {
+  margin-left: 9px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-top: 15px;
+  color: white;
+  background-color: #51C2D2;
+  width: 120px;
+  height: 55px;
+  text-align: center;
+  margin-right: 15px;
+  font-family: poppins;
+}
+
+.badgecarton {
+  margin-left: 9px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-top: 15px;
+  color: white;
+  background-color: #9a5a16;
+  width: 120px;
+  height: 55px;
+  text-align: center;
+  margin-right: 15px;
+  font-family: poppins;
+}
+
+.badgemenager {
+  margin-left: 9px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-top: 15px;
+  color: white;
+  background-color:#002a6f;
+  width: 120px;
+  height: 55px;
+  text-align: center;
+  margin-right: 15px;
+  font-family: poppins;
+}
+
+.button-current {
+  height: 40px;
+  align-items: center;
+  margin: 16px 0px -16px 64px;
 }

@@ -1,15 +1,17 @@
 
 <div class="container-show">
   <!-- button_show -->
-  <div>
-    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name.upcase %></span></h1>
-    <div class="button_retour">
-      <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
-      <%= image_tag "retour-arrière.png" %>
-      <% end  %>
+    <div class="hey">
+      <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name.upcase %></span></h1>
+      <div class="badge<%= @bin.kind %>"> <%= @bin.kind %> </div>
     </div>
-  </div>
 
+
+    <div class="button-retour">
+      <%=  link_to bins_path(bin_type: @bin.kind) do %>
+      <%= image_tag "retour-arrière.png" %>
+      <% end %>
+    </div>
 </div>
 
 
