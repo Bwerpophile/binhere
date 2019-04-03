@@ -320,6 +320,27 @@ opacity: 1;
   }
 }
 
+
+.user-infos {
+  display: flex;
+  // justify-content: space-between;
+}
+
+.user-avatar {
+  margin: 0 16px 0 0;
+}
+
+.card-trip-user.avatar-bordered {
+  max-height: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+.avis_name-user {
+  flex: 0 0 65%
+}
+
 .avis_name p {
   color: #EEB111;
   margin-bottom: -4px;
