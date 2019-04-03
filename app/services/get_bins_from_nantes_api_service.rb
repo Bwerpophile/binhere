@@ -30,8 +30,7 @@ class GetBinsFromNantesAPIService
     if kind == "papiercarton"
       kind = "carton"
     elsif kind == "Emb. ménager"
-      kind == "menagere"
-
+      kind = "menager"
     end
     return kind
   end

@@ -285,35 +285,35 @@ plasticbin5 = Bin.create!(
   address: "Avenue de l'Hôtel Dieu, 44000 Nantes",
   latitude: 47.211509,
   longitude: -1.550971,
-  user: mathtieu,
+  user: matthieu,
 )
 
 reviews1 = Review.create!(
   name: 'Peut mieux faire' ,
   description:'Et bien c est une poubelle tout ce qu il y a de plus basique, cependant des jeunes laisses leur bouteilles de verre au pied du container parfois',
   user: matthieu,
-  bin: glass1,
+  bin: glassbin1,
 )
 
 reviews2 = Review.create!(
   name: 'Super' ,
   description:'D habitude je me rend toujours à la poubelle plus au nord mais grace a binhere j ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci Bin here !!',
   user: joris,
-  bin: glass2,
+  bin: glassbin2,
 )
 
 reviews3 = Review.create!(
   name: 'nul' ,
   description:'Beaucoup trop de gens utilise cette poubelle ! C est parfois à croire que les éboueurs ne passe plus !',
   user: matthieu,
-  bin: glass3,
+  bin: glassbin3,
 )
 
 reviews4 = Review.create!(
   name: 'une poubelle' ,
   description:'Bon on m a demandé de donner une review sur une poubelle, j aime bien le concept, poubelle clean, lieu clean.',
   user: jimmy,
-  bin: glass1,
+  bin: glassbin4,
 )
 reviews5 = Review.create!(
   name: 'sale' ,
@@ -372,4 +372,6 @@ reviews10 = Review.create!(
   user: simon,
   bin: poubelle_carton3,
 )
+
+  GetBinsFromNantesAPIService.new.call
 
