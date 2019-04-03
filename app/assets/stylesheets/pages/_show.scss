@@ -315,6 +315,7 @@ opacity: 1;
 .hover_review {
   padding: 8px 16px;
   margin-right: 4px;
+  border-bottom: solid 1px #e5e5e5;
   &:hover {
     background-color: #e5e5e5;
     padding: 8px 16px;
@@ -326,9 +327,10 @@ opacity: 1;
   margin-bottom: -4px;
 }
 
-.avis_name_delete {
+.avis_name_date {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .card_review {
