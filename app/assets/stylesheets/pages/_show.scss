@@ -318,7 +318,6 @@ opacity: 1;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .submit_button {
@@ -335,6 +334,7 @@ opacity: 1;
   }
 }
 
+
 .user-infos {
   display: flex;
   // justify-content: space-between;
@@ -347,27 +347,23 @@ opacity: 1;
 .card-trip-user.avatar-bordered {
   max-height: 40px;
   max-width: 40px;
+  min-height: 40px;
   min-width: 40px;
-  max-height: 40px;
 }
 
 .avis_name-user {
   flex: 0 0 65%;
 }
 
-.avis_name-user p {
+.avis_name p {
   color: #EEB111;
   margin-bottom: -4px;
+}
+
+.avis_name_date {
   display: flex;
   justify-content: space-between;
-}
-
-.avis_date {
   margin-bottom: 8px;
-}
-
-.avis_date p {
-  font-size: 14px;
 }
 
 .card_review {
@@ -451,15 +447,14 @@ opacity: 1;
   margin: 16px 0px -16px 64px;
 }
 
-
 #bin-profil {
   position: absolute;
   max-width: 50px;
   max-height: 50px;
   min-width: 50px;
   min-height: 50px;
-  top: 434px;
   left: 259px;
+
 }
 
 
