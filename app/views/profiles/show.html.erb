@@ -27,7 +27,9 @@
       </div>
 
       <div class="bin-display-show col-xl-9 col-md-5 col-lg-8 col-sm-6">
-        <h1 id="avis">Mes poubelles</h1>
+        <div id="mespoubeles">
+          <h1 id="avis">Mes poubelles - <%= current_user.bins.length %> </h1>
+        </div>
         <div class="claimed-bin">
           <div class="card-maps-container-show">
             <div class="card-container-show">
