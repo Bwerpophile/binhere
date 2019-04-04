@@ -1,6 +1,3 @@
-
-
-
 <div class="show-content">
   <div class="container-show">
     <div class="header-show">
@@ -9,112 +6,73 @@
           <%= image_tag "retour-arrière.png" %>
           <% end %>
       </div>
-      <div class="showing-bin-name">
-        <h1 class="highlighted highlighted-yellow"><strong>POUBELLE <%= @bin.name %> </strong> </h1>
-      </div>
+
     </div>
   </div>
 
-  <div class="profil">
 
     <div class="bin-card-profil-infos">
-      <div class="binphoto">
-        <%= cl_image_tag @bin.photo, class:"photo-current-poubelle"%>
-        <% @bin.user %>
-      </div>
-
-      <div class="user_details">
-
-        <div class="profil-bin-elements">
-          <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
-          <p id="city"><%= (@bin.address.split(','))[0] %> <br> <%= (@bin.address.split(','))[1]%></p>
-        </div>
-
-        <div class="profil-bin-elements">
-          <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
-          <% if @bin.user == true %>
-              <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
-              <p id="city"><%= @bin.user.user_name %></p>
-            <% else %>
-              <p id="city">Cette poubelle n'a pas de propriétaire</p>
-            <% end %>
-        </div>
-
-        <div class="profil-bin-elements">
-          <p class="menu-profil"><span class="highlighted highlighted-yellow">CRÉÉ LE</span></p>
-          <p id="created"><br><%= @bin.created_at.strftime('%d-%m-%Y')%></p>
-        </div>
-
-        <div class="profil-bin-elements">
-          <p class="menu-profil"><span class="highlighted highlighted-yellow">MISE A JOUR</span></p>
-          <p id="created"><br><%= @bin.updated_at.strftime('%d-%m-%Y')%></p>
-        </div>
+      <div class="binphoto", style="background-image: url('<%= cl_image_path @bin.photo %>')";>
 
       </div>
+      <div class="bin-details">
 
+          <h1><strong>POUBELLE <%= @bin.name %> </strong> </h1>
 
-<div class="reviews-colapse">
-  <p>
-    <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Ajouter un commentaire
-    </button>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body collapse-input">
-      <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
-              <%= f.input :name, label: 'Objet' %>
-              <%= f.input :description,  as: :text, label: 'Votre commentaire' %>
-              <%= f.submit "Ajouter", class: "btn btn-primary"%>
+        <div class="user_details">
 
+          <div class="profil-bin-elements">
+            <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
+            <p id="city"><%= (@bin.address.split(','))[0] %> <br> <%= (@bin.address.split(','))[1]%></p>
+          </div>
+
+          <div class="profil-bin-elements">
+            <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
+            <% if @bin.user == true %>
+                <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
+                <p id="city"><%= @bin.user.user_name %></p>
+              <% else %>
+                <p id="city">Cette poubelle n'a pas de propriétaire</p>
               <% end %>
+          </div>
+
+          <div class="profil-bin-elements">
+            <p class="menu-profil"><span class="highlighted highlighted-yellow">CRÉÉ LE</span></p>
+            <p id="created"><br><%= @bin.created_at.strftime('%d-%m-%Y')%></p>
+          </div>
+
+          <div class="profil-bin-elements">
+            <p class="menu-profil"><span class="highlighted highlighted-yellow">MISE A JOUR</span></p>
+            <p id="created"><br><%= @bin.updated_at.strftime('%d-%m-%Y')%></p>
+          </div>
+
+        </div>
+      </div>
+
+
 
     </div>
 
 
+  <div class="map-show-container">
+    <div class="map-container-show">
+      <div id='my_map'
+        data-mapbox-access-token='<%= ENV['MAPBOX_API_KEY'] %>'
+        data-start-coordinates="<%= geocode(params[:address]) || geocode(@bin.address) %>"
+        data-end-coordinates='<%= geocode(@bin.address) %>'
+        data-initial-zoom-level='14'>
+      </div>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    </div>
+    <div class="maps_instruction" id='instructions'></div>
   </div>
+</div>
 
-            <div class="avis_show">
-              <% if @bin.reviews.any? %>
-              <% @reviews.each do |review|  %>
-                <div class="hover_review">
-                  <div class="user-infos">
-                    <div class="user-avatar">
-                      <%= cl_image_tag review.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
-                    </div>
-                    <div class="avis_name-user">
-                      <div class="avis-user-name">
-                        <p><strong><%= review.user.user_name.capitalize %></strong></p>
-                      </div>
-                      <div class=" avis-review-name">
-                        <p><%= review.name %></p>
-                      </div>
-                    </div>
-                    <div class="avis_date">
-                      <div><p><%= review.created_at.strftime('%d/%m/%Y') %></p></div>
-                    </div>
-                  </div>
-                  <div class="descriptif_avis">
-                    <div><%= review.description %></div>
-                  </div>
-                </div>
-              <% end %>
-              <% end %>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="map-show-container">
-          <div class="map-container-show">
-            <div
-              id='my_map'
-              data-mapbox-access-token='<%= ENV['MAPBOX_API_KEY'] %>'
-              data-start-coordinates="<%= geocode(params[:address]) || geocode(@bin.address) %>"
-              data-end-coordinates='<%= geocode(@bin.address) %>'
-              data-initial-zoom-level='14'
-             ></div>
-            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-          </div>
-      <div class="maps_instruction" id='instructions'></div>
+  <div class="container-show">
+    <div class="header-show">
+      <div class="showing-bin-name">
+        <h3 class="highlighted highlighted-yellow"> Laissez un commentaire</h3>
+      </div>
     </div>
   </div>
 
@@ -133,6 +91,7 @@
          <% end %>
      </div>
   </div>
+
 
   <div class="reviews">
     <div class="row customer-reviews">
