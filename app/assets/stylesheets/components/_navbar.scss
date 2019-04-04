@@ -4,7 +4,7 @@
   opacity: 1;
   font-family: poppins;
   font-size: large;
-  color: black
+  color: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -29,4 +29,8 @@
 .logo_and_title {
   display: flex;
   align-items: center;
+}
+.lien-navbar {
+  display:flex;
+  flex-direction: column;
 }

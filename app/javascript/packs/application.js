@@ -12,3 +12,4 @@ import { initMapboxShow } from '../plugins/init_mapbox_show';
 initMapboxShow();
 initMapbox();
 initAutocomplete();
+

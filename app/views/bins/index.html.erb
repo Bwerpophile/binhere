@@ -1,33 +1,30 @@
  <div class="container-index">
   <div class="container-adress-cards">
      <div class="map-boutons">
-        <div class="title-bin-index">
-        <h1 class="around-bin-text">POUBELLES AUTOUR DE VOUS</h1>
+      <div class="title-bin-index">
+
+      <h1 class="around-bin-text">POUBELLES AUTOUR DE VOUS</h1>
+      </div>
+        <div class="button-container-index">
+
+
+          <%= link_to bins_path(bin_type: "verre") do %>
+            <div class="btn verre non-active <%= params[:bin_type] == "verre" ? "active filter" : nil%>">Verre</div>
+          <% end %>
+
+          <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
+            <div class="btn plastique non-active <%= params[:bin_type] == "plastique" ? "active filter" : nil%>">Plastique</div>
+          <% end %>
+
+          <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
+            <div class="btn carton non-active <%= params[:bin_type] == "carton" ? "active filter" : nil%>">Carton</div>
+          <% end %>
+
+          <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
+            <div class="btn menager non-active <%= params[:bin_type] == "menager" ? "active filter" : nil%>">Ménager</div>
+          <% end %>
         </div>
-          <div class="button-container-index">
-
-
-
-
-
-
-            <%= link_to bins_path(bin_type: "verre") do %>
-              <div class="btn verre non-active <%= params[:bin_type] == "verre" ? "active filter" : nil%>">Verre</div>
-            <% end %>
-
-            <%= link_to bins_path(bin_type: "plastique"), class: 'card_link' do %>
-              <div class="btn plastique non-active <%= params[:bin_type] == "plastique" ? "active filter" : nil%>">Plastique</div>
-            <% end %>
-
-            <%= link_to bins_path(bin_type: "carton"), class: 'card_link' do %>
-              <div class="btn carton non-active <%= params[:bin_type] == "carton" ? "active filter" : nil%>">Carton</div>
-            <% end %>
-
-            <%= link_to bins_path(bin_type: "menager"), class: 'card_link' do %>
-              <div class="btn menager non-active <%= params[:bin_type] == "menager" ? "active filter" : nil%>">Ménager</div>
-            <% end %>
-          </div>
-        </div>
+      </div>
 
           <div class="container-address-button">
             <div class="address">
@@ -42,38 +39,40 @@
             </div>
           </div>
 
-
-
-
-
     <% if @bins.present?%>
+
       <div class="card-maps-container">
-        <div class="card-container-index">
+        <div class="container">
           <div class="row">
             <% @bins.each do |bin| %>
-             <!--  <div class="col-12"> -->
-                <%= link_to bin_path(bin, address: params[:address]) do %>
+            
+              <div class="col-sm.col-md.col-lg.col-xl">
+                <%= link_to bin_path(bin) do %>
+                
                  <div class="card-trip">
                     <div class="poubelle-image"><%= cl_image_tag(bin.photo, gravity: :north, crop: :fill, class: "poubelle-image-cl") %></div>
                     <div class="card-trip-infos">
                       <div class="card-trip-infos-nameaddress">
                         <h2> Poubelle <%= bin.name %></h2>
                         <p><%= (bin.address.split(','))[0] %>,</p>
-                        <p><%= (bin.address.split(','))[1] %>,</p>
+                        <p><%= (bin.address.split(','))[1] %>.</p>
                       </div>
 
                       <h3 class="card-trip-pricing">+ d'infos</h3>
                       <% if bin.user %>
-                        <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+                        <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200, :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
                       <% end %>
                     </div>
                   </div>
-               <% end %>
+                <% end %>
+              </div>
             <%end%>
           </div>
         </div>
       </div>
+
     <% else %>
+
     <div>
       <div class="button_notfound">
         <%=  link_to bins_path(bin_type: params[:bin_type]) do %>

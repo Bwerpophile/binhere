@@ -15,12 +15,12 @@ body {
 
 .card-maps-container{
   display: flex;
-  margin-left: 24px;
+  margin-left: 13px;
   min-height: calc(100vh - 164px);
 }
 
 .container-adress-cards {
-  flex: 0 0 63%;
+  flex: 0 0 64%;
   min-height: calc(100vh - 164px);
 }
 
@@ -48,6 +48,10 @@ body {
   width: 100%;
 }
 
+.search-bar {
+  max-width: 540px;
+}
+
 .form-control {
   margin-bottom: 24px;
   flex: 0 0 40%;
@@ -60,9 +64,7 @@ body {
   position: sticky;
   top: 0;
   position: relative;
-  height: 750px;
-  flex: 0 0 37%
-
+  flex: 0 0 36%
 }
 
 
@@ -148,9 +150,7 @@ opacity: 1;
   padding-top: 4px;
   width: 562px;
   font-weight: bold;
-
 }
-
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
