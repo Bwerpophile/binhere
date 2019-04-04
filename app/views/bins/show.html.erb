@@ -1,101 +1,54 @@
+<div class="reviews-colapse">
+  <p>
+    <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Ajouter un commentaire
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body collapse-input">
+      <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
+              <%= f.input :name, label: 'Objet' %>
+              <%= f.input :description,  as: :text, label: 'Votre commentaire' %>
+              <%= f.submit "Ajouter", class: "btn btn-primary"%>
 
-<div class="container-show">
-  <!-- button_show -->
-    <div class="hey">
-      <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name %></span></h1>
-      <div class="badge<%= @bin.kind %>"> <%= @bin.kind %> </div>
+              <% end %>
     </div>
+  </div>
+  <!-- Delete by Thomas Meerseman from the Noun Project -->
+   <div class="reviews">
+        <div class="row customer-reviews">
+          <div class="col-md-12 column">
+            <div class="inner-box">
 
-
-    <div class="button-retour">
-      <%=  link_to bins_path(bin_type: @bin.kind) do %>
-      <%= image_tag "retour-arrière.png" %>
-      <% end %>
-    </div>
-</div>
-
-
-<div class="profilreviewsmap">
-  <div class="profilreview">
-    <div class="profil">
-      <div class=" binphoto">
-        <%= cl_image_tag @bin.photo %>
-        <% @bin.user %>
-        <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
-      </div>
-      <div class="binprofilinfos">
-          <h2 #id="profil-name"> <strong><%= @bin.name %> </strong> </h2>
-          <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
-          <p id="city"><%= @bin.address %></p>
-          <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
-          <% if @bin.user == true %>
-          <p id="city"><%= @bin.user.user_name %></p>
-          <% else %>
-          <p id="city">Cette poubelle n'a pas de propriétaire</p>
-          <% end %>
-          <p class="city-profil"><span class="highlighted highlighted-yellow">CRÉÉ LE</span></p>
-          <p id="created"><%= @bin.created_at.strftime('%d-%m-%Y')%></p>
-          <p class="city-profil"><span class="highlighted highlighted-yellow">MISE A JOUR</span></p>
-          <p id="created"><%= @bin.updated_at.strftime('%d-%m-%Y')%></p>
-        </div>
-    </div>
-
-    <div class="reviews">
-      <div class="row customer-reviews">
-        <div class="col-md-12 column">
-          <div class="inner-box">
-            <h2 style="color: #EEB111;"><strong>Partagez votre avis</strong></h2>
-            <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
-            <%= f.input :name, label: 'Objet' %>
-            <%= f.input :description, label: 'Votre commentaire' %>
-            <%= f.submit "Ajouter", class: "btn btn-primary"%>
-
-            <% end %>
-          <div class="avis_show">
-            <% if @bin.reviews.any? %>
-            <% @reviews.each do |review|  %>
-              <div class="hover_review">
-                <div class="user-infos">
-                  <div class="user-avatar">
-                    <%= cl_image_tag review.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
-                  </div>
-                  <div class="avis_name-user">
-                    <div class="avis-user-name">
-                      <p><strong><%= review.user.user_name.capitalize %></strong></p>
+            <div class="avis_show">
+              <% if @bin.reviews.any? %>
+              <% @reviews.each do |review|  %>
+                <div class="hover_review">
+                  <div class="user-infos">
+                    <div class="user-avatar">
+                      <%= cl_image_tag review.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
                     </div>
-                    <div class=" avis-review-name">
-                      <p><%= review.name %></p>
+                    <div class="avis_name-user">
+                      <div class="avis-user-name">
+                        <p><strong><%= review.user.user_name.capitalize %></strong></p>
+                      </div>
+                      <div class=" avis-review-name">
+                        <p><%= review.name %></p>
+                      </div>
+                    </div>
+                    <div class="avis_date">
+                      <div><p><%= review.created_at.strftime('%d/%m/%Y') %></p></div>
                     </div>
                   </div>
-                  <div class="avis_date">
-                    <div><p><%= review.created_at.strftime('%d/%m/%Y') %></p></div>
+                  <div class="descriptif_avis">
+                    <div><%= review.description %></div>
                   </div>
                 </div>
-                <div class="descriptif_avis">
-                  <div><%= review.description %></div>
-                </div>
-              </div>
-            <% end %>
-            <% end %>
-          </div>
+              <% end %>
+              <% end %>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-
-  <div class="map-show-container">
-    <div class="map-container-show">
-      <div id="map"
-      data-markers="[<%= @marker.to_json %>]"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-    </div>
-  </div>
 </div>
-
-
-
-<!-- Delete by Thomas Meerseman from the Noun Project -->

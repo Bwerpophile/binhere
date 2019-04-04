@@ -1,72 +1,15 @@
 // DIV infos poubelle
+.reviews-colapse {
 
-.bin_name {
-  font-family: poppins;
-  font-size: 35px;
-  padding-top: 4px;
-  padding-left: 12px;
-  margin-left: 32px;
-  height: 5%;
-  font-weight: bold;
 }
-// DIV map et reviews
-
-.highlighted-yellow {
-  color: black;
-  background: #EEB111;
-}
-.highlighted {
-  padding: 0 15px 3px;
-  font-style: normal;
-  font-family: poppins;
+.review-button {
+  margin-left: 50px;
 }
 
-.profilreviewsmap {
-  display: flex;
-  padding: 32px;
-  min-height: 800px;
+.collapse-input{
+  width: 600px;
+  margin-left: 50px;
 }
-
-.profilreview {
-  display: flex;
-  flex: 0 0 50%;
-  height: 100%;
-}
-
-.profil {
-  flex: 0 0 30%;
-  background-color: white;
-  margin: 0 8px 0 32px;
-  // max-height: 400px;
-}
-
-.binphoto {
-  width: 100%;
-}
-
-.binphoto > img {
-  width: 100%;
-  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  max-height: 260px;
-  max-width: 260px;
-  min-height: 260px;
-  min-width: 260px;
-}
-
-.binprofilinfos {
-  padding: 16px;
-  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  height: 530px
-}
-
-.binprofilinfos h2 {
-  color: black;
-}
-
-.binprofilinfos p {
-}
-
-
 ///////////
 #avis {
   color: #EEB111;
@@ -173,12 +116,7 @@
   justify-content: space-between;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
 .button_show img {
   height: 40px;
   width: 40px;
@@ -274,6 +212,8 @@ opacity: 1;
   flex: 0 0 60%;
   background-color: white;
   margin: 0 32px 0 8px;
+  height: 350px;
+  width: 800px;
 }
 
 .customer-reviews {
@@ -441,3 +381,7 @@ opacity: 1;
   top: 440px;
 }
 
+.add-comment-button {
+  color: #EEB111;
+
+}
