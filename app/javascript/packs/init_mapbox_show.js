@@ -128,4 +128,4 @@ const initMapboxShow = () => {
   })
 }
 
-export { initMapboxShow };
+initMapboxShow();
