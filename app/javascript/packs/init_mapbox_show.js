@@ -11,7 +11,7 @@ const initMapboxShow = () => {
     container: mapDiv,
     style:     'mapbox://styles/mapbox/streets-v10',
     center:    startCoordinates,
-    zoom:      initialZoomLevel
+    zoom:      16
   });
 
   function drawRoute(end) {
