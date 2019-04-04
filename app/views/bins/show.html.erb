@@ -2,7 +2,7 @@
 <div class="container-show">
   <!-- button_show -->
   <div>
-    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name.upcase %></span></h1>
+    <h1 class="bin_name"> <span class="highlighted highlighted-yellow">POUBELLE : <%= @bin.name %></span></h1>
     <div class="button_retour">
       <%=  link_to bins_path(bin_type: params[:bin_type]) do %>
       <%= image_tag "retour-arrière.png" %>
@@ -65,151 +65,23 @@
         </div>
       </div>
     </div>
-  </div>
-
-
-
-  <div
-      id='my_map'
-      data-mapbox-access-token='pk.eyJ1Ijoibmljb2xhcy1rb3VkZXRhdCIsImEiOiJjanR5Mm5odjEwZHM5M3lwbjg5NzEzanZuIn0.ygRRSyPmL-YtX4plrsTQMg'
-      data-start-coordinates='[-1.55336, 47.21725]'
-      data-end-coordinates='[-1.552301, 47.218043]'
-      data-initial-zoom-level='16'
-    ></div>
-    <div id='instructions'></div>
+    <div class="map-show-container">
+      <div class="map-container-show">
+        <div
+          id='my_map'
+          data-mapbox-access-token='<%= ENV['MAPBOX_API_KEY'] %>'
+          data-start-coordinates="<%= geocode(params[:address]) || geocode(@bin.address) %>"
+          data-end-coordinates='<%= geocode(@bin.address) %>'
+          data-initial-zoom-level='14'
+        ></div>
 
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-
-    <script>
-      const mapDiv = document.querySelector('#my_map')
-
-      const startCoordinates = JSON.parse(mapDiv.dataset.startCoordinates)
-      const endCoordinates   = JSON.parse(mapDiv.dataset.endCoordinates)
-      const initialZoomLevel = parseInt(JSON.parse(mapDiv.dataset.initialZoomLevel))
-
-      mapboxgl.accessToken = mapDiv.dataset.mapboxAccessToken
-
-      const map = new mapboxgl.Map({
-        container: mapDiv,
-        style:     'mapbox://styles/mapbox/streets-v10',
-        center:    startCoordinates,
-        zoom:      initialZoomLevel
-      });
-
-      function drawRoute(end) {
-        const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${startCoordinates[0]},${startCoordinates[1]};${end[0]},${end[1]}?language=fr&steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`
-
-        var req = new XMLHttpRequest();
-        req.responseType = 'json';
-        req.open('GET', url, true);
-        req.onload = function() {
-          var data  = req.response.routes[0];
-          var route = data.geometry.coordinates;
-
-          var geojson = {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-              type: 'LineString',
-              coordinates: route
-            }
-          };
-
-          // if the route already exists on the map, reset it using setData
-          if (map.getSource('route')) {
-            map.getSource('route').setData(geojson)
-
-          } else {
-            // otherwise, make a new request
-            map.addLayer({
-              id: 'route',
-              type: 'line',
-              source: {
-                type: 'geojson',
-                data: {
-                  type: 'Feature',
-                  properties: {},
-                  geometry: {
-                    type: 'LineString',
-                    coordinates: geojson
-                  }
-                }
-              },
-              layout: {
-                'line-join': 'round',
-                'line-cap': 'round'
-              },
-              paint: {
-                'line-color': '#3887be',
-                'line-width':  5,
-                'line-opacity': 0.75
-              }
-            });
-          }
-
-          // Printing instructions
-
-          var instructions = document.getElementById('instructions')
-          var steps        = data.legs[0].steps
-
-          const itineraryDuration = Math.floor(data.duration / 60)
-
-          const tripInstructionsHtml = steps.map(step => {
-            return `<li>${step.maneuver.instruction}</li>`
-          }).join('')
-
-          instructions.innerHTML = `
-            <span class="duration">${itineraryDuration} minutes 🚶‍♀️</span>
-            ${tripInstructionsHtml}
-          `
-        }
-
-        req.send()
-      }
-
-      map.on('load', function() {
-        // make an initial directions request that
-        // starts and ends at the same location
-        drawRoute(startCoordinates);
-
-        // Add starting point to the map
-
-        const startPoint = {
-          id: 'point',
-          type: 'circle',
-          source: {
-            type: 'geojson',
-            data: {
-              type: 'FeatureCollection',
-              features: [{
-                type: 'Feature',
-                properties: {},
-                geometry: {
-                  type: 'Point',
-                  coordinates: startCoordinates
-                }
-              }
-              ]
-            }
-          },
-          paint: {
-            'circle-radius': 10,
-            'circle-color': '#3887be',
-          }
-        }
-
-        map.addLayer(startPoint);
-
-        // Add end point to the map
-
-        const startMarker = new mapboxgl.Marker()
-          .setLngLat(endCoordinates)
-          .addTo(map);
-
-        drawRoute(endCoordinates);
-      })
-    </script>
+      </div>
+      <div class="maps_instruction" id='instructions'></div>
+    </div>
+  </div>
 </div>
+
 
 
 

@@ -28,8 +28,8 @@ const initMapbox = () => {
     });
 
     // map.addControl(directions, 'top-left');
-    directions.setOrigin(`${mapElement.dataset.departure-address}`);
-    directions.setDestination(`${mapElement.dataset.data-end-coordinates}`);
+    // directions.setOrigin(`${mapElement.dataset.departure-address}`);
+    // directions.setDestination(`${mapElement.dataset.data-end-coordinates}`);
 
     // const valenter = () => {
     //                   const input_address = document.getElementById("address_user").value;
