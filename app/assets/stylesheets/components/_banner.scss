@@ -1,9 +1,10 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
-  height: 850px;
-  display: flex;
+  height: calc(100vh - 77px);
+  align-items:center;
+  display:flex;
+  min-height: 600px;
 }
 
 .banner h1 {
