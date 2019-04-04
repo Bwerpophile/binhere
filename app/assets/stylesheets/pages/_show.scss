@@ -45,7 +45,8 @@
 }
 
 .show-content {
-  margin-left: 32px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .container-show {
@@ -77,6 +78,7 @@
   display: flex;
   margin-right: 16px;
   margin-top: 8px;
+  margin-bottom: 8px;
   height: 40px;
   width: 40px;
   &:hover {
@@ -100,8 +102,7 @@
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width: 70%;
-  padding: 16px;
+  // width: 70%;
   // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   align-items: center;
   min-width: 260px;
@@ -114,7 +115,14 @@
   padding-top: 16px;
 }
 
+.maps_instruction li {
+  font-size: 18px;
+  padding: 5px 0;
+}
 
+.duration {
+  // color: red;
+}
 
 .binphoto-show {
   width: 100%;
@@ -140,14 +148,22 @@
   background-image: cover;
   width: 300px;
   height: 300px;
-
+  max-height: 190px;
+  max-width: 190px;
 }
 
 .photo-current-poubelle {
-
+ // width: 100%;*
 
 }
 
+.show-left {
+  flex: 0 0 40%;
+}
+
+.show-container {
+  display: flex;
+}
 
 .binphoto > img {
   // width: 100%;
@@ -155,11 +171,11 @@
   max-height: 300px;
   max-width: 300px;
   min-width: 280px;
-
+}
 
 .binphoto {
-    width: 200px;
-    height: 200px;
+    width: 550px;
+    height: 300px;
     background-size: cover;
  }
 
@@ -176,23 +192,33 @@
 
 .user_details {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-betwee;
 
 }
 
+.bin-details {
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
 .profil-bin-elements {
-  margin: 0 0 0 16px;
-  max-width: 25%;
+  // margin: 0 0 0 16px;
+  // max-width: 25%;
+  flex: 0 0 60%;
 }
 
 .binprofilinfos {
   padding: 16px;
   // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   align-items: center;
-  min-width: 260px;
-
 }
 
+.bin-image {
+  width: 200px;
+  height: 204px;
+  background-size: cover;
+  background-position: center;
+}
 
 .highlighted-yellow {
   color: black;
@@ -205,12 +231,15 @@
   font-family: poppins;
 }
 
+.commentaire-show {
+  display: flex;
 
+}
 ///////////
 
 
 .review-button {
-  margin-left: 50px;
+  margin-left: 25px;
 }
 
 .collapse-input{
@@ -292,15 +321,14 @@
 
 
 .map-show-container {
-  display: flex;
-  flex: 0 0 50%;
+  flex: 0 0 60%;
   position: relative;
   max-height: 800px;
-  width: 100%;
-  height: 500px;
+  // width: 100%;
+  height: 80vh;
 }
 .map-container-show {
-  flex: 0 0 70%;
+  // flex: 0 0 70%;
   height: 100%;
   position: sticky;
   top: 0;
@@ -308,6 +336,18 @@
   width: 100%;
 }
 
+#instructions {
+  // width: 100%;
+  // width: 400px;
+  top: 0;
+  bottom: 20%;
+  padding: 20px;
+  // overflow-y: scroll;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  line-height: 2em;
+  flex: 0 0 567px;
+}
 
 
 #my_map {
@@ -318,20 +358,10 @@
 }
 
 
-#instructions {
-  width: 100%;
-  // width: 400px;
-  top: 0;
-  bottom: 20%;
-  padding: 20px;
-  // overflow-y: scroll;
-  font-family: sans-serif;
-  font-size: 0.8em;
-  line-height: 2em;
-}
 
 .duration {
   font-size: 2em;
+
 }
 
 .mapcards {
