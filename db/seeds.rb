@@ -32,6 +32,7 @@ victorine = User.create!(
   email: 'victo@gmail.com',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/victorine.jpg')),
+  city: 'Nantes',
 )
 
 joris = User.create!(
@@ -42,6 +43,7 @@ joris = User.create!(
   email: 'jojo@gmail.com',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/joris.jpg')),
+  city: 'Lorient',
 )
 
 boby = User.create!(
@@ -52,6 +54,7 @@ boby = User.create!(
   email: 'bobo29@hotmail.fr',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/boby.jpg')),
+  city: 'Nantes',
 )
 
 jimmy = User.create!(
@@ -62,6 +65,7 @@ jimmy = User.create!(
   email: 'jimmy@gmail.com',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/jimmy.jpg')),
+  city: 'Los Angeles',
 )
 
 matthieu = User.create!(
@@ -72,6 +76,7 @@ matthieu = User.create!(
   email: 'mat@gmail.com',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/matthieu.jpg')),
+  city: 'Lorient',
 )
 
 simon = User.create!(
@@ -82,6 +87,7 @@ simon = User.create!(
   email: 'keryhuel.simon@gmail.com',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/simon.jpg')),
+  city: 'Düsseldorf',
 )
 
 
@@ -135,8 +141,56 @@ poubelle_carton5 = Bin.create!(
   address: '13 Rue de la Juiverie, 44000 Nantes',
   latitude: 47.2154289,
   longitude: -1.5530633,
+  user: simon,
+)
+poubelle_carton6 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin11.jpg')),
+  kind: 'carton',
+  name: 'Solomun',
+  address: "'16 Place Rosa Parks, 44000 Nantes'",
+  latitude: 47.214273,
+  longitude: -1.528956,
   user: jimmy,
 )
+poubelle_carton7 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin12.jpg')),
+  kind: 'carton',
+  name: 'Le vin blanc',
+  address: '9 Rue Descartes, 44000 Nantes',
+  latitude: 47.218574,
+  longitude: -1.565511,
+  user: joris,
+)
+poubelle_carton8 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin13.jpg')),
+  kind: 'carton',
+  name: 'Angelina Jolie vieille',
+  address: '17 Rue Crébillon, 44000 Nantes',
+  latitude: 47.213627,
+  longitude: -1.560892,
+  user: matthieu,
+)
+
+poubelle_carton9 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin14.jpg')),
+  kind: 'carton',
+  name: 'Bes niauesr',
+  address: '5 Rue Duvoisin, 44000 Nantes',
+  latitude: 47.2150764,
+  longitude: -1.5601941,
+  user: victorine,
+)
+
+poubelle_carton10 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin15.jpg')),
+  kind: 'carton',
+  name: 'le prénom Jonas',
+  address: '1 Rue de Budapest, 44000 Nantes',
+  latitude: 47.2158245,
+  longitude: -1.5631356,
+  user: joris,
+)
+
 
 poubelle_menagere1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin6.jpg')),
@@ -186,6 +240,56 @@ poubelle_menagere5 = Bin.create!(
   latitude: 47.2191746,
   longitude: -1.5503382,
   user: jimmy,
+)
+
+poubelle_menagere6 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin16.jpg')),
+  kind: 'menager',
+  name: 'La Chouffe',
+  address: '18 Rue Marceau, 44000 Nantes',
+  latitude: 47.2150764,
+  longitude: -1.5601941,
+  user: simon,
+)
+
+poubelle_menagere7 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin17.jpg')),
+  kind: 'menager',
+  name: 'Charlotte',
+  address: '8 Rue saint Jean, 44000 Nantes',
+  latitude: 47.2156122,
+  longitude: -1.5560511,
+  user: victorine,
+)
+
+poubelle_menagere8 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin18.jpg')),
+  kind: 'menager',
+  name: 'La discrimination',
+  address: 'Allée Hélène-de-Chappotin, 44000 Nantes',
+  latitude: 47.2147912,
+  longitude: -1.5571571,
+  user: joris,
+)
+
+poubelle_menagere9 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin19.jpg')),
+  kind: 'menager',
+  name: 'araigné',
+  address: '18 Rue Simillien, 44000 Nantes',
+  latitude: 47.229306,
+  longitude: -1.569412,
+  user: jimmy,
+)
+
+poubelle_menagere10 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/bin20.jpg')),
+  kind: 'menager',
+  name: 'Les kebabs qui ferment à 2h',
+  address: '31 Rue Saint-Donatien, 44000 Nantes',
+  latitude: 47.227804,
+  longitude: -1.542017,
+  user: matthieu,
 )
 
 glassbin1 = Bin.create!(
@@ -238,6 +342,56 @@ glassbin5 = Bin.create!(
   user: matthieu,
 )
 
+glassbin6 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container6.jpg')),
+  kind: 'verre',
+  name: 'les vidéos de chat',
+  address: '25 Rue Harouys, 44000 Nantes',
+  latitude: 47.217112,
+  longitude: -1.566914,
+  user: simon,
+)
+
+glassbin7 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container7.jpg')),
+  kind: 'verre',
+  name: 'les parisiens',
+  address: '20 Rue Octave Feuillet, 44000 Nantes',
+  latitude: 47.222719,
+  longitude: -1.573481,
+  user: victorine,
+)
+
+glassbin8 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container8.jpg')),
+  kind: 'verre',
+  name: "au jour d'aujourd'hui",
+  address: '2 Rue Bonne Louise, 44000 Nantes',
+  latitude: 47.215329,
+  longitude: -1.567785,
+  user: joris,
+)
+
+glassbin9 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container9.jpg')),
+  kind: 'verre',
+  name: "'les conversations dans l'ascenseur",
+  address: '10 Rue Kléber, 44000 Nantes',
+  latitude: 47.213905,
+  longitude: -1.565766,
+  user: matthieu,
+)
+
+glassbin10 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container10.jpg')),
+  kind: 'verre',
+  name: "'RyanAir",
+  address: '10 Rue du Bois Joli, 44000 Nantes',
+  latitude: 47.203293,
+  longitude: -1.555829,
+  user: simon,
+)
+
 plasticbin1 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique1.jpg')),
   kind: 'plastique',
@@ -286,6 +440,55 @@ plasticbin5 = Bin.create!(
   latitude: 47.211509,
   longitude: -1.550971,
   user: matthieu,
+)
+
+plasticbin6 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique6.jpg')),
+  kind: 'plastique',
+  name: 'Le busway le matin',
+  address: "27 Rue Alexandre Fourny, 44000 Nantes",
+  latitude: 47.203978,
+  longitude: -1.549324,
+  user: simon,
+)
+plasticbin7 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique7.jpg')),
+  kind: 'plastique',
+  name: 'Téléphoner dans un transport en commun',
+  address: "1 Rue Fulton, 44000 Nantes",
+  latitude: 47.209067,
+  longitude: -1.575727,
+  user: victorine,
+)
+
+plasticbin8 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique8.jpg')),
+  kind: 'plastique',
+  name: 'les pizza froides',
+  address: "75 Rue du Coudray, 44000 Nantes",
+  latitude: 47.228439,
+  longitude: -1.544833,
+  user: jimmy,
+)
+
+plasticbin9 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique9.jpg')),
+  kind: 'plastique',
+  name: 'La grippe',
+  address: "16 Rue de l'Allouée, 44000 Nantes",
+  latitude: 47.228832,
+  longitude: -1.576568,
+  user: joris,
+)
+
+plasticbin10 = Bin.create!(
+  photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique10.jpg')),
+  kind: 'Le rhume',
+  name: 'Les livreurs en retard',
+  address: "40 Rue Saint-Jacques, 44000 Nantes",
+  latitude: 47.196390,
+  longitude: -1.538736,
+  user: simon,
 )
 
 reviews1 = Review.create!(
@@ -373,6 +576,6 @@ reviews10 = Review.create!(
   bin: poubelle_carton3,
 )
 
-
-  GetBinsFromNantesAPIService.new.call
+GetBinsFromNantesAPIService.new.call
+puts "C'est bon c'est créé ! <3 <3 <3 <3 Bon courage pour le Demo Day les BinHere's boys !"
 

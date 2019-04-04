@@ -11,28 +11,24 @@
 }
 
 // DIV infos poubelle
+.reviews-colapse {
 
-.bin_name {
-  font-family: poppins;
-  font-size: 35px;
-  padding-top: 4px;
-  padding-left: 12px;
+
+// HEADER
+.show-content {
   margin-left: 32px;
-  height: 5%;
-  font-weight: bold;
-}
-// DIV map et reviews
-
-.highlighted-yellow {
-  color: black;
-  background: #EEB111;
 }
 
-.highlighted {
-  padding: 0 15px 3px;
-  font-style: normal;
-  font-family: poppins;
+.container-show {
+ flex-direction: row;
+ width: 100%;
+ max-height: 950px;
 }
+
+.header-show {
+  display: flex;
+}
+
 
 .profilreviewsmap {
   display:grid;
@@ -46,10 +42,34 @@
 .profil {
   width: 40px;
   flex: 0 0 15%;
-  background-color: white;
-  // margin: 0 8px 0 32px;
-  // max-height: 400px;
+  }
+.button-retour img {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  &:hover {
+    transition: 0.4s;
+    transform: scale(1.2);
+  }
 }
+
+
+////////////////////
+
+.profil {
+  display: flex;
+
+  background-color: white;
+  margin: 32px 0 32px 0;
+}
+
+.binprofilinfos {
+  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
 
 .binphoto-show {
   width: 100%;
@@ -64,48 +84,82 @@
   min-width: 260px;
   max-width: 260px;
   max-height: 260px;
+
+.binprofilinfos h2 {
+  color: black;
+}
+.binphoto {
+  // width: 100%;
+  min-width: 260px;
+}
+.binphoto > img {
+  // width: 100%;
+  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  max-height: 300px;
+  max-width: 300px;
+  min-width: 280px;
+
+}
+
+#bin-profil {
+  position: absolute;
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  left: 257px;
+  bottom: 590px;
+
 }
 
 .user_details {
-  // display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.own_and_update{
-  // width: 250px;
-  display: flex;
-}
-
-.name_and_own {
-display: flex;
-// width: 250px;
-}
+.profil-bin-elements {
+  margin: -14px 16px 0 16px;
+  max-width: 25%;
 
 .binprofilinfos {
   padding: 16px;
   // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   align-items: center;
   min-width: 260px;
+
 }
 
 
-.city_show {
-  // width: 200px;
-  flex: 0 0 65%;
-}
-
-.owner_show {
-  flex: 0 0 65%;
-}
-
-.binprofilinfos h2 {
+.highlighted-yellow {
   color: black;
+  background: #EEB111;
 }
+
+.highlighted {
+  padding: 0 15px 3px;
+  font-style: normal;
+  font-family: poppins;
+}
+
+
+
+
+
 
 
 ///////////
+
+}
+.review-button {
+  margin-left: 50px;
+}
+
+.collapse-input{
+  width: 600px;
+  margin-left: 50px;
+}
+
 #avis {
   color: #EEB111;
 }
@@ -137,22 +191,8 @@ display: flex;
   padding-bottom: 5px;
 }
 //////////
-// ---BUTTON---
+// ---BUTTONS---
 
-.hey {
-  display: flex;
-  align-items: center;
-}
-
-.button-retour img {
-  height: 40px;
-  width: 40px;
-  margin: 16px 0px -16px 64px;
-  &:hover {
-    transition: 0.4s;
-    transform: scale(1.2);
-  }
-}
 
 .button_show img {
   height: 40px;
@@ -168,7 +208,30 @@ display: flex;
   justify-content: space-between;
 }
 
-// DIV map
+
+.button_show {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_show img {
+  height: 40px;
+  width: 40px;
+  &:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  }
+}
+
+
+////// DIV map
+
 
 .map-show-container {
   display: flex;
@@ -176,6 +239,8 @@ display: flex;
   flex: 0 0 50%;
   position: relative;
   max-height: 800px;
+  width: 70%;
+  height: 600px;
 }
 
 .mapcards {
@@ -200,6 +265,7 @@ display: flex;
   width: 100%;
 }
 
+
 .container-show {
  flex-direction: column;
  width: 100%;
@@ -211,20 +277,7 @@ display: flex;
   justify-content: space-between;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.button_show img {
-  height: 40px;
-  width: 40px;
-  &:hover {
-  transition: 0.4s;
-  transform: scale(1.2);
-  }
-}
 
 .card-container {
  justify-content: space-between;
@@ -265,18 +318,6 @@ display: flex;
 opacity: 1;
 }
 
-.reviews_show h2{
- font-size: 16px;
- font-weight: bold;
- margin: 0;
-}
-
-.reviews_show {
-  margin-top: 30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 150px;
-  min-height: 800px;
-}
 
 .card-product-show {
  overflow: hidden;
@@ -296,12 +337,30 @@ opacity: 1;
 }
 
 /// REVIEWS ///
+
+
+.reviews_show h2{
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+
+.reviews_show {
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 150px;
+  min-height: 800px;
+}
 .reviews {
   height: 800px;
   // padding: 0 32px;
   width: 400px;
   background-color: white;
-  margin-left : 32px;
+
+  margin: 0 32px 0 8px;
+  height: 350px;
+  width: 800px;
+
 }
 
 .customer-reviews {
@@ -462,15 +521,6 @@ opacity: 1;
   margin: 16px 0px -16px 64px;
 }
 
-#bin-profil {
-  position: absolute;
-  max-width: 50px;
-  max-height: 50px;
-  min-width: 50px;
-  min-height: 50px;
-  left: 259px;
-
-}
 
 
 .btn-add-review {
@@ -486,3 +536,7 @@ opacity: 1;
   }
 }
 
+.add-comment-button {
+  color: #EEB111;
+
+}
