@@ -29,6 +29,20 @@
   display: flex;
 }
 
+
+.profilreviewsmap {
+  display:grid;
+  padding: 50px;
+}
+
+// .profil-review-show {
+//   height: 100%;
+// }
+
+.profil {
+  width: 40px;
+  flex: 0 0 15%;
+  }
 .button-retour img {
   display: flex;
   height: 40px;
@@ -44,6 +58,7 @@
 
 .profil {
   display: flex;
+
   background-color: white;
   margin: 32px 0 32px 0;
 }
@@ -54,6 +69,21 @@
   align-items: center;
   width: 70%;
 }
+
+
+.binphoto-show {
+  width: 100%;
+  min-width: 260px;
+}
+
+
+.binphoto-show > img {
+  width: 100%;
+  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  min-height: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  max-height: 260px;
 
 .binprofilinfos h2 {
   color: black;
@@ -68,6 +98,7 @@
   max-height: 300px;
   max-width: 300px;
   min-width: 280px;
+
 }
 
 #bin-profil {
@@ -90,6 +121,12 @@
 .profil-bin-elements {
   margin: -14px 16px 0 16px;
   max-width: 25%;
+
+.binprofilinfos {
+  padding: 16px;
+  // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  align-items: center;
+  min-width: 260px;
 
 }
 
@@ -251,17 +288,6 @@
  align-self: flex-start;
 
 }
-
-.card-container-show {
-  justify-content: space-between;
-  padding: 32px;
-  flex: 1 0 50%;
-  a:hover {
-    text-decoration: none;
-  }
-}
-
-
 
 .map-bin-container {
  // background-color: red;
