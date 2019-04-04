@@ -28,12 +28,9 @@
 
           <div class="profil-bin-elements">
             <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
-            <% if @bin.user == true %>
-                <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
                 <p id="city"><%= @bin.user.user_name %></p>
-              <% else %>
-                <p id="city">Cette poubelle n'a pas de propriétaire</p>
-              <% end %>
+              </div>
+            </div>
           </div>
 
           <div class="profil-bin-elements">
