@@ -12,15 +12,15 @@
           <div class=" binphoto-show">
             <%= cl_image_tag current_user.avatar, gravity: :north, crop: :fill%>
           </div>
-          <div class="binprofilinfos">
+          <div class="binprofilinfos-show">
             <h2 #id="profil-name"> <strong><%= current_user.full_name %> </strong> </h2>
-            <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
+            <p class="menu-profil-show"><span class="highlighted highlighted-yellow">VILLE</span></p>
             <p id="city"><%= current_user.city %></p>
-            <p class="menu-profil"><span class="highlighted highlighted-yellow">PSEUDO</span></p>
+            <p class="menu-profil-show"><span class="highlighted highlighted-yellow">PSEUDO</span></p>
             <p id="city"><%= current_user.user_name %></p>
-             <p class="menu-profil"><span class="highlighted highlighted-yellow">EMAIL</span></p>
+             <p class="menu-profil-show"><span class="highlighted highlighted-yellow">EMAIL</span></p>
             <p id="city"><%= current_user.email %></p>
-            <p class="city-profil"><span class="highlighted highlighted-yellow">CRÉÉ</span></p>
+            <p class="menu-profil-show"><span class="highlighted highlighted-yellow">CRÉÉ</span></p>
             <p id="created"><%= current_user.created_at.strftime('%d-%m-%Y') %></p>
           </div>
         </div>
