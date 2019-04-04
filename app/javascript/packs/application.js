@@ -7,7 +7,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initMapboxShow } from '../plugins/init_mapbox_show';
 
+initMapboxShow();
 initMapbox();
 initAutocomplete();
 
