@@ -36,8 +36,7 @@
 
 .profilreviewsmap {
   display: flex;
-  padding: 32px;
-  min-height: 800px;
+  padding: 50px;
 }
 
 .profilreview {
@@ -49,9 +48,10 @@
 }
 
 .profil {
-  flex: 0 0 45%;
+  width: 40px;
+  flex: 0 0 30%;
   background-color: white;
-  margin: 0 8px 0 32px;
+  // margin: 0 8px 0 32px;
   // max-height: 400px;
 }
 
@@ -68,11 +68,37 @@
   min-width: 260px;
 }
 
-.binprofilinfos {
-  display: flex;
-  padding: 16px;
-  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+.user_details {
+  // display: flex;
+  justify-content: space-between;
   align-items: center;
+
+}
+
+.own_and_update{
+  // width: 250px;
+  display: flex;
+}
+
+.name_and_own {
+display: flex;
+// width: 250px;
+}
+
+.binprofilinfos {
+  padding: 16px;
+  // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  align-items: center;
+}
+
+
+.city_show {
+  // width: 200px;
+  flex: 1 0 65%;
+}
+
+.owner_show {
+  flex: 1 1 65%;
 }
 
 .binprofilinfos h2 {
@@ -284,10 +310,10 @@ opacity: 1;
 /// REVIEWS ///
 .reviews {
   height: 800px;
-  padding: 0 32px;
-  flex: 0 0 60%;
+  // padding: 0 32px;
+  width: 400px;
   background-color: white;
-  margin: 0 32px 0 8px;
+  margin-left : 32px;
 }
 
 .customer-reviews {
