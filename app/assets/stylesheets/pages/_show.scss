@@ -14,8 +14,15 @@
 .reviews-colapse {
 
 
+
+.bin_name {
+  font-family: poppins;
+  font-size: 35px;
+  padding-top: 4px;
+  padding-left: 12px;
 // HEADER
 .show-content {
+
   margin-left: 32px;
 }
 
@@ -298,7 +305,7 @@
  padding: 32px;
  // position: sticky;
  // top: 0;
- position: relative;
+ // position: relative;
 }
 
 .button-container {
@@ -456,6 +463,32 @@ opacity: 1;
   height: auto;
 }
 
+
+#my_map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+#instructions {
+  flex: 0 0 40px;
+        margin: 20px;
+        width: 100%;
+        width: 400px;
+        top: 0;
+        bottom: 20%;
+        padding: 20px;
+        background-color: rgba(173, 17, 17, 0.9);
+        // overflow-y: scroll;
+        font-family: sans-serif;
+        font-size: 0.8em;
+        line-height: 2em;
+      }
+.duration {
+        font-size: 2em;
+      }
 
 // BADGE
 

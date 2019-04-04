@@ -1,5 +1,6 @@
 
 
+
 <div class="show-content">
   <div class="container-show">
     <div class="header-show">
@@ -69,6 +70,8 @@
               <% end %>
 
     </div>
+
+   
   </div>
   <!-- Delete by Thomas Meerseman from the Noun Project -->
    <div class="reviews">
@@ -107,20 +110,23 @@
             </div>
           </div>
         </div>
-
-
-  <div class="map-show-container">
-    <div class="map-container-show">
-      <div id="map"
-        data-markers="[<%= @marker.to_json %>]"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-
-
-      </div>
+        <div class="map-show-container">
+          <div class="map-container-show">
+            <div
+              id='my_map'
+              data-mapbox-access-token='<%= ENV['MAPBOX_API_KEY'] %>'
+              data-start-coordinates="<%= geocode(params[:address]) || geocode(@bin.address) %>"
+              data-end-coordinates='<%= geocode(@bin.address) %>'
+              data-initial-zoom-level='14'
+             ></div>
+            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+          </div>
+      <div class="maps_instruction" id='instructions'></div>
     </div>
   </div>
 
 </div>
+
 
 
 
