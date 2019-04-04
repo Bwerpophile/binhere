@@ -10,12 +10,12 @@
     </div>
   </div>
 
-
+<div class="show-container">
+ <div class="show-left">
     <div class="bin-card-profil-infos">
-      <div class="binphoto", style="background-image: url('<%= cl_image_path @bin.photo %>')";>
+      <div class="bin-image" style="background-image: url('<%= cl_image_path @bin.photo %> ')"></div>
 
-      </div>
-      <div class="bin-details">
+        <div class="bin-details">
 
           <h1><strong>POUBELLE <%= @bin.name %> </strong> </h1>
 
@@ -28,28 +28,15 @@
 
           <div class="profil-bin-elements">
             <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
-                <p id="city"><%= @bin.user.user_name %></p>
-              </div>
-            </div>
-          </div>
+            <p id="city"><%= @bin.user.user_name %></p>
 
-          <div class="profil-bin-elements">
-            <p class="menu-profil"><span class="highlighted highlighted-yellow">CRÉÉ LE</span></p>
-            <p id="created"><br><%= @bin.created_at.strftime('%d-%m-%Y')%></p>
           </div>
-
-          <div class="profil-bin-elements">
-            <p class="menu-profil"><span class="highlighted highlighted-yellow">MISE A JOUR</span></p>
-            <p id="created"><br><%= @bin.updated_at.strftime('%d-%m-%Y')%></p>
-          </div>
-
         </div>
       </div>
-
-
-
     </div>
-
+    <h3 class="highlighted highlighted-yellow"> ITINERAIRE</h3>
+    <div class="maps_instruction" id='instructions'></div>
+ </div>
 
   <div class="map-show-container">
     <div class="map-container-show">
@@ -61,24 +48,23 @@
       </div>
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     </div>
-    <div class="maps_instruction" id='instructions'></div>
   </div>
 </div>
-
-  <div class="container-show">
-    <div class="header-show">
+  <div class="container-show-commentaires">
+    <div class="commentaire-show">
       <div class="showing-bin-name">
-        <h3 class="highlighted highlighted-yellow"> Laissez un commentaire</h3>
+        <h3 class="highlighted highlighted-yellow">LAISSEZ UN COMMENTAIRE</h3>
       </div>
+      <p><button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Ajouter
+         <i class="fas fa-plus"></i>
+       </button></p>
     </div>
+
   </div>
 
   <div class="reviews-colapse">
-    <p>
-     <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-       Ajouter un commentaire
-     </button>
-    </p>
+
+
   <div class="collapse" id="collapseExample">
      <div class="card card-body collapse-input">
        <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
@@ -127,6 +113,10 @@
     </div>
   </div>
 </div>
+
+</div>
+
+
 
 <%= javascript_pack_tag 'init_mapbox_show' %>
 
