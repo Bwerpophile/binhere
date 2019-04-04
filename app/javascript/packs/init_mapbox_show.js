@@ -14,6 +14,20 @@ const initMapboxShow = () => {
     zoom:      16
   });
 
+  const fitMapToMarkers = (map, markers, zoom) => {
+    const bounds = new mapboxgl.LngLatBounds();
+    markers.forEach(marker => bounds.extend([ marker[0], marker[1] ]));
+    map.fitBounds(bounds, { padding: 70, maxZoom: zoom, duration: 0 });
+  };
+
+  const markers = [startCoordinates, endCoordinates];
+  if (JSON.stringify(startCoordinates)==JSON.stringify(endCoordinates)
+) {
+    fitMapToMarkers(map, markers, 16);
+  } else {
+    fitMapToMarkers(map, markers, 20);
+  }
+
   function drawRoute(end) {
     const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${startCoordinates[0]},${startCoordinates[1]};${endCoordinates[0]},${endCoordinates[1]}?language=fr&steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`
 
@@ -58,8 +72,8 @@ const initMapboxShow = () => {
             'line-cap': 'round'
           },
           paint: {
-            'line-color': '#3887be',
-            'line-width':  5,
+            'line-color': 'rgb(238, 177, 17)',
+            'line-width':  4,
             'line-opacity': 0.75
           }
         });
@@ -111,8 +125,8 @@ const initMapboxShow = () => {
         }
       },
       paint: {
-        'circle-radius': 10,
-        'circle-color': '#3887be',
+        'circle-radius': 6,
+        'circle-color': 'black',
       }
     }
 
@@ -125,6 +139,23 @@ const initMapboxShow = () => {
       .addTo(map);
 
     drawRoute(endCoordinates);
+
+    markers.forEach((marker) => {
+
+      // Create a HTML element for your custom marker
+      const element = document.createElement('div');
+      element.className = 'marker';
+      element.style.backgroundImage = `url('${marker.image_url}')`;
+      element.style.backgroundSize = 'contain';
+      element.style.width = '35px';
+      element.style.height = '35px';
+
+
+      new mapboxgl.Marker(element)
+        .setLngLat([ marker.lng, marker.lat ])
+        .addTo(map);
+    });
+
   })
 }
 
