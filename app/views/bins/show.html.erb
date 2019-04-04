@@ -10,30 +10,30 @@
           <% end %>
       </div>
       <div class="showing-bin-name">
-        <h2 id="profil-name"> <strong><%= @bin.name %> </strong> </h2>
+        <h1 class="highlighted highlighted-yellow"><strong>POUBELLE <%= @bin.name %> </strong> </h1>
       </div>
     </div>
   </div>
 
   <div class="profil">
 
-    <div class="binprofilinfos">
+    <div class="bin-card-profil-infos">
       <div class="binphoto">
-        <%= cl_image_tag @bin.photo, :crop=>"fill", width: 200, heigth: 200, class:"photo-current-poubelle"%>
+        <%= cl_image_tag @bin.photo, class:"photo-current-poubelle"%>
         <% @bin.user %>
-        <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
       </div>
 
       <div class="user_details">
 
         <div class="profil-bin-elements">
           <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
-          <p id="city"><%= @bin.address %></p>
+          <p id="city"><%= (@bin.address.split(','))[0] %> <br> <%= (@bin.address.split(','))[1]%></p>
         </div>
 
         <div class="profil-bin-elements">
           <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
           <% if @bin.user == true %>
+              <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
               <p id="city"><%= @bin.user.user_name %></p>
             <% else %>
               <p id="city">Cette poubelle n'a pas de propriétaire</p>
@@ -51,7 +51,6 @@
         </div>
 
       </div>
-
 
 
 <div class="reviews-colapse">
@@ -73,12 +72,6 @@
 
    
   </div>
-  <!-- Delete by Thomas Meerseman from the Noun Project -->
-   <div class="reviews">
-        <div class="row customer-reviews">
-          <div class="col-md-12 column">
-            <div class="inner-box">
-
 
             <div class="avis_show">
               <% if @bin.reviews.any? %>
@@ -125,8 +118,59 @@
     </div>
   </div>
 
-</div>
+  <div class="reviews-colapse">
+    <p>
+     <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+       Ajouter un commentaire
+     </button>
+    </p>
+  <div class="collapse" id="collapseExample">
+     <div class="card card-body collapse-input">
+       <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
+         <%= f.input :name, label: 'Objet' %>
+         <%= f.input :description,  as: :text, label: 'Votre commentaire' %>
+         <%= f.submit "Ajouter", class: "btn btn-primary"%>
+         <% end %>
+     </div>
+  </div>
 
+  <div class="reviews">
+    <div class="row customer-reviews">
+      <div class="col-md-12 column">
+        <div class="inner-box">
+
+        <div class="avis_show">
+          <% if @bin.reviews.any? %>
+          <% @reviews.each do |review|  %>
+          <div class="hover_review">
+            <div class="user-infos">
+            <div class="user-avatar">
+                 <%= cl_image_tag review.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+               </div>
+               <div class="avis_name-user">
+                 <div class="avis-user-name">
+                   <p><strong><%= review.user.user_name.capitalize %></strong></p>
+                 </div>
+                 <div class=" avis-review-name">
+                   <p><%= review.name %></p>
+                 </div>
+               </div>
+               <div class="avis_date">
+                 <div><p><%= review.created_at.strftime('%d/%m/%Y') %></p></div>
+               </div>
+            </div>
+             <div class="descriptif_avis">
+               <div><%= review.description %></div>
+             </div>
+        </div>
+          <% end %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
