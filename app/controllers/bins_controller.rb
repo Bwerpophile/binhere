@@ -33,7 +33,8 @@ class BinsController < ApplicationController
         # lat: bin.latitude,
         # lng: bin.longitude
       lat: @bin.latitude,
-      lng: @bin.longitude
+      lng: @bin.longitude,
+       image_url: helpers.asset_url('garbage.png')
         # infoWindow: render_to_string(partial: "infowindow", locals: { bin: bin }),
         # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
