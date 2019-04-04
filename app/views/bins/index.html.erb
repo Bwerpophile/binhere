@@ -45,10 +45,10 @@
         <div class="container">
           <div class="row">
             <% @bins.each do |bin| %>
-            
+
               <div class="col-sm.col-md.col-lg.col-xl">
                 <%= link_to bin_path(bin) do %>
-                
+
                  <div class="card-trip">
                     <div class="poubelle-image"><%= cl_image_tag(bin.photo, gravity: :north, crop: :fill, class: "poubelle-image-cl") %></div>
                     <div class="card-trip-infos">
@@ -57,8 +57,11 @@
                         <p><%= (bin.address.split(','))[0] %>,</p>
                         <p><%= (bin.address.split(','))[1] %>.</p>
                       </div>
+                      <div class="card-trip-pricing-container">
+                        <div class="card-trip-pricing"><%= bin.reviews.length %><i class="far fa-comment comment"></i></div>
+                        <h3 class="card-trip-pricing">+ d'infos</h3>
+                      </div>
 
-                      <h3 class="card-trip-pricing">+ d'infos</h3>
                       <% if bin.user %>
                         <%= cl_image_tag bin.user.avatar, width: 200, heigth: 200, :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
                       <% end %>
