@@ -11,102 +11,19 @@
 }
 
 // DIV infos poubelle
+.reviews-colapse {
 
-.bin_name {
-  font-family: poppins;
-  font-size: 35px;
-  padding-top: 4px;
-  padding-left: 12px;
-  margin-left: 32px;
-  height: 5%;
-  font-weight: bold;
-}
-// DIV map et reviews
-
-.highlighted-yellow {
-  color: black;
-  background: #EEB111;
-}
-
-.highlighted {
-  padding: 0 15px 3px;
-  font-style: normal;
-  font-family: poppins;
-}
-
-.profilreviewsmap {
-  display: flex;
-  padding: 50px;
-}
-
-.profilreview {
-  display: flex;
-  justify-content: space-between;
-  flex: 1 0 60%;
-  height: 100%;
 
 }
-
-.profil {
-  width: 40px;
-  flex: 0 0 30%;
-  background-color: white;
-  // margin: 0 8px 0 32px;
-  // max-height: 400px;
+.review-button {
+  margin-left: 50px;
 }
 
-.binphoto {
-  width: 100%;
-  min-width: 260px;
+.collapse-input{
+  width: 600px;
+  margin-left: 50px;
 }
 
-
-.binphoto > img {
-  width: 100%;
-  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  min-height: 260px;
-  min-width: 260px;
-}
-
-.user_details {
-  // display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.own_and_update{
-  // width: 250px;
-  display: flex;
-}
-
-.name_and_own {
-display: flex;
-// width: 250px;
-}
-
-.binprofilinfos {
-  padding: 16px;
-  // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  align-items: center;
-}
-
-
-.city_show {
-  // width: 200px;
-  flex: 0 0 65%;
-}
-
-.owner_show {
-  flex: 0 0 65%;
-}
-
-.binprofilinfos h2 {
-  color: black;
-}
-
-
-///////////
 #avis {
   color: #EEB111;
 }
@@ -212,11 +129,7 @@ display: flex;
   justify-content: space-between;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .button_show img {
   height: 40px;
@@ -313,7 +226,11 @@ opacity: 1;
   // padding: 0 32px;
   width: 400px;
   background-color: white;
-  margin-left : 32px;
+
+  margin: 0 32px 0 8px;
+  height: 350px;
+  width: 800px;
+
 }
 
 .customer-reviews {
@@ -498,3 +415,7 @@ opacity: 1;
   }
 }
 
+.add-comment-button {
+  color: #EEB111;
+
+}
