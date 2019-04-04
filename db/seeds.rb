@@ -22,7 +22,7 @@ User.destroy_all
 puts "Start database creation... "
 
 
-puts "Victorine creation..."
+puts "Users creation..."
 
 victorine = User.create!(
   user_name: 'Victo',
@@ -90,8 +90,6 @@ simon = User.create!(
   city: 'Düsseldorf',
 )
 
-
-puts "Victorine is behind you ..."
 puts "Starting trashes creation ..."
 
 poubelle_carton1 = Bin.create!(
@@ -577,5 +575,4 @@ reviews10 = Review.create!(
 )
 
 # GetBinsFromNantesAPIService.new.call
-puts "C'est bon c'est créé ! <3 <3 <3 <3 Bon courage pour le Demo Day les BinHere's boys !"
-
+puts "Database created !"
