@@ -373,6 +373,6 @@ reviews10 = Review.create!(
   bin: poubelle_carton3,
 )
 
-
-  GetBinsFromNantesAPIService.new.call
+GetBinsFromNantesAPIService.new.call
+puts "C'est bon c'est créé ! <3 <3 <3 <3 Bon courage pour le Demo Day les BinHere's boys !"
 
