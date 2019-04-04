@@ -35,37 +35,35 @@
 }
 
 .profilreviewsmap {
-  display: flex;
+  display:grid;
   padding: 50px;
 }
 
-.profilreview {
-  display: flex;
-  justify-content: space-between;
-  flex: 1 0 60%;
-  height: 100%;
-
-}
+// .profil-review-show {
+//   height: 100%;
+// }
 
 .profil {
   width: 40px;
-  flex: 0 0 30%;
+  flex: 0 0 15%;
   background-color: white;
   // margin: 0 8px 0 32px;
   // max-height: 400px;
 }
 
-.binphoto {
+.binphoto-show {
   width: 100%;
   min-width: 260px;
 }
 
 
-.binphoto > img {
+.binphoto-show > img {
   width: 100%;
   box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   min-height: 260px;
   min-width: 260px;
+  max-width: 260px;
+  max-height: 260px;
 }
 
 .user_details {
@@ -89,6 +87,7 @@ display: flex;
   padding: 16px;
   // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
   align-items: center;
+  min-width: 260px;
 }
 
 
@@ -236,17 +235,6 @@ display: flex;
  align-self: flex-start;
 
 }
-
-.card-container-show {
-  justify-content: space-between;
-  padding: 32px;
-  flex: 1 0 50%;
-  a:hover {
-    text-decoration: none;
-  }
-}
-
-
 
 .map-bin-container {
  // background-color: red;
