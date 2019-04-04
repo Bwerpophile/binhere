@@ -1,3 +1,4 @@
+
 <div class="show-content">
   <div class="container-show">
     <div class="header-show">
@@ -49,8 +50,29 @@
 
       </div>
 
+
+<div class="reviews-colapse">
+  <p>
+    <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Ajouter un commentaire
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body collapse-input">
+      <%= simple_form_for [@bin, @review] do |f| %> <!-- simple form -->
+              <%= f.input :name, label: 'Objet' %>
+              <%= f.input :description,  as: :text, label: 'Votre commentaire' %>
+              <%= f.submit "Ajouter", class: "btn btn-primary"%>
+
+              <% end %>
+
     </div>
   </div>
+  <!-- Delete by Thomas Meerseman from the Noun Project -->
+   <div class="reviews">
+        <div class="row customer-reviews">
+          <div class="col-md-12 column">
+            <div class="inner-box">
 
 
   <div class="map-show-container">
@@ -58,21 +80,11 @@
       <div id="map"
         data-markers="[<%= @marker.to_json %>]"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
       </div>
     </div>
   </div>
 
 </div>
 
-
-
-
-
-<!--
-<div class="profilreviewsmap">
-  <div class="profilreview">
-
-
-  </div>
-</div> -->
 
