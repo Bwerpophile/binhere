@@ -1,3 +1,58 @@
+
+
+<div class="show-content">
+  <div class="container-show">
+    <div class="header-show">
+      <div class="button-retour">
+          <%=  link_to bins_path(bin_type: @bin.kind) do %>
+          <%= image_tag "retour-arrière.png" %>
+          <% end %>
+      </div>
+      <div class="showing-bin-name">
+        <h2 id="profil-name"> <strong><%= @bin.name %> </strong> </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="profil">
+
+    <div class="binprofilinfos">
+      <div class="binphoto">
+        <%= cl_image_tag @bin.photo, :crop=>"fill", width: 200, heigth: 200, class:"photo-current-poubelle"%>
+        <% @bin.user %>
+        <%= cl_image_tag @bin.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered", id:"bin-profil" %>
+      </div>
+
+      <div class="user_details">
+
+        <div class="profil-bin-elements">
+          <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
+          <p id="city"><%= @bin.address %></p>
+        </div>
+
+        <div class="profil-bin-elements">
+          <p class="menu-profil"><span class="highlighted highlighted-yellow">PROPRIETAIRE</span></p>
+          <% if @bin.user == true %>
+              <p id="city"><%= @bin.user.user_name %></p>
+            <% else %>
+              <p id="city">Cette poubelle n'a pas de propriétaire</p>
+            <% end %>
+        </div>
+
+        <div class="profil-bin-elements">
+          <p class="menu-profil"><span class="highlighted highlighted-yellow">CRÉÉ LE</span></p>
+          <p id="created"><br><%= @bin.created_at.strftime('%d-%m-%Y')%></p>
+        </div>
+
+        <div class="profil-bin-elements">
+          <p class="menu-profil"><span class="highlighted highlighted-yellow">MISE A JOUR</span></p>
+          <p id="created"><br><%= @bin.updated_at.strftime('%d-%m-%Y')%></p>
+        </div>
+
+      </div>
+
+
+
 <div class="reviews-colapse">
   <p>
     <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -12,6 +67,7 @@
               <%= f.submit "Ajouter", class: "btn btn-primary"%>
 
               <% end %>
+
     </div>
   </div>
   <!-- Delete by Thomas Meerseman from the Noun Project -->
@@ -19,6 +75,7 @@
         <div class="row customer-reviews">
           <div class="col-md-12 column">
             <div class="inner-box">
+
 
             <div class="avis_show">
               <% if @bin.reviews.any? %>
@@ -50,6 +107,21 @@
             </div>
           </div>
         </div>
+
+
+  <div class="map-show-container">
+    <div class="map-container-show">
+      <div id="map"
+        data-markers="[<%= @marker.to_json %>]"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+
       </div>
+    </div>
+  </div>
+
 </div>
+
+
+
 
