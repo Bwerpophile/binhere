@@ -12,24 +12,26 @@
 
 // DIV infos poubelle
 
+#mespoubelles {
+  display: flex;
+  justify-content: space-between;
+  color: #EEB111;
+
+}
+
+#binnum {
+  padding: 30px;
+}
+
 
 .bin_name {
   font-family: poppins;
   font-size: 35px;
   padding-top: 4px;
   padding-left: 12px;
-// HEADER
-
-.bin_name {
- font-family: poppins;
- font-size: 35px;
- padding-top: 4px;
- padding-left: 12px;
- margin-left: 32px;
- height: 5%;
- font-weight: bold;
 }
 
+// HEADER
 .show-content {
 
   margin-left: 32px;
@@ -51,6 +53,9 @@
   padding: 50px;
 }
 
+// .profil-review-show {
+//   height: 100%;
+// }
 
 .profil {
   width: 40px;
@@ -70,9 +75,11 @@
 }
 
 
+////////////////////
 
 .profil {
   display: flex;
+
   background-color: white;
   margin: 32px 0 0 0;
   position: relative;
@@ -83,18 +90,7 @@
   display: flex;
   align-items: center;
   width: 70%;
-
-  padding: 16px;
-  // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
-  align-items: center;
-  min-width: 260px;
-}
-
-.binprofilinfos-show {
-  align-items: center;
-  width: 70%;
-  padding-left: 16px;
-  padding-top: 16px;
+  min-height: 20px;
 }
 
 
@@ -103,6 +99,7 @@
   width: 100%;
   min-width: 260px;
 }
+
 
 .binphoto-show > img {
   width: 100%;
@@ -117,7 +114,6 @@
 
   color: black;
 }
-
 .binphoto {
   // width: 100%;*
   max-width: 200px;
@@ -131,7 +127,6 @@
   // min-width: 200px;
   min-height: 200px;
 }
-
 
 .binphoto > img {
   // width: 100%;
@@ -164,11 +159,14 @@
   max-width: 25%;
 }
 
-.menu-profil-show {
-  font-weight: bold;
-  margin-top: 29px;
-  margin-bottom: 4px;
+.binprofilinfos {
+  padding: 16px;
+  // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  align-items: center;
+  min-width: 260px;
+
 }
+
 
 .highlighted-yellow {
   color: black;
@@ -183,6 +181,7 @@
 
 
 ///////////
+
 
 .review-button {
   margin-left: 50px;
@@ -597,5 +596,4 @@ opacity: 1;
 
 .add-comment-button {
   color: #EEB111;
-
 }
