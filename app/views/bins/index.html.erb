@@ -45,10 +45,10 @@
         <div class="container">
           <div class="row">
             <% @bins.each do |bin| %>
-            
+
               <div class="col-sm.col-md.col-lg.col-xl">
-                <%= link_to bin_path(bin) do %>
-                
+                <%= link_to bin_path(bin, address: params[:address]) do %>
+
                  <div class="card-trip">
                     <div class="poubelle-image"><%= cl_image_tag(bin.photo, gravity: :north, crop: :fill, class: "poubelle-image-cl") %></div>
                     <div class="card-trip-infos">
