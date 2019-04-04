@@ -64,7 +64,12 @@
       </div>
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     </div>
-    <div class="maps_instruction" id='instructions'></div>
+    <div> <% if params[:address].present? %>
+      <div class="maps_instruction" id='instructions'>
+      <% else %>
+      <p > Vous n'avez pas défini d'itinéraire </p>
+      <% end  %>
+    </div>
   </div>
 </div>
 
