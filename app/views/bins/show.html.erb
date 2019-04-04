@@ -1,4 +1,5 @@
 
+
 <div class="show-content">
   <div class="container-show">
     <div class="header-show">
@@ -51,6 +52,7 @@
       </div>
 
 
+
 <div class="reviews-colapse">
   <p>
     <button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -75,16 +77,51 @@
             <div class="inner-box">
 
 
+            <div class="avis_show">
+              <% if @bin.reviews.any? %>
+              <% @reviews.each do |review|  %>
+                <div class="hover_review">
+                  <div class="user-infos">
+                    <div class="user-avatar">
+                      <%= cl_image_tag review.user.avatar, width: 200, heigth: 200,  :gravity=>"faces", :crop=>"fill", class:"card-trip-user avatar-bordered" %>
+                    </div>
+                    <div class="avis_name-user">
+                      <div class="avis-user-name">
+                        <p><strong><%= review.user.user_name.capitalize %></strong></p>
+                      </div>
+                      <div class=" avis-review-name">
+                        <p><%= review.name %></p>
+                      </div>
+                    </div>
+                    <div class="avis_date">
+                      <div><p><%= review.created_at.strftime('%d/%m/%Y') %></p></div>
+                    </div>
+                  </div>
+                  <div class="descriptif_avis">
+                    <div><%= review.description %></div>
+                  </div>
+                </div>
+              <% end %>
+              <% end %>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
   <div class="map-show-container">
     <div class="map-container-show">
       <div id="map"
         data-markers="[<%= @marker.to_json %>]"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 
+
       </div>
     </div>
   </div>
 
 </div>
+
+
 
 
