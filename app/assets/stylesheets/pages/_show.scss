@@ -29,18 +29,20 @@
   font-size: 35px;
   padding-top: 4px;
   padding-left: 12px;
-   margin-left: 32px;
+}
+// HEADER
+
+.bin_name {
+ font-family: poppins;
+ font-size: 35px;
+ padding-top: 4px;
+ padding-left: 12px;
+ margin-left: 32px;
  height: 5%;
  font-weight: bold;
-
-// HEADER
 }
 
-
-
-// HEADER
 .show-content {
-
   margin-left: 32px;
 }
 
@@ -97,7 +99,17 @@
   display: flex;
   align-items: center;
   width: 70%;
-  min-height: 20px;
+  padding: 16px;
+  // box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  align-items: center;
+  min-width: 260px;
+}
+
+.binprofilinfos-show {
+  align-items: center;
+  width: 70%;
+  padding-left: 16px;
+  padding-top: 16px;
 }
 
 
@@ -118,7 +130,6 @@
 }
 
 .binprofilinfos h2 {
-
   color: black;
 }
 .binphoto {
