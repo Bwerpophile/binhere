@@ -24,6 +24,7 @@
 }
 
 
+
 .bin_name {
   font-family: poppins;
   font-size: 35px;
@@ -31,6 +32,7 @@
   padding-left: 12px;
 }
 // HEADER
+
 
 .bin_name {
  font-family: poppins;
@@ -66,10 +68,10 @@
 //   height: 100%;
 // }
 
-.profil {
-  width: 40px;
-  flex: 0 0 15%;
-  }
+// .profil {
+//   width: 40px;
+//   flex: 0 0 15%;
+//   }
 
 .button-retour img {
   display: flex;
@@ -132,19 +134,20 @@
 .binprofilinfos h2 {
   color: black;
 }
-.binphoto {
+
+.binphoto img {
   // width: 100%;*
-  max-width: 200px;
-  max-height: 200px;
-  min-width: 260px;
+  background-image: cover;
+  width: 300px;
+  height: 300px;
+
 }
 
 .photo-current-poubelle {
-  max-width: 100%;
-  max-height: 100%;
-  // min-width: 200px;
-  min-height: 200px;
+
+
 }
+
 
 .binphoto > img {
   // width: 100%;
@@ -153,7 +156,12 @@
   max-width: 300px;
   min-width: 280px;
 
-}
+
+.binphoto {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+ }
 
 #bin-profil {
   position: absolute;
@@ -169,11 +177,11 @@
 .user_details {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 }
 
 .profil-bin-elements {
-  margin: -80px 0 0 16px;
+  margin: 0 0 0 16px;
   max-width: 25%;
 }
 
@@ -280,17 +288,50 @@
 }
 
 
-////// DIV map
+////// DIV map //////
 
 
 .map-show-container {
   display: flex;
-  flex-direction: column;
   flex: 0 0 50%;
   position: relative;
   max-height: 800px;
-  width: 70%;
+  width: 100%;
   height: 500px;
+}
+.map-container-show {
+  flex: 0 0 70%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+#my_map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+#instructions {
+  width: 100%;
+  // width: 400px;
+  top: 0;
+  bottom: 20%;
+  padding: 20px;
+  // overflow-y: scroll;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+.duration {
+  font-size: 2em;
 }
 
 .mapcards {
@@ -305,16 +346,6 @@
 .mapcards:hover {
   opacity: 1;
 }
-
-.map-container-show {
-  flex: 0 0 100%;
-  height: 100%;
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
 
 .container-show {
  flex-direction: column;
@@ -339,6 +370,11 @@
 
 }
 
+.bin-details {
+  flex-grow: 1;
+
+}
+
 .map-bin-container {
  // background-color: red;
  // display: sticky;
@@ -355,18 +391,6 @@
  justify-content: space-around;
 }
 
-
-.mapcards {
- max-width: 100%;
- max-height: 100%;
- background-position: center;
- background-size: cover;
- height:150px;
-}
-
-.mapcards:hover {
-opacity: 1;
-}
 
 
 .card-product-show {
@@ -507,31 +531,6 @@ opacity: 1;
 }
 
 
-#my_map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-
-#instructions {
-  flex: 0 0 40px;
-        margin: 20px;
-        width: 100%;
-        width: 400px;
-        top: 0;
-        bottom: 20%;
-        padding: 20px;
-        background-color: rgba(173, 17, 17, 0.9);
-        // overflow-y: scroll;
-        font-family: sans-serif;
-        font-size: 0.8em;
-        line-height: 2em;
-      }
-.duration {
-        font-size: 2em;
-      }
 
 // BADGE
 
