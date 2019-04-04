@@ -92,7 +92,7 @@ const initMapboxShow = () => {
 
       instructions.innerHTML = `
         <span class="duration">${itineraryDuration} minutes 🚶‍♀️</span>
-        ${tripInstructionsHtml}
+
       `
     }
 

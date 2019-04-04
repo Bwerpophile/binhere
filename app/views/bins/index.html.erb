@@ -32,7 +32,7 @@
                 <%= form_tag bins_path, method: :get do %>
                   <%= text_field_tag :address,
                       params[:address], id: 'address_user',
-                      placeholder: "Saisissez votre adresse"%>
+                      placeholder: "Saisissez votre adresse", class: "form-control"%>
                   <%=  hidden_field_tag :bin_type, params[:bin_type] %>
                <% end %>
               </div>

@@ -1,14 +1,10 @@
-.banner-box {
-  display:flex;
-  flex-direction: column;
-  padding-top: 125px;
-}
+
 
 .cards-homepage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
-  height: 500px;
+
   width: 300px;
   margin-top: 10px;
   font-color: white;

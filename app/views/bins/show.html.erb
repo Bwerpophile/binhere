@@ -17,12 +17,18 @@
 
         <div class="bin-details">
 
-          <h1><strong>POUBELLE <%= @bin.name %> </strong> </h1>
+          <h3><strong>POUBELLE <%= @bin.name %> </strong> </h3>
+          <% if params[:address].present? %>
+            <div class="maps_instruction" id='instructions'>
+            </div>
+          <% else %>
+              <p > <%= link_to  "Entrez un itinéraire", bins_path(bin_type: @bin.kind)%> </p>
+          <% end  %>
 
         <div class="user_details">
 
           <div class="profil-bin-elements">
-            <p class="menu-profil"><span class="highlighted highlighted-yellow">VILLE</span></p>
+            <p class="menu-profil"><span class="highlighted highlighted-yellow">ADRESSE</span></p>
             <p id="city"><%= (@bin.address.split(','))[0] %> <br> <%= (@bin.address.split(','))[1]%></p>
           </div>
 
@@ -34,35 +40,15 @@
         </div>
       </div>
     </div>
-    <h3 class="highlighted highlighted-yellow"> ITINERAIRE</h3>
-    <% if params[:address].present? %>
-      <div class="maps_instruction" id='instructions'>
-      </div>
-    <% else %>
-        <p > Vous n'avez pas défini d'itinéraire </p>
-    <% end  %>
-  </div>
 
-  <div class="map-show-container">
-    <div class="map-container-show">
-      <div id='my_map'
-        data-mapbox-access-token='<%= ENV['MAPBOX_API_KEY'] %>'
-        data-start-coordinates="<%= geocode(params[:address]) || geocode(@bin.address) %>"
-        data-end-coordinates='<%= geocode(@bin.address) %>'
-        data-initial-zoom-level='14'>
-      </div>
-      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-    </div>
-    <div>
-    </div>
-  </div>
-  <div class="container-show-commentaires">
+
+    <div class="container-show-commentaires">
     <div class="commentaire-show">
       <div class="showing-bin-name">
-        <h3 class="highlighted highlighted-yellow">LAISSEZ UN COMMENTAIRE </h3>
+        <h3 class="highlighted highlighted-yellow">COMMENTAIRES </h3>
       </div>
-      <p><button class="btn btn-primary review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Ajouter
-         <i class="fas fa-plus"></i>
+      <p><button class="btn review-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> <i class="fas fa-plus"></i> Ajouter un commentaire
+
        </button></p>
     </div>
   </div>
@@ -119,7 +105,25 @@
   </div>
 </div>
 
-</div>
+
+  </div>
+
+      <div class="map-show-container">
+        <div class="map-container-show">
+          <div id='my_map'
+            data-mapbox-access-token='<%= ENV['MAPBOX_API_KEY'] %>'
+            data-start-coordinates="<%= geocode(params[:address]) || geocode(@bin.address) %>"
+            data-end-coordinates='<%= geocode(@bin.address) %>'
+            data-initial-zoom-level='14'>
+          </div>
+          <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+        </div>
+      </div>
+  </div>
+
+ </div>
+
+
 
 
 
