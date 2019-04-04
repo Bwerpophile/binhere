@@ -1,15 +1,3 @@
-.elderscroll::-webkit-scrollbar{
-    background-color:#fff;
-    width:16px
-}
-
-.elderscroll::-webkit-scrollbar-thumb {
-    background-color:#babac0;
-    border-radius:16px;
-    border:4px solid #fff
-}
-
-
 .card-container-show::-webkit-scrollbar{
     background-color:#fff;
     width:16px
@@ -35,7 +23,30 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* Add some padding inside the card container */
+/** PROFILE CARD **/
+
+.profil-show {
+  background-color: white;
+  max-width: 260px;
+  // margin: 0 8px 0 32px;
+  // max-height: 400px;
+}
+
+.binphoto-show > img {
+  width: 100%;
+  box-shadow: 1px 0px 15px rgba(0,0,0,0.2);
+  min-height: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  max-height: 260px;
+}
+
+.photo-infos {
+  margin-top: 28px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  min-width: 260px;
+  max-width: 260px;
+  }
 
 .card-profile {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -84,12 +95,6 @@
   color: #EEB111
 }
 
-// scrollbar //
-
-.elderscroll {
-  overflow-y: scroll;
-  max-height: 770px;
-}
 
 
 // --------------- //
@@ -121,5 +126,3 @@
     text-decoration: none;
   }
 }
-
-// scrollbar //

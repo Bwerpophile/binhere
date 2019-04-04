@@ -127,7 +127,7 @@ poubelle_carton3 = Bin.create!(
 poubelle_carton4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin4.jpg')),
   kind: 'carton',
-  name: 'Tonc',
+  name: 'Aristide briand',
   address: '6 Place Aristide Briand, 44003 Nantes',
   latitude: 47.2177317,
   longitude: -1.5633201,
@@ -155,7 +155,7 @@ poubelle_carton6 = Bin.create!(
 poubelle_carton7 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin12.jpg')),
   kind: 'carton',
-  name: 'Le vin blanc',
+  name: 'du centre',
   address: '9 Rue Descartes, 44000 Nantes',
   latitude: 47.218574,
   longitude: -1.565511,
@@ -164,7 +164,7 @@ poubelle_carton7 = Bin.create!(
 poubelle_carton8 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin13.jpg')),
   kind: 'carton',
-  name: 'Angelina Jolie vieille',
+  name: 'coin de la rue',
   address: '17 Rue Crébillon, 44000 Nantes',
   latitude: 47.213627,
   longitude: -1.560892,
@@ -184,7 +184,7 @@ poubelle_carton9 = Bin.create!(
 poubelle_carton10 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin15.jpg')),
   kind: 'carton',
-  name: 'le prénom Jonas',
+  name: 'Jonas',
   address: '1 Rue de Budapest, 44000 Nantes',
   latitude: 47.2158245,
   longitude: -1.5631356,
@@ -215,7 +215,7 @@ poubelle_menagere2 = Bin.create!(
 poubelle_menagere3 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin8.jpg')),
   kind: 'menager',
-  name: 'Baleine',
+  name: 'Sully bin',
   address: 'Rue Sully, 44000 Nantes',
   latitude: 47.2206028,
   longitude: -1.5507245,
@@ -225,7 +225,7 @@ poubelle_menagere3 = Bin.create!(
 poubelle_menagere4 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin9.jpg')),
   kind: 'menager',
-  name: 'Monster',
+  name: 'Poubelle Viarme',
   address: '31 Place Viarme, 44000 Nantes',
   latitude: 47.2200198,
   longitude: -1.5626764,
@@ -255,7 +255,7 @@ poubelle_menagere6 = Bin.create!(
 poubelle_menagere7 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin17.jpg')),
   kind: 'menager',
-  name: 'Charlotte',
+  name: '8 rue saint Jean',
   address: '8 Rue saint Jean, 44000 Nantes',
   latitude: 47.2156122,
   longitude: -1.5560511,
@@ -265,7 +265,7 @@ poubelle_menagere7 = Bin.create!(
 poubelle_menagere8 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin18.jpg')),
   kind: 'menager',
-  name: 'La discrimination',
+  name: 'Ordure ménagère',
   address: 'Allée Hélène-de-Chappotin, 44000 Nantes',
   latitude: 47.2147912,
   longitude: -1.5571571,
@@ -275,7 +275,7 @@ poubelle_menagere8 = Bin.create!(
 poubelle_menagere9 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin19.jpg')),
   kind: 'menager',
-  name: 'araigné',
+  name: "Bouffay",
   address: '18 Rue Simillien, 44000 Nantes',
   latitude: 47.229306,
   longitude: -1.569412,
@@ -285,7 +285,7 @@ poubelle_menagere9 = Bin.create!(
 poubelle_menagere10 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin20.jpg')),
   kind: 'menager',
-  name: 'Les kebabs qui ferment à 2h',
+  name: 'Donatien - Menagère',
   address: '31 Rue Saint-Donatien, 44000 Nantes',
   latitude: 47.227804,
   longitude: -1.542017,
@@ -345,7 +345,7 @@ glassbin5 = Bin.create!(
 glassbin6 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container6.jpg')),
   kind: 'verre',
-  name: 'les vidéos de chat',
+  name: 'du haut de la rue',
   address: '25 Rue Harouys, 44000 Nantes',
   latitude: 47.217112,
   longitude: -1.566914,
@@ -355,7 +355,7 @@ glassbin6 = Bin.create!(
 glassbin7 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container7.jpg')),
   kind: 'verre',
-  name: 'les parisiens',
+  name: 'Parisiens',
   address: '20 Rue Octave Feuillet, 44000 Nantes',
   latitude: 47.222719,
   longitude: -1.573481,
@@ -375,7 +375,7 @@ glassbin8 = Bin.create!(
 glassbin9 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container9.jpg')),
   kind: 'verre',
-  name: "'les conversations dans l'ascenseur",
+  name: "'a coter des escaliers'",
   address: '10 Rue Kléber, 44000 Nantes',
   latitude: 47.213905,
   longitude: -1.565766,
@@ -405,7 +405,7 @@ plasticbin1 = Bin.create!(
 plasticbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique2.jpg')),
   kind: 'plastique',
-  name: 'VirtualDJ',
+  name: 'en bas de la rue',
   address: 'Place du Commerce, 44000 Nantes',
   latitude: 47.213293,
   longitude: -1.558250,
@@ -454,7 +454,7 @@ plasticbin6 = Bin.create!(
 plasticbin7 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique7.jpg')),
   kind: 'plastique',
-  name: 'Téléphoner dans un transport en commun',
+  name: 'pas loin du park',
   address: "1 Rue Fulton, 44000 Nantes",
   latitude: 47.209067,
   longitude: -1.575727,
@@ -464,7 +464,7 @@ plasticbin7 = Bin.create!(
 plasticbin8 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique8.jpg')),
   kind: 'plastique',
-  name: 'les pizza froides',
+  name: 'div cassée',
   address: "75 Rue du Coudray, 44000 Nantes",
   latitude: 47.228439,
   longitude: -1.544833,
@@ -483,7 +483,7 @@ plasticbin9 = Bin.create!(
 
 plasticbin10 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique10.jpg')),
-  kind: 'Le rhume',
+  kind: 'Plastique Saint-Jacques',
   name: 'Les livreurs en retard',
   address: "40 Rue Saint-Jacques, 44000 Nantes",
   latitude: 47.196390,
