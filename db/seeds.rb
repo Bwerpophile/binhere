@@ -43,7 +43,7 @@ joris = User.create!(
   email: 'jojo@gmail.com',
   password: 'password',
   avatar: File.open(Rails.root.join('db/fixtures/users/joris.jpg')),
-  city: 'Lorient',
+  city: 'Nantes',
 )
 
 boby = User.create!(
@@ -162,7 +162,7 @@ poubelle_carton7 = Bin.create!(
 poubelle_carton8 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/bin13.jpg')),
   kind: 'carton',
-  name: 'coin de la rue',
+  name: 'du coin',
   address: '17 Rue Crébillon, 44000 Nantes',
   latitude: 47.213627,
   longitude: -1.560892,
@@ -303,7 +303,7 @@ glassbin1 = Bin.create!(
 glassbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container3.jpg')),
   kind: 'verre',
-  name: 'H&M',
+  name: "près d'H&M",
   address: '10 Quai Turenne, 44000 Nantes',
   latitude: 47.212585,
   longitude: -1.555094,
@@ -334,7 +334,7 @@ glassbin5 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container5.jpg')),
   kind: 'verre',
   name: 'Adèle',
-  address: "1 Allée de l'île Gloriette, 44000 Nantes",
+  address: "1'Allée de l'île Gloriette, 44000 Nantes",
   latitude: 47.211347,
   longitude: -1.556855,
   user: matthieu,
@@ -373,7 +373,7 @@ glassbin8 = Bin.create!(
 glassbin9 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container9.jpg')),
   kind: 'verre',
-  name: "'a coter des escaliers'",
+  name: "'à coté des escaliers'",
   address: '10 Rue Kléber, 44000 Nantes',
   latitude: 47.213905,
   longitude: -1.565766,
@@ -452,7 +452,7 @@ plasticbin6 = Bin.create!(
 plasticbin7 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container_plastique7.jpg')),
   kind: 'plastique',
-  name: 'pas loin du park',
+  name: 'pas loin du parc',
   address: "1 Rue Fulton, 44000 Nantes",
   latitude: 47.209067,
   longitude: -1.575727,
@@ -505,14 +505,14 @@ reviews2 = Review.create!(
 
 reviews3 = Review.create!(
   name: 'Nul' ,
-  description:"Beaucoup trop de gens utilise cette poubelle ! C'est parfois à croire que les éboueurs ne passe plus !",
+  description:"Beaucoup trop de gens utilisent cette poubelle ! C'est parfois à croire que les éboueurs ne passent plus !",
   user: matthieu,
   bin: glassbin3,
 )
 
 reviews4 = Review.create!(
-  name: 'Une poubelle' ,
-  description:"Bon on m'a demandé de donner une review sur une poubelle, j'aime bien le concept, poubelle clean, lieu clean.",
+  name: 'Poubelle qui déborde...' ,
+  description:"Poubelle mal desservie. Aujour'hui encore, elle déborde.",
   user: jimmy,
   bin: glassbin4,
 )
@@ -569,7 +569,7 @@ reviews10 = Review.create!(
 
 reviews10 = Review.create!(
   name: 'yes' ,
-  description:"I was visiting Nantes and thanks god i've heard ot binhere? before, this bin is very usefull, thanks !",
+  description:"I was visiting Nantes and thanks god i've heard to binhere? before, this bin is very usefull, thanks !",
   user: simon,
   bin: poubelle_carton3,
 )
