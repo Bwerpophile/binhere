@@ -303,7 +303,7 @@ glassbin1 = Bin.create!(
 glassbin2 = Bin.create!(
   photo: File.open(Rails.root.join('db/fixtures/bins/container3.jpg')),
   kind: 'verre',
-  name: "près d'H&M",
+  name: "La vie",
   address: '10 Quai Turenne, 44000 Nantes',
   latitude: 47.212585,
   longitude: -1.555094,
@@ -491,16 +491,16 @@ plasticbin10 = Bin.create!(
 
 reviews1 = Review.create!(
   name: 'Peut mieux faire' ,
-  description:"Et bien c'est une poubelle tout ce qu il y'a de plus basique, cependant, des jeunes laissent parfois leur bouteilles de verre au pied du container.",
+  description:"Et bien c'est une poubelle tout ce qu il y'a de plus basique, cependant, des jeunes laissent parfois leurs bouteilles de verre au pied du container.",
   user: matthieu,
   bin: glassbin1,
 )
 
 reviews2 = Review.create!(
   name: 'Super' ,
-  description:"D'habitude je me rend toujours à la poubelle plus au nord mais grâce à BinHere, j'ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci BinHere !!",
-  user: joris,
-  bin: glassbin2,
+  description:"D'habitude je me rends toujours à la poubelle plus au nord mais grâce à BinHere, j'ai remarqué que celle-ci était plus proche de chez moi, elle est super clean et il y a toujours de la place, merci BinHere !!",
+  user: simon,
+  bin: glassbin3,
 )
 
 reviews3 = Review.create!(
@@ -530,7 +530,7 @@ reviews6 = Review.create!(
 )
 reviews7 = Review.create!(
   name: 'Merci' ,
-  description:"Moi qui adore le tri je suis ravi d'avoir apris l'existence de cette poubelle plastique dans mon quartier, un grand merci a Binhere pour leur travail !",
+  description:"Moi qui adore le tri je suis ravi d'avoir appris l'existence de cette poubelle plastique dans mon quartier, un grand merci a Binhere pour leur travail !",
   user: simon,
   bin: plasticbin3,
 )
@@ -542,7 +542,7 @@ reviews8 = Review.create!(
 )
 review9 = Review.create!(
   name: 'pas mal' ,
-  description:"Cette poubelle est pas mal mais je préfère cette à Rue de sully",
+  description:"Cette poubelle est pas mal mais je préfère celle de Rue de sully",
   user: jimmy,
   bin: poubelle_menagere2,
 )
