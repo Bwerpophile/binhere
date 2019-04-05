@@ -512,7 +512,7 @@ reviews3 = Review.create!(
 
 reviews4 = Review.create!(
   name: 'Poubelle qui déborde...' ,
-  description:"Poubelle mal desservie. Aujour'hui encore, elle déborde.",
+  description:"Poubelle mal desservie. Aujourd'hui encore, elle déborde.",
   user: jimmy,
   bin: glassbin4,
 )
