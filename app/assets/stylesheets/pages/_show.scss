@@ -38,7 +38,11 @@
 .show-content {
   margin-left: 80px;
   margin-right: 80px;
+}
 
+.profil-card-address {
+  height: 50px;
+  min-height: 50px;
 }
 
 .container-show {
@@ -57,11 +61,11 @@
   padding: 50px;
 }
 
+.button-retour {
+  display: flex;
+  align-items: center;
+}
 
-// .profil {
-//   width: 40px;
-//   flex: 0 0 15%;
-//   }
 
 .button-retour img {
   display: flex;
@@ -178,7 +182,7 @@
 }
 
 .binphoto {
-    width: 550px;
+    width: 450px;
     height: 300px;
     background-size: cover;
  }
@@ -593,11 +597,11 @@
   margin-left: 9px;
   margin-bottom: 5px;
   border-radius: 2px;
-  padding-top: 15px;
+  padding-top: 6px;
   color: white;
   background-color: #46a84d;
-  width: 120px;
-  height: 55px;
+  width: 100px;
+  height: 35px;
   text-align: center;
   margin-right: 15px;
   font-family: poppins;
@@ -607,11 +611,11 @@
   margin-left: 9px;
   margin-bottom: 5px;
   border-radius: 2px;
-  padding-top: 15px;
+  padding-top: 6px;
   color: white;
   background-color: #51C2D2;
-  width: 120px;
-  height: 55px;
+  width: 100px;
+  height: 35px;
   text-align: center;
   margin-right: 15px;
   font-family: poppins;
@@ -621,11 +625,11 @@
   margin-left: 9px;
   margin-bottom: 5px;
   border-radius: 2px;
-  padding-top: 15px;
+  padding-top: 6px;
   color: white;
   background-color: #9a5a16;
-  width: 120px;
-  height: 55px;
+  width: 100px;
+  height: 35px;
   text-align: center;
   margin-right: 15px;
   font-family: poppins;
@@ -635,11 +639,11 @@
   margin-left: 9px;
   margin-bottom: 5px;
   border-radius: 2px;
-  padding-top: 15px;
+  padding-top: 6px;
   color: white;
   background-color:#002a6f;
-  width: 120px;
-  height: 55px;
+  width: 100px;
+  height: 35px;
   text-align: center;
   margin-right: 15px;
   font-family: poppins;
