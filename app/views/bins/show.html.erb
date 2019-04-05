@@ -5,6 +5,7 @@
           <%=  link_to bins_path(bin_type: @bin.kind) do %>
           <%= image_tag "retour-arrière.png" %>
           <% end %>
+          <div class="badge<%=@bin.kind%> <%= params[:bin_type] == "verre" ? "active filter" : nil%>"><%=@bin.kind%></div>
       </div>
 
     </div>
@@ -14,6 +15,7 @@
   <div class="show-left">
     <div class="bin-card-profil-infos">
       <div class="bin-image" style="background-image: url('<%= cl_image_path @bin.photo %> ')"></div>
+
 
         <div class="bin-details">
 
