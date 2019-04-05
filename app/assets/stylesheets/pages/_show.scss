@@ -12,7 +12,9 @@
 
 // DIV infos poubelle
 
-
+.fas {
+  margin-right: 3px;
+}
 
 .bin_name {
   font-family: poppins;
@@ -416,8 +418,8 @@
 
 .bin-details {
   flex-grow: 1;
-
 }
+
 
 .map-bin-container {
  // background-color: red;
@@ -545,11 +547,20 @@
 
 .avis_name-user {
   flex: 0 0 65%;
+  line-height: 13px;
+}
+
+.avis_date {
+  font-size: 13px;
 }
 
 .avis_name p {
   color: #EEB111;
   margin-bottom: -4px;
+}
+
+.avis-review-name p {
+  color: #eeb111;
 }
 
 .avis_name_date {
